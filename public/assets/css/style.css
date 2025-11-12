@@ -59,7 +59,7 @@
   --tg-heading-line-height: 1.2;
   --tg-body-color: #74787C;
   --tg-heading-color: #1D3131;
-  --tg-theme-primary: #128982;
+  --tg-theme-primary:  #061E3E;
   --tg-color-dark-theme: #51AEA9;
   --tg-color-white-default: #ffffff;
   --tg-color-red-default: #ED1730;
@@ -3203,7 +3203,7 @@ textarea.is-invalid {
 }
 
 .tgmenu__nav .logo img {
-  max-height: 40px;
+  max-height: 70px;
 }
 
 .tgmenu__navbar-wrap {
@@ -7956,7 +7956,6 @@ textarea.is-invalid {
   transition: 0.4s;
   border-radius: 7px;
   box-shadow: 0px 0px 15px rgba(29, 43, 42, 0.1);
-  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7964,7 +7963,6 @@ textarea.is-invalid {
 
 .client-card img {
   transition: 0.4s;
-  filter: grayscale(1);
 }
 
 .client-card:hover img {
@@ -13352,7 +13350,7 @@ blockquote .blockquote-card_title:before {
 }
 
 .footer__logo img {
-  max-height: 40px;
+  max-height: 70px;
 }
 
 .footer__links .list-wrap {

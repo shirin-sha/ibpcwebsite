@@ -7,8 +7,8 @@ export default function Section9() {
 			<section className="blog-area-1 pt-120 pb-120">
 				<div className="container">
 					<div className="section__title mb-50 text-center">
-						<span className="sub-title text-anim">News Updates</span>
-						<h2 className="title text-anim2">Latest Blog Posts</h2>
+						<span className="sub-title text-anim">COMPLETE UPDATES ABOUT IBPC</span>
+						<h2 className="title text-anim2">Recent News & Updates</h2>
 					</div>
 					<div className="row gy-40 justify-content-center">
 						<div className="col-xl-4 col-md-6">

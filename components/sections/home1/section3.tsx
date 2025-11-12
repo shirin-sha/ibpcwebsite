@@ -17,22 +17,17 @@ export default function Section3() {
 										</div>
 									</div>
 									<div className="about-experience-wrap movingX">
-										<h3 className="counter-title"><CounterUp>96</CounterUp>%</h3>
-										<span className="counter-text">Successful Stories</span>
+										<h3 className="counter-title"><CounterUp>98</CounterUp>%</h3>
+										<span className="counter-text">Member Engagement</span>
 									</div>
 								</div>
 							</div>
 							<div className="col-xl-6">
 								<div className="section__title">
-									<span className="sub-title text-anim">About Amazing Company</span>
-									<h2 className="title text-anim2">Business Strategy For
-										Every Stage in Our Every
-										Client’s Journey
-									</h2>
+									<span className="sub-title text-anim">About IBPC Kuwait</span>
+									<h2 className="title text-anim2">Empowering Business Growth and Professional Partnerships</h2>
 								</div>
-								<p className="mt-30 mb-30">Central to the consultancy's modus operandi is a commitment to
-									innovation, manifested in its agile approach to problem-solving and its relentless
-									pursuit of cutting-edge solutions.</p>
+								<p className="mt-30 mb-30">IBPC Kuwait serves as a bridge between India and Kuwait, fostering business collaboration, cultural exchange, and professional development through strategic initiatives and shared opportunities.</p>
 								<div className="about-grid-card">
 									<div className="box-icon">
 										<svg width={50} height={51} viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,9 +35,8 @@ export default function Section3() {
 										</svg>
 									</div>
 									<div className="card-details">
-										<h4 className="box-title">Global Insights</h4>
-										<p className="box-text">Central to the consultancy's modus operandi is a commitment to
-											innovation, manifested in its agile approach...</p>
+										<h4 className="box-title">Global Partnerships</h4>
+										<p className="box-text">IBPC connects members with chambers, industries, and organizations across India and Kuwait, strengthening trade ties and creating international opportunities.</p>
 									</div>
 								</div>
 								<div className="about-grid-card">
@@ -68,14 +62,13 @@ export default function Section3() {
 										</svg>
 									</div>
 									<div className="card-details">
-										<h4 className="box-title">Business Investment</h4>
-										<p className="box-text">Central to the consultancy's modus operandi is a commitment to
-											innovation, manifested in its agile approach...</p>
+										<h4 className="box-title">Business Development</h4>
+										<p className="box-text">Through business forums, investment meets, and networking events, IBPC helps entrepreneurs and professionals explore markets and grow together.</p>
 									</div>
 								</div>
 								<div className="tg-button-wrap mt-50">
-									<Link href="/appointment" className="btn">
-										<span className="btn-text" data-text="Book Appointment Now" />
+									<Link href="/about" className="btn">
+										<span className="btn-text" data-text="Learn More" />
 									</Link>
 								</div>
 							</div>

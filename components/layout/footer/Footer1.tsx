@@ -11,12 +11,12 @@ export default function Footer1() {
 							<div className="row gy-40 justify-content-between align-items-center">
 								<div className="col-xl-5 col-lg-6">
 									<h3 className="footer__top-title">
-										Join Valom and Get a Special Discount
+										We Value Your Voice at IBPC Kuwait
 									</h3>
 								</div>
 								<div className="col-auto">
 									<Link href="/contact" className="btn btn-three">
-										<span className="btn-text" data-text="WRITE YOUR EXPERIENCE" />
+										<span className="btn-text" data-text="Share Your Feedback" />
 									</Link>
 								</div>
 							</div>
@@ -26,19 +26,18 @@ export default function Footer1() {
 								<div className="col-xl-3 col-lg-4 col-md-6">
 									<div className="footer__widget footer__about">
 										<div className="footer__logo">
-											<Link href="/"><img src="/assets/img/logo/logo-white.svg" alt="logo" /></Link>
+											<Link href="/"><img src="/assets/img/logo/logo.png" alt="logo" /></Link>
 										</div>
 										<p className="footer__content mb-35">
-											Felis consquat magnis fames sagittis ultrices plasodales porttitor quisque ultrice
-											tempor turpis.
+											Indian Business & Professional Council (IBPC) Kuwait is a premier platform fostering business growth, professional excellence, and strong bilateral relations between India and Kuwait.
 										</p>
 										<div className="social-links">
 											<ul className="list-wrap">
-												<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
-												<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
-												<li><Link href="/https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in" /></Link></li>
-												<li><Link href="/https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
-												<li><Link href="/https://www.skype.com/" target="_blank"><i className="fab fa-skype" /></Link></li>
+												<li><Link href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
+												<li><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
+												<li><Link href="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in" /></Link></li>
+												<li><Link href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
+												<li><Link href="https://www.youtube.com/" target="_blank"><i className="fab fa-youtube" /></Link></li>
 											</ul>
 										</div>
 									</div>
@@ -52,23 +51,23 @@ export default function Footer1() {
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
-													About Us
+													About IBPC
 												</Link>
 											</li>
 											<li>
-												<Link href="/project">
+												<Link href="/events">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
-													Portfolio
+													General Events
 												</Link>
 											</li>
 											<li>
-												<Link href="/appointment">
+												<Link href="/ibpc-events">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
-													Appointment
+													IBPC Events
 												</Link>
 											</li>
 											<li>
@@ -76,15 +75,15 @@ export default function Footer1() {
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
-													Blog
+													News & Updates
 												</Link>
 											</li>
 											<li>
-												<Link href="/contact">
+												<Link href="/partners">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
-													Contact Us
+													Partners & Associations
 												</Link>
 											</li>
 										</ul>
@@ -92,75 +91,88 @@ export default function Footer1() {
 								</div>
 								<div className="col-xl-auto col-md-6">
 									<div className="footer__widget footer__contact">
-										<h4 className="footer__widget-title">Office Inforamtion</h4>
-										<div className="footer__info-item">
-											<div className="footer__info-icon">
-												<i className="fas fa-phone-alt" />
-											</div>
-											<div className="footer__info-content">
-												<h4 className="title">Call Us 24/7</h4>
-												<Link href="/tel:25621452156">(+256) 2145.2156</Link>
-											</div>
-										</div>
+										<h4 className="footer__widget-title">Office Information</h4>
 										<div className="footer__info-item">
 											<div className="footer__info-icon">
 												<i className="fas fa-envelope" />
 											</div>
 											<div className="footer__info-content">
-												<h4 className="title">Work with us</h4>
-												<Link href="/mailto:info@valom.com">info@valom.com</Link>
+												<h4 className="title">Email</h4>
+												<Link href="mailto:info@ibpckuwait.org">info@ibpckuwait.org</Link>
 											</div>
 										</div>
 										<div className="footer__info-item">
 											<div className="footer__info-icon">
-												<i className="fas fa-map-marker-alt" />
+												<i className="fas fa-phone-alt" />
 											</div>
 											<div className="footer__info-content">
-												<h4 className="title">Our Location</h4>
-												<p>XYZ Hilton Street, 125</p>
+												<h4 className="title">Phone Sec.</h4>
+												<Link href="tel:+96599586968">+965 9958 6968</Link>
+											</div>
+										</div>
+										<div className="footer__info-item">
+											<div className="footer__info-icon">
+												<i className="fas fa-phone-alt" />
+											</div>
+											<div className="footer__info-content">
+												<h4 className="title">Phone Pres.</h4>
+												<Link href="tel:+96599586968">+965 9958 6968</Link>
+											</div>
+										</div>
+										<div className="footer__info-item">
+											<div className="footer__info-icon">
+												<i className="fas fa-globe" />
+											</div>
+											<div className="footer__info-content">
+												<h4 className="title">Website</h4>
+												<Link href="https://www.ibpckuwait.org" target="_blank">www.ibpckuwait.org</Link>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div className="col-xl-auto col-md-6">
-									<div className="footer__widget footer__insta-feed-list">
-										<h4 className="footer__widget-title">Instagram Posts</h4>
+									<div className="footer__widget footer__links">
+										<h4 className="footer__widget-title">Membership Information</h4>
 										<ul className="list-wrap">
 											<li>
-												<div className="insta-thumb">
-													<img src="/assets/img/widget/ins_post01.jpg" alt="Image" />
-													<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
-												</div>
+												<Link href="/member-login">
+													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
+													</svg>
+													Member's Login
+												</Link>
 											</li>
 											<li>
-												<div className="insta-thumb">
-													<img src="/assets/img/widget/ins_post02.jpg" alt="Image" />
-													<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
-												</div>
+												<Link href="/membership-directory">
+													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
+													</svg>
+													Membership Directory
+												</Link>
 											</li>
 											<li>
-												<div className="insta-thumb">
-													<img src="/assets/img/widget/ins_post03.jpg" alt="Image" />
-													<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
-												</div>
+												<Link href="/new-membership">
+													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
+													</svg>
+													New Membership
+												</Link>
 											</li>
 											<li>
-												<div className="insta-thumb">
-													<img src="/assets/img/widget/ins_post04.jpg" alt="Image" />
-													<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
-												</div>
+												<Link href="/committee">
+													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
+													</svg>
+													IBPC Committee
+												</Link>
 											</li>
 											<li>
-												<div className="insta-thumb">
-													<img src="/assets/img/widget/ins_post05.jpg" alt="Image" />
-													<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
-												</div>
-											</li>
-											<li>
-												<div className="insta-thumb">
-													<img src="/assets/img/widget/ins_post06.jpg" alt="Image" />
-													<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
-												</div>
+												<Link href="/gallery">
+													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
+													</svg>
+													Photo Gallery
+												</Link>
 											</li>
 										</ul>
 									</div>
@@ -171,7 +183,7 @@ export default function Footer1() {
 					<div className="footer__bottom text-center">
 						<div className="container">
 							<div className="footer__copyright">
-								<Link href="#">Valom</Link> - Copyright 2025. All rights reserved.
+								<Link href="/">IBPC Kuwait</Link> - Copyright 2025. All rights reserved.
 							</div>
 						</div>
 					</div>

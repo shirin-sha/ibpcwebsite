@@ -34,70 +34,56 @@ export default function About() {
 						</div>
 					</section>
 					{/* breadcrumb-area-end */}
-					{/*==============================
-About Area
-==============================*/}
+					
 					<section className="about-area-2 pt-120 pb-120 overflow-hidden">
 						<div className="container">
 							<div className="about-wrap2">
 								<div className="row gx-60 gy-5 align-items-center">
 									<div className="col-xl-6">
-										<div className="about-thumb2-1">
-											<div className="img1">
-												<div className="thumb image-anim">
-													<img src="/assets/img/others/about2-1.jpg" alt="img" />
-												</div>
-											</div>
-											<div className="img2">
-												<div className="thumb image-anim">
-													<img src="/assets/img/others/about2-2.jpg" alt="img" />
-												</div>
-											</div>
-											<div className="about-bg-shape2-1">
-												<div className="shape1" />
-												<div className="shape2" />
-											</div>
+										<div className="about-single-image">
+											<img 
+												src="/assets/img/others/about2-1.jpg" 
+												alt="About IBPC" 
+												style={{
+													width: '100%',
+													height: 'auto',
+													borderRadius: '10px',
+													objectFit: 'cover'
+												}}
+											/>
 										</div>
 									</div>
 									<div className="col-xl-6">
 										<div className="section__title">
-											<span className="sub-title text-anim">About Amazing Company</span>
-											<h2 className="title text-anim2">We’re Trusted  Professional
-												Consultancy Company
-											</h2>
+											<span className="sub-title text-anim">EMPOWERING INDO-KUWAIT BUSINESS RELATIONS</span>
+											<h2 className="title text-anim2">About Indian Business and Professional Council (Kuwait)</h2>
 										</div>
-										<p className="mt-30 mb-40">The business consultancy company stands as a stalwart beacon of guidance and innovation, offering a multifaceted array of services tailored to propel enterprises toward their zenith. At its core, this entity operates as a bastion of strategic insight, employing a cadre of seasoned professionals.</p>
+										<p className="mt-30 mb-40">
+											The Indian Business and Professional Council, Kuwait (IBPC) was established in 2001 under the patronage of the Ambassador of India to Kuwait. IBPC is a non-profit, voluntary association of leading businessmen, senior corporate executives and professionals from the Indian diaspora community in Kuwait, dedicated to promoting business, trade, and investment between Kuwait & India.
+										</p>
 										<div className="checklist-wrap">
 											<ul className="list-wrap">
 												<li>
 													<span className="icon">
 														<i className="fas fa-check-circle" />
 													</span>
-													Remain flexible and adaptive to swiftly respond to changing market dynamics and client needs.
+													Institutional linkage with ASSOCHAM, FICCI, CII and Kuwait Chamber of Commerce.
 												</li>
 												<li>
 													<span className="icon">
 														<i className="fas fa-check-circle" />
 													</span>
-													Empower clients through knowledge transfer, skill-building, and fostering a culture of self-sufficiency.
+													Facilitates direct business connections through investment seminars and networking events.
 												</li>
 												<li>
 													<span className="icon">
 														<i className="fas fa-check-circle" />
 													</span>
-													Facilitate a culture of ongoing learning and refinement to ensure sustained success and growth.
+													Promotes India's business opportunities and rich cultural heritage to Kuwait.
 												</li>
 											</ul>
 										</div>
-										<div className="cta-link">Call to ask any question <Link href="/tel:52537561523">+525-3756-1523</Link></div>
-										<div className="tg-button-wrap mt-30">
-											<Link href="/appointment" className="btn">
-												<span className="btn-text" data-text="Make An Appointment" />
-											</Link>
-											<Link href="/service" className="btn btn-six">
-												<span className="btn-text" data-text="View Our Services" />
-											</Link>
-										</div>
+									
 									</div>
 								</div>
 							</div>
@@ -109,26 +95,41 @@ Counter Area
 ==============================*/}
 					<section className="counter-area-1 pb-120 pt-120 pt-xl-0">
 						<div className="container">
+							<div className="row justify-content-center mb-50">
+								<div className="col-12">
+									<div className="section__title text-center">
+										<span className="sub-title text-anim">OUR ACHIEVEMENTS</span>
+										<h2 className="title text-anim2">Key Highlights of IBPC</h2>
+									</div>
+								</div>
+							</div>
 							<div className="row gy-30 justify-content-center">
-								<div className="col-lg-4 col-md-6">
+								<div className="col-lg-3 col-md-6">
 									<div className="counter-card">
-										<h3 className="counter-card_title"><CounterUp>35</CounterUp></h3>
-										<p className="counter-card_subtitle">Years Of Experience</p>
-										<p className="counter-card_text">Central to the consultancy's modus operandi is a commitment...</p>
+										<h3 className="counter-card_title"><CounterUp>100</CounterUp>+</h3>
+										<p className="counter-card_subtitle">Events Hosted</p>
+										<p className="counter-card_text">Successfully organized business forums, seminars, and networking events.</p>
 									</div>
 								</div>
-								<div className="col-lg-4 col-md-6">
+								<div className="col-lg-3 col-md-6">
 									<div className="counter-card">
-										<h3 className="counter-card_title"><CounterUp>500</CounterUp>+</h3>
-										<p className="counter-card_subtitle">Official Project Completed</p>
-										<p className="counter-card_text">Central to the consultancy's modus operandi is a commitment...</p>
+										<h3 className="counter-card_title"><CounterUp>20</CounterUp>+</h3>
+										<p className="counter-card_subtitle">Years of Service</p>
+										<p className="counter-card_text">Serving the Indo-Kuwait business community since 2001.</p>
 									</div>
 								</div>
-								<div className="col-lg-4 col-md-6">
+								<div className="col-lg-3 col-md-6">
 									<div className="counter-card">
-										<h3 className="counter-card_title"><CounterUp>396</CounterUp>+</h3>
-										<p className="counter-card_subtitle">In-House Team Members</p>
-										<p className="counter-card_text">Central to the consultancy's modus operandi is a commitment...</p>
+										<h3 className="counter-card_title"><CounterUp>50</CounterUp>+</h3>
+										<p className="counter-card_subtitle">Strategic Partnerships</p>
+										<p className="counter-card_text">Strong collaborations with leading Chambers of Commerce.</p>
+									</div>
+								</div>
+								<div className="col-lg-3 col-md-6">
+									<div className="counter-card">
+										<h3 className="counter-card_title"><CounterUp>30</CounterUp>+</h3>
+										<p className="counter-card_subtitle">Cultural Events</p>
+										<p className="counter-card_text">Promoting Indian culture through workshops and performances.</p>
 									</div>
 								</div>
 							</div>

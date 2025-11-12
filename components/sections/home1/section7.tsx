@@ -16,9 +16,8 @@ export default function Section7() {
 						</div>
 						<div className="col-xl-6">
 							<div className="section__title mb-50">
-								<span className="sub-title text-anim">OUR Business GOAL</span>
-								<h2 className="title text-anim2">Make Every Stage in The
-									Customer Journey</h2>
+								<span className="sub-title text-anim">OUR CORE APPROACH</span>
+								<h2 className="title text-anim2">Empowering Growth at Every Step of the Business Journey</h2>
 							</div>
 							<div className="goal-grid-card">
 								<div className="box-icon">
@@ -35,9 +34,8 @@ export default function Section7() {
 									</svg>
 								</div>
 								<div className="card-details">
-									<h4 className="box-title">Strategy Development</h4>
-									<p className="box-text">Efficiently unleash cross-media information without cross-media
-										value work.</p>
+									<h4 className="box-title">Strategic Empowerment</h4>
+									<p className="box-text">IBPC helps members navigate challenges by creating opportunities for collaboration, knowledge exchange, and growth across industries.</p>
 								</div>
 							</div>
 							<div className="goal-grid-card">
@@ -51,9 +49,8 @@ export default function Section7() {
 									</svg>
 								</div>
 								<div className="card-details">
-									<h4 className="box-title">Data-Driven Insights</h4>
-									<p className="box-text">Efficiently unleash cross-media information without cross-media
-										value work.</p>
+									<h4 className="box-title">Insight-Driven Collaboration</h4>
+									<p className="box-text">Through research and member feedback, IBPC develops data-driven programs that address evolving business needs and regional market trends.</p>
 								</div>
 							</div>
 						</div>

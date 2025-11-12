@@ -11,10 +11,8 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 							<div className="col-xl-6">
 								<ul className="tg-header__top-info left-side list-wrap justify-content-xl-start justify-content-center">
 									<li>
-										<svg width={16} height={14} viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M11.5625 5.03125L14.8438 10.7812C14.9375 10.9375 15 11.0938 15 11.2812V13C15 13.5625 14.5312 14 14 14H2C1.4375 14 1 13.5625 1 13V11.2812C1 11.0938 1.03125 10.9375 1.125 10.7812L4.40625 5.03125C4.75 4.40625 5.4375 4 6.15625 4H9.8125C10.5312 4 11.1875 4.40625 11.5625 5.03125ZM13.5 12.5V11.4062L10.25 5.75C10.1562 5.625 10 5.5 9.8125 5.5H6.15625C5.96875 5.5 5.8125 5.625 5.71875 5.75L2.5 11.4062V12.5H13.5ZM8 7C9.09375 7 10 7.90625 10 9C10 10.125 9.09375 11 8 11C6.875 11 6 10.125 6 9C6 7.90625 6.875 7 8 7ZM15.8125 2.84375C15.9062 2.96875 16 3.09375 16 3.25V5C16 5.28125 15.75 5.5 15.5 5.5H13.2812C13.0938 5.5 12.9375 5.40625 12.8438 5.25L12 3C10.75 2.46875 9.375 2.25 8 2.25C6.59375 2.25 5.21875 2.46875 4 3L3.125 5.25C3.03125 5.40625 2.875 5.5 2.6875 5.5H0.5C0.21875 5.5 0 5.28125 0 5V3.25C0 3.09375 0.0625 2.96875 0.15625 2.84375C2.34375 1.03125 5.125 0 8 0C10.8438 0 13.625 1.03125 15.8125 2.84375Z" fill="currentColor" />
-										</svg>
-										We Help Take Your Parcel Every Where Around The World
+										
+										Empowering Indian Professionals and Businesses in Kuwait
 									</li>
 								</ul>
 							</div>
@@ -39,7 +37,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 								<div className="tgmenu__wrap">
 									<nav className="tgmenu__nav">
 										<div className="logo">
-											<Link href="/"><img src="/assets/img/logo/logo.svg" alt="Logo" /></Link>
+											<Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
 										</div>
 										<div className="info-card-wrap">
 											<div className="info-card">
@@ -62,11 +60,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 											</div>
 											<div className="info-card">
 												<div className="info-card_icon">
-													<i className="fas fa-map-marker-alt" />
+													<i className="fas fa-calendar-alt" />
 												</div>
 												<div className="info-card_content">
-													<p className="info-card_text">Office Address</p>
-													<p className="info-card_link">251 Hilton, Berlin</p>
+													<p className="info-card_text">Browse Events</p>
+													<Link href="/events" className="info-card_link">General Events Info</Link>
 												</div>
 											</div>
 										</div>
@@ -87,7 +85,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 										</div>
 										<div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
 											<ul className="navigation">
-												<li ><Link href="#">HOME</Link></li>
+												<li ><Link href="/">HOME</Link></li>
 												<li><Link href="/about">ABOUT IBPC</Link></li>
 												<li ><Link href="#">COMMITTEE</Link></li>
 												<li className="menu-item-has-children"><Link href="#">MEMBERSHIP</Link>

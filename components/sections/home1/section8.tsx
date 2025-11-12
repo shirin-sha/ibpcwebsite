@@ -108,8 +108,8 @@ export default function Section8() {
 					<div className="row justify-content-between align-items-center">
 						<div className="col-xl-6 col-lg-7">
 							<div className="section__title mb-50">
-								<span className="sub-title text-anim">Our LATEST PROJECTS</span>
-								<h2 className="title text-anim2">Our Successful Projects</h2>
+								<span className="sub-title text-anim">OUR IMPACT STORIES</span>
+								<h2 className="title text-anim2">Our Signature Events</h2>
 							</div>
 						</div>
 						<div className="col-auto">

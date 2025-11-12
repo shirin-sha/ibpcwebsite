@@ -17,49 +17,49 @@ const swiperOptions = {
 
 
 export default function Section12() {
-	// Define testimonials data array
-	const testimonials = [
+	// Define events data array
+	const events = [
 		{
-			image: "/assets/img/testimonial/3-1.png",
-			name: "Thomas Wilson",
-			designation: "Director TMS.Inc",
-			text: "The predictive analytics features have not only improved our decision-making but also significantly boosted our quarterly sales figures by 40%. It’s like having a future-proof navigator for our business."
+			dateTime: " August 21, 2025 To August 22, 2025",
+			location: "HICC, Novotel, Hyderabad, India",
+			title: "AgriBiz Connect 2025 – ASSOCHAM",
+			link: "/events/business-innovation-forum"
 		},
 		{
-			image: "/assets/img/testimonial/3-2.png",
-			name: "Michael Foster",
-			designation: "Director TMS.Inc",
-			text: "The predictive analytics features have not only improved our decision-making but also significantly boosted our quarterly sales figures by 40%. It’s like having a future-proof navigator for our business."
+			dateTime: "August 28, 2025 To August 30, 2025",
+			location: "Bharat Mandapam, New Delhi",
+			title: "11th India International MSME Expo & Summit – 2025",
+			link: "/events/cultural-exchange-networking"
 		},
 		{
-			image: "/assets/img/testimonial/3-3.png",
-			name: "George Arthur",
-			designation: "Director TMS.Inc",
-			text: "The predictive analytics features have not only improved our decision-making but also significantly boosted our quarterly sales figures by 40%. It’s like having a future-proof navigator for our business."
+			dateTime: "September 4, 2025 To September 6, 2025",
+			location: "Bharat Mandapam, New Delhi",
+			title: "11th Edition iPHEX-2025: India’s Mega Pharma Exhibition & B2B",
+			link: "/events/trade-opportunities-roundtable"
 		},
 		{
-			image: "/assets/img/testimonial/3-1.png",
-			name: "Thomas Wilson",
-			designation: "Director TMS.Inc",
-			text: "The predictive analytics features have not only improved our decision-making but also significantly boosted our quarterly sales figures by 40%. It’s like having a future-proof navigator for our business."
+			dateTime: "September 11, 2025",
+			location: "Bombay Exhibition Centre, Goregaon, Mumbai",
+			title: "15th AIGMF International Conference on ‘AI and Digitalisation – the future for sustainable glassmaking",
+			link: "/events/investment-summit"
 		},
 		{
-			image: "/assets/img/testimonial/3-2.png",
-			name: "Michael Foster",
-			designation: "Director TMS.Inc",
-			text: "The predictive analytics features have not only improved our decision-making but also significantly boosted our quarterly sales figures by 40%. It’s like having a future-proof navigator for our business."
+			dateTime: "September 11, 2025",
+			location: "Bombay Exhibition Centre, Mumbai",
+			title: "15th AIGMF International Conference",
+			link: "/events/women-in-business-mixer"
 		},
 		{
-			image: "/assets/img/testimonial/3-3.png",
-			name: "George Arthur",
-			designation: "Director TMS.Inc",
-			text: "The predictive analytics features have not only improved our decision-making but also significantly boosted our quarterly sales figures by 40%. It’s like having a future-proof navigator for our business."
+			dateTime: "10/04/26, 11:00 AM",
+			location: "Bengaluru, India",
+			title: "Tech Partnerships Showcase",
+			link: "/events/tech-partnerships-showcase"
 		}
 	]
 
 	return (
 		<>
-			<section className="testimonial-area-3 overflow-hidden">
+			<section className="testimonial-area-3 overflow-hidden mt-30">
 				<div
 					className="testimonial-wrap3 pt-120 pb-120 bg-cover gray-bg"
 					data-background="assets/img/bg/testimonial-bg-shape3-1.png"
@@ -90,22 +90,31 @@ export default function Section12() {
 								data-swiper-options='{}'
 							>
 								<div className="swiper-wrapper">
-									{testimonials.map((testimonial, index) => (
+									{events.map((event, index) => (
 										<SwiperSlide key={index}>
 											<div className="testimonial-card3">
-												<div className="testimonial-author-card3">
-													<div className="testi-author-thumb">
-														<img src={testimonial.image} alt={testimonial.name} />
-													</div>
-													<div className="media-body">
-														<h4 className="testimonial-card-title">{testimonial.name}</h4>
-														<p className="testimonial-card-desig">{testimonial.designation}</p>
-													</div>
-													<div className="testimonial-quote-icon">
-														<i className="fas fa-quote-right" />
-													</div>
+											
+											<div className="testimonial-author-card3">
+                                                   
+                                                    <div className="media-body">
+                                                        <h4 className="testimonial-card-title" style={{ fontSize: '14px' }}>
+															<i className="fas fa-calendar-alt" />
+															<span style={{ marginLeft: 8 }}>{event.dateTime}</span>
+														</h4>
+                                                        <p className="testimonial-card-desig">
+															<i className="fas fa-map-marker-alt" />
+															<span style={{ marginLeft: 8 }}>{event.location}</span>
+														</p>
+                                                    </div>
+                                                 
+                                                </div>
+                                                <p className="testi-text" style={{ fontSize: '20px' }}>{event.title}</p>
+												<div className="tg-button-wrap mt-20">
+													<Link href={event.link} className="link-btn">
+														Learn More
+														<i className="fas fa-arrow-right" />
+													</Link>
 												</div>
-												<p className="testi-text">"{testimonial.text}"</p>
 											</div>
 										</SwiperSlide>
 									))}
