@@ -97,20 +97,20 @@ export default function Section12() {
 											<div className="testimonial-author-card3">
                                                    
                                                     <div className="media-body">
-                                                        <h4 className="testimonial-card-title" style={{ fontSize: '14px' }}>
+                                                        <h4 className="testimonial-card-title" style={{ fontSize: '14px', color: '#ffffff' }}>
 															<i className="fas fa-calendar-alt" />
 															<span style={{ marginLeft: 8 }}>{event.dateTime}</span>
 														</h4>
-                                                        <p className="testimonial-card-desig">
+                                                        <p className="testimonial-card-desig" style={{ color: '#ffffff' }}>
 															<i className="fas fa-map-marker-alt" />
 															<span style={{ marginLeft: 8 }}>{event.location}</span>
 														</p>
                                                     </div>
                                                  
                                                 </div>
-                                                <p className="testi-text" style={{ fontSize: '20px' }}>{event.title}</p>
+                                                <p className="testi-text" style={{ fontSize: '20px', color: '#ffffff' }}>{event.title}</p>
 												<div className="tg-button-wrap mt-20">
-													<Link href={event.link} className="link-btn">
+													<Link href={event.link} className="link-btn" style={{ color: '#ffffff' }}>
 														Learn More
 														<i className="fas fa-arrow-right" />
 													</Link>
