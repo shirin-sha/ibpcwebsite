@@ -23,43 +23,37 @@ export default function Section12() {
 			dateTime: "August 21, 2025 To August 22, 2025",
 			location: "HICC, Novotel, Hyderabad, India",
 			title: "AgriBiz Connect 2025 – ASSOCHAM",
-			link: "/events/business-innovation-forum",
-			description: "Engage with agri-business leaders and explore bilateral trade and investment opportunities."
+			link: "/events/business-innovation-forum"
 		},
 		{
 			dateTime: "August 28, 2025 To August 30, 2025",
 			location: "Bharat Mandapam, New Delhi",
 			title: "11th India International MSME Expo & Summit – 2025",
-			link: "/events/cultural-exchange-networking",
-			description: "Connect with MSME innovators driving partnerships between India and the wider global market."
+			link: "/events/cultural-exchange-networking"
 		},
 		{
 			dateTime: "September 4, 2025 To September 6, 2025",
 			location: "Bharat Mandapam, New Delhi",
 			title: "11th Edition iPHEX-2025: India’s Mega Pharma Exhibition & B2B",
-			link: "/events/trade-opportunities-roundtable",
-			description: "Discover the latest advancements in pharma and healthcare exports at India’s premier B2B expo."
+			link: "/events/trade-opportunities-roundtable"
 		},
 		{
 			dateTime: "September 11, 2025",
 			location: "Bombay Exhibition Centre, Goregaon, Mumbai",
 			title: "15th AIGMF International Conference on ‘AI and Digitalisation – the future for sustainable glassmaking",
-			link: "/events/investment-summit",
-			description: "Learn how AI and digitalisation are transforming sustainable manufacturing in the glass sector."
+			link: "/events/investment-summit"
 		},
 		{
 			dateTime: "September 11, 2025",
 			location: "Bombay Exhibition Centre, Mumbai",
 			title: "15th AIGMF International Conference",
-			link: "/events/women-in-business-mixer",
-			description: "Join global experts and industry leaders discussing future-forward strategies for glass manufacturing."
+			link: "/events/women-in-business-mixer"
 		},
 		{
 			dateTime: "October 4, 2026, 11:00 AM",
 			location: "Bengaluru, India",
 			title: "Tech Partnerships Showcase",
-			link: "/events/tech-partnerships-showcase",
-			description: "Spotlight on collaborative tech ventures, showcasing innovation across India’s emerging industries."
+			link: "/events/tech-partnerships-showcase"
 		}
 	]
 
@@ -74,7 +68,7 @@ export default function Section12() {
 						<div className="row align-items-center justify-content-center">
 							<div className="col-xl-6 col-lg-10">
 								<div className="section__title text-center mb-50">
-									<span className="sub-title text-anim">CONNECTING THROUGH BUSINESS AND CULTURE</span>
+									<span className="sub-title text-anim text-white">CONNECTING THROUGH BUSINESS AND CULTURE</span>
 									<h2 className="title text-white text-anim2">
 										Explore Business Events
 									</h2>
@@ -82,7 +76,11 @@ export default function Section12() {
 										Stay updated with upcoming and past events—from business forums and trade shows to cultural gatherings. Discover opportunities, insights, and moments that strengthen India–Kuwait relations.
 									</p>
 									<div className="tg-button-wrap mt-40 justify-content-center">
-										<Link href="/contact" className="btn btn-three">
+										<Link
+											href="/contact"
+											className="btn btn-three"
+											style={{ border: "1px solid #ffffff" }}
+										>
 											<span className="btn-text" data-text="Browse All Events" />
 										</Link>
 									</div>
@@ -100,7 +98,16 @@ export default function Section12() {
 										<SwiperSlide key={index}>
 											<div
 												className="blog__post-item blog__post-item-four"
-												style={{ padding: "30px", background: "#fff", borderRadius: "10px", boxShadow: "0 2px 10px rgba(0,0,0,0.1)" }}
+												style={{
+													padding: "30px",
+													background: "#fff",
+													borderRadius: "10px",
+													boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+													minHeight: "320px",
+													display: "flex",
+													flexDirection: "column",
+													justifyContent: "space-between"
+												}}
 											>
 												<div className="blog__post-meta">
 													<ul className="list-wrap">
@@ -123,7 +130,6 @@ export default function Section12() {
 														{event.title}
 													</Link>
 												</h3>
-												<p className="mb-20">{event.description}</p>
 												<div className="blog__post-bottom">
 													<Link href={event.link} className="link-btn" style={{ color: "var(--tg-theme-primary)" }}>
 														LEARN MORE
