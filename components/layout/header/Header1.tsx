@@ -107,9 +107,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 											</ul>
 										</div>
 										<div className="tgmenu__action d-none d-lg-block">
-											<Link href="/appointment" className="btn btn-two menu-tigger">
-												<span className="btn-text" data-text="Book Appointment" />
-											</Link>
+											<a href="https://mms.ibpckuwait.org/login" className="btn btn-two menu-tigger" target='_blank'>
+												<span className="btn-text" data-text="Member Login" />
+											</a>
 										</div>
 										<div className="mobile-nav-toggler d-lg-none d-inline-flex">
 											<Link href="#" className="sidebar-btn">

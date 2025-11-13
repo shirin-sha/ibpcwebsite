@@ -10,7 +10,7 @@ export default function Section4() {
 					<div className="row justify-content-center">
 						<div className="col-12">
 							<div className="section__title text-center mb-50">
-								<span className="sub-title text-anim">IMPACTFUL PROGRAMS AND INITIATIVES.</span>
+								<span className="sub-title text-anim text-white">IMPACTFUL PROGRAMS AND INITIATIVES.</span>
 								<h2 className="title text-white text-anim2">Our Key Initiatives Driving Growth</h2>
 							</div>
 						</div>
@@ -37,12 +37,6 @@ export default function Section4() {
 								</div>
 								<div className="box-img image-anim">
 									<img src="/assets/img/service/service-img-1-1.jpg" alt="img" />
-									<div className="tg-button-wrap">
-										<Link href="/service-details" className="btn btn-three">
-											<span className="btn-text" data-text="Read More Details" />
-											<i className="fas fa-arrow-right" />
-										</Link>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -65,12 +59,6 @@ export default function Section4() {
 								</div>
 								<div className="box-img image-anim">
 									<img src="/assets/img/service/service-img-1-2.jpg" alt="img" />
-									<div className="tg-button-wrap">
-										<Link href="/service-details" className="btn btn-three">
-											<span className="btn-text" data-text="Read More Details" />
-											<i className="fas fa-arrow-right" />
-										</Link>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -97,12 +85,6 @@ export default function Section4() {
 								</div>
 								<div className="box-img image-anim">
 									<img src="/assets/img/service/service-img-1-3.jpg" alt="img" />
-									<div className="tg-button-wrap">
-										<Link href="/service-details" className="btn btn-three">
-											<span className="btn-text" data-text="Read More Details" />
-											<i className="fas fa-arrow-right" />
-										</Link>
-									</div>
 								</div>
 							</div>
 						</div>

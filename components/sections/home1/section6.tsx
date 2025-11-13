@@ -9,7 +9,7 @@ export default function Section6() {
 					<div className="row justify-content-center">
 						<div className="col-12">
 							<div className="section__title text-center mb-50">
-								<span className="sub-title text-anim">KEY LEADERS</span>
+								<span className="sub-title text-anim text-white">KEY LEADERS</span>
 								<h2 className="title text-white text-anim2">Voices That Inspire Our Vision</h2>
 							</div>
 						</div>
