@@ -12,7 +12,7 @@ export default function Blog2() {
 							<div className="row align-items-center">
 								<div className="col-xl-6">
 									<div className="breadcrumb__content">
-										<h3 className="title">Blog Grid</h3>
+										<h3 className="title">News And Events</h3>
 									</div>
 								</div>
 								<div className="col-xl-6">

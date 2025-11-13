@@ -87,20 +87,20 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 											<ul className="navigation">
 												<li ><Link href="/">HOME</Link></li>
 												<li><Link href="/about">ABOUT IBPC</Link></li>
-												<li ><Link href="#">COMMITTEE</Link></li>
+												<li ><Link href="/committee">COMMITTEE</Link></li>
 												<li className="menu-item-has-children"><Link href="#">MEMBERSHIP</Link>
 													<ul className="sub-menu">
-														<li><Link href="/project">MEMBERS LOGIN</Link></li>
-														<li><Link href="/project-details">NEW MEMBERSHIP</Link></li>
-														<li><Link href="/team">MEMBERSHIP DIRECTORY</Link></li>
+														<li><a href="https://mms.ibpckuwait.org/login" target='_blank'>MEMBERS LOGIN</a></li>
+														<li><a href="https://mms.ibpckuwait.org/register" target='_blank'>NEW MEMBERSHIP</a></li>
+														<li><a href="https://mms.ibpckuwait.org" target='_blank'>MEMBERSHIP DIRECTORY</a></li>
 													</ul>
 												</li>
 												<li className="menu-item-has-children"><Link href="#">MEDIA</Link>
 													<ul className="sub-menu">
-														<li><Link href="/blog">EVENTS</Link></li>
-														<li><Link href="/blog-2">NEWS</Link></li>
-														<li><Link href="/blog-details">PHOTO GALLERY</Link></li>
-														<li><Link href="/blog-details">VIDEO GALLERY</Link></li>
+														<li><Link href="/events">GENERAL EVENTS</Link></li>
+														<li><Link href="/news-events">NEWS & EVENTS</Link></li>
+														<li><Link href="/photo-gallery">PHOTO GALLERY</Link></li>
+														<li><Link href="/video-gallery">VIDEO GALLERY</Link></li>
 													</ul>
 												</li>
 												<li><Link href="/contact">CONTACT US</Link></li>
