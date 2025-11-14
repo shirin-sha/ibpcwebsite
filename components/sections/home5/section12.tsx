@@ -81,7 +81,7 @@ export default function Section12() {
 									</p>
 									<div className="tg-button-wrap mt-40 justify-content-center">
 										<Link
-											href="/contact"
+											href="/events"
 											className="btn btn-three"
 											style={{ border: "1px solid #ffffff" }}
 										>

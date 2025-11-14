@@ -7,11 +7,13 @@ const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
 	slidesPerView: 1,
 	spaceBetween: 30,
-	autoplay: {	
-		delay: 2500,
+	autoplay: {
+		delay: 4000,
 		disableOnInteraction: false,
+		pauseOnMouseEnter: true,
 	},
 	loop: true,
+	speed: 900,
 	pagination: {
 		el: ".slider-pagination2",
 		clickable: true,
@@ -67,11 +69,11 @@ export default function Section1() {
 													<div className="title3" data-ani="slideinup" data-ani-delay="0.4s">And Businesses</div>
 												</h1>
 												<div className="tg-button-wrap" data-ani="slideinup" data-ani-delay="0.5s">
-													<Link href="/contact" className="btn btn-three">
-														<span className="btn-text" data-text="Become a Member" />
+													<Link href="/committee" className="btn btn-three">
+														<span className="btn-text" data-text="Our Committee" />
 													</Link>
-													<Link href="/service" className="btn btn-four">
-														<span className="btn-text" data-text="Discover More" />
+													<Link href="https://mms.ibpckuwait.org/register" className="btn btn-four" target="_blank">
+														<span className="btn-text" data-text="Join Now" />
 													</Link>
 												</div>
 											</div>
@@ -94,11 +96,11 @@ export default function Section1() {
 													<div className="title3" data-ani="slideinup" data-ani-delay="0.4s">Succeed.</div>
 												</h1>
 												<div className="tg-button-wrap" data-ani="slideinup" data-ani-delay="0.5s">
-													<Link href="/contact" className="btn btn-three">
-														<span className="btn-text" data-text="View Membership" />
+													<Link href="/news-events" className="btn btn-three">
+														<span className="btn-text" data-text="IBPC News" />
 													</Link>
-													<Link href="/service" className="btn btn-four">
-														<span className="btn-text" data-text="Learn More" />
+													<Link href="/contact" className="btn btn-four">
+														<span className="btn-text" data-text="Contact Us" />
 													</Link>
 												</div>
 											</div>
