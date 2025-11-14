@@ -35,48 +35,13 @@ export default function Contact() {
 					==============================*/}
 					<section className="contact-page-area overflow-hidden pt-120">
 						<div className="container">
-							<div className="contact-wrap2 pt-120 pb-120 smoke5-bg">
-								<div className="row gy-5 align-items-center">
-									<div className="col-xl-5">
-										<div className="section__title mb-30">
-											<span className="sub-title">Get in touch</span>
-											<h2 className="title">Contact us</h2>
-											<p className="mt-3">We are here to answer any question you may have.</p>
-										</div>
-										<div className="contact-info-list">
-											<div className="contact-info-card d-flex align-items-start mb-25">
-												<div className="contact-info-icon">
-													<i className="fas fa-id-card" />
-												</div>
-												<div className="contact-info-content">
-													<p className="fw-semibold mb-1 text-uppercase" style={{ letterSpacing: '0.08em', color: 'var(--tg-theme-primary)' }}>Membership</p>
-													<h4 className="mb-2">Would you like to join our growing team?</h4>
-													<ul className="list-unstyled mb-0">
-														<li><i className="fas fa-envelope me-2" />info@ibpckuwait.org</li>
-														<li><i className="fas fa-phone me-2" />+965 5007 8512</li>
-													</ul>
-												</div>
-											</div>
-											<div className="contact-info-card d-flex align-items-start">
-												<div className="contact-info-icon">
-													<i className="fas fa-comments" />
-												</div>
-												<div className="contact-info-content">
-													<p className="fw-semibold mb-1 text-uppercase" style={{ letterSpacing: '0.08em', color: 'var(--tg-theme-primary)' }}>Feedbacks</p>
-													<h4 className="mb-2">Have a question in mind? Send a message.</h4>
-													<ul className="list-unstyled mb-0">
-														<li><i className="fas fa-envelope me-2" />admin@ibpckuwait.org</li>
-														<li><i className="fas fa-phone me-2" />+965 5007 8512</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="col-xl-7">
-										<div className="contact-form-wrap2 text-center">
+							<div className="contact-wrap2 pt-120 pb-120 smoke5-bg text-center">
+								<div className="row justify-content-end">
+									<div className="col-xl-12">
+										<div className="contact-form-wrap2">
 											<div className="section__title mb-30">
-												<span className="sub-title">Send a message</span>
-												<h2 className="title">Needs Help? Let’s Get in Touch</h2>
+												<span className="sub-title">Reach Out Anytime</span>
+												<h2 className="title">Need help? Let’s connect</h2>
 											</div>
 											<form action="mail.php" method="POST" className="contact__form ajax-contact">
 												<div className="row gy-4">
@@ -92,12 +57,22 @@ export default function Contact() {
 													</div>
 													<div className="col-12">
 														<div className="form-group">
-															<input type="text" className="form-control style-white" name="subject" id="subject" placeholder="Subject" />
+															<select name="subject" id="subject" className="form-select style-white">
+																<option selected hidden>Select Service</option>
+																<option value="Business">Business</option>
+																<option value="Managment">Managment</option>
+																<option value="Analysis">Analysis</option>
+															</select>
+															<label className="form-icon-right2">
+																<svg width={16} height={8} viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1.125 0.6875C1.21875 0.5625 1.34375 0.5 1.5 0.5C1.59375 0.5 1.71875 0.53125 1.8125 0.625L7.96875 6.28125L14.1562 0.625C14.3438 0.4375 14.6562 0.4375 14.8438 0.65625C15.0312 0.84375 15.0312 1.15625 14.8125 1.34375L8.3125 7.34375C8.125 7.53125 7.84375 7.53125 7.65625 7.34375L1.15625 1.34375C0.9375 1.1875 0.9375 0.875 1.125 0.6875Z" fill="currentColor" />
+																</svg>
+															</label>
 														</div>
 													</div>
 													<div className="col-12">
 														<div className="form-group">
-															<textarea name="message" placeholder="Your Message (optional)" id="contactForm" className="form-control style-white" />
+															<textarea name="message" placeholder="Type Your Message" id="contactForm" className="form-control style-white" />
 														</div>
 													</div>
 												</div>
@@ -111,7 +86,71 @@ export default function Contact() {
 							</div>
 						</div>
 					</section>
+					<section className="pt-60 pb-120">
+						<div className="container">
+							<div className="row justify-content-center">
+								<div className="col-lg-8">
+									<div className="section__title text-center mb-40">
+										<span className="sub-title">Stay Connected</span>
+										<h2 className="title">Contact Us</h2>
+										<p className="sec-text mt-3">Our team is ready to support you across membership, events, and feedback.</p>
+									</div>
+								</div>
+							</div>
+							<div className="row gy-4">
+								<div className="col-lg-6">
+									<div className="info-card membership-card h-100" style={{ background: '#ffffff', borderRadius: '18px', boxShadow: '0 18px 45px rgba(0,0,0,0.07)', padding: '32px', display: 'flex', flexDirection: 'column', gap: '18px' }}>
+										<div className="d-flex align-items-start" style={{ gap: '18px' }}>
+											<div className="info-card_icon" style={{ width: '56px', height: '56px', borderRadius: '14px', background: 'var(--tg-theme-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px' }}>
+												<i className="fas fa-id-card" />
+											</div>
+											<div className="text-start">
+												<p className="text-uppercase fw-semibold mb-2" style={{ letterSpacing: '0.08em', color: 'var(--tg-theme-primary)' }}>Membership</p>
+												<h4 className="mb-3" style={{ lineHeight: 1.4 }}>Would you like to join our growing team?</h4>
+												<p className="mb-0" style={{ color: '#666' }}>Get all the membership support you need from the IBPC Secretariat.</p>
+											</div>
+										</div>
+										<div className="contact-details text-start" style={{ borderTop: '1px solid #f0f0f0', paddingTop: '18px', marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+											<p className="mb-0" style={{ fontSize: '17px', fontWeight: 600, color: 'var(--tg-theme-primary)' }}>
+												<i className="fas fa-envelope me-2" />
+												<Link href="mailto:info@ibpckuwait.org" style={{ color: 'inherit' }}>info@ibpckuwait.org</Link>
+											</p>
+											<p className="mb-0" style={{ fontSize: '17px', fontWeight: 600, color: 'var(--tg-theme-primary)' }}>
+												<i className="fas fa-phone me-2" />
+												<Link href="tel:+96550078512" style={{ color: 'inherit' }}>+965 5007 8512</Link>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div className="col-lg-6">
+									<div className="info-card feedback-card h-100" style={{ background: '#ffffff', borderRadius: '18px', boxShadow: '0 18px 45px rgba(0,0,0,0.07)', padding: '32px', display: 'flex', flexDirection: 'column', gap: '18px' }}>
+										<div className="d-flex align-items-start" style={{ gap: '18px' }}>
+											<div className="info-card_icon" style={{ width: '56px', height: '56px', borderRadius: '14px', background: 'var(--tg-theme-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px' }}>
+												<i className="fas fa-comments" />
+											</div>
+											<div className="text-start">
+												<p className="text-uppercase fw-semibold mb-2" style={{ letterSpacing: '0.08em', color: 'var(--tg-theme-primary)' }}>Feedbacks</p>
+												<h4 className="mb-3" style={{ lineHeight: 1.4 }}>Have a question in mind? Send a message.</h4>
+												<p className="mb-0" style={{ color: '#666' }}>Share suggestions or ask about upcoming initiatives—we're always listening.</p>
+											</div>
+										</div>
+										<div className="contact-details text-start" style={{ borderTop: '1px solid #f0f0f0', paddingTop: '18px', marginTop: '4px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+											<p className="mb-0" style={{ fontSize: '17px', fontWeight: 600, color: 'var(--tg-theme-primary)' }}>
+												<i className="fas fa-envelope me-2" />
+												<Link href="mailto:admin@ibpckuwait.org" style={{ color: 'inherit' }}>admin@ibpckuwait.org</Link>
+											</p>
+											<p className="mb-0" style={{ fontSize: '17px', fontWeight: 600, color: 'var(--tg-theme-primary)' }}>
+												<i className="fas fa-phone me-2" />
+												<Link href="tel:+96550078512" style={{ color: 'inherit' }}>+965 5007 8512</Link>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					{/*======== / Contact Section ========*/}
+				
 				</>
 			</Layout>
 		</>
