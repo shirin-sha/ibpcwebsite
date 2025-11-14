@@ -124,7 +124,7 @@ export default function Section12() {
 															</Link>
 														</li>
 													</ul>
-												</div>
+                                                    </div>
 												<h3 className="title">
 													<Link href={event.link} className="event-title-link">
 														{event.title}
@@ -135,7 +135,7 @@ export default function Section12() {
 														LEARN MORE
 														<i className="fas fa-angle-double-right" />
 													</Link>
-												</div>
+                                                </div>
 											</div>
 										</SwiperSlide>
 									))}

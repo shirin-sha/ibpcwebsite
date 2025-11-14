@@ -33,8 +33,9 @@ export default function Section6() {
 								</div>
 								<div className="team-card-details">
 									<h4 className="box-title"><Link href="/team-details">Dr. Adarsh Swaika</Link></h4>
-									<span className="box-text">INDIAN AMBASSODOR TO KUWAIT</span>
-									<p className="box-desc">
+									<span className="box-text" style={{ fontSize: '13px', display: 'block', marginBottom: '10px' }}>INDIAN AMBASSADOR TO KUWAIT</span>
+									<p className="box-desc" style={{ fontStyle: 'italic', lineHeight: '1.7', color: '#666' }}>
+										<i className="fas fa-quote-left" style={{ fontSize: '14px', marginRight: '8px', opacity: '0.5' }}></i>
 										I extend my heartiest greetings to Indian Business and Professional Council (IBPC), Kuwait. I commend IBPC for their persistent efforts and commitment in fostering trade..
 									</p>
 								</div>
@@ -58,10 +59,9 @@ export default function Section6() {
 								</div>
 								<div className="team-card-details">
 									<h4 className="box-title"><Link href="/team-details">Meshal Al-Shamali</Link></h4>
-									<span className="box-text">
-KUWAIT'S AMBASSODOR TO INDIA
-</span>
-									<p className="box-desc">
+									<span className="box-text" style={{ fontSize: '13px', display: 'block', marginBottom: '10px' }}>KUWAIT'S AMBASSADOR TO INDIA</span>
+									<p className="box-desc" style={{ fontStyle: 'italic', lineHeight: '1.7', color: '#666' }}>
+										<i className="fas fa-quote-left" style={{ fontSize: '14px', marginRight: '8px', opacity: '0.5' }}></i>
 										First of all, I express my gratitude to the leadership of the State of Kuwait and the Republic of India for their patronage and support for a strong Kuwait-India Partnership.
 									</p>
 								</div>
@@ -85,8 +85,9 @@ KUWAIT'S AMBASSODOR TO INDIA
 								</div>
 								<div className="team-card-details">
 									<h4 className="box-title"><Link href="/team-details">Kaizar T Shakir</Link></h4>
-									<span className="box-text">CHAIRMAN - IBPC</span>
-									<p className="box-desc">
+									<span className="box-text" style={{ fontSize: '13px', display: 'block', marginBottom: '10px' }}>CHAIRMAN - IBPC</span>
+									<p className="box-desc" style={{ fontStyle: 'italic', lineHeight: '1.7', color: '#666' }}>
+										<i className="fas fa-quote-left" style={{ fontSize: '14px', marginRight: '8px', opacity: '0.5' }}></i>
 										Dear Members, Friends, and Well-wishers, Welcome to the official website of the Indian Business and Professional Council (IBPC), Kuwait — a distinguished forum that..
 									</p>
 								</div>
