@@ -26,7 +26,7 @@ export default function Footer1() {
 								<div className="col-xl-3 col-lg-4 col-md-6">
 									<div className="footer__widget footer__about">
 										<div className="footer__logo">
-											<Link href="/"><img src="/assets/img/logo/logo.png" alt="logo" /></Link>
+											<Link href="/"><img src="/assets/img/logo/logo-white.png" alt="logo" /></Link>
 										</div>
 										<p className="footer__content mb-35">
 											Indian Business & Professional Council (IBPC) Kuwait is a premier platform fostering business growth, professional excellence, and strong bilateral relations between India and Kuwait.
