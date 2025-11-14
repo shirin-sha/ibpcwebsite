@@ -17,8 +17,8 @@ export default function Section6() {
 							</div>
 						</div>
 					</div>
-					<div className="row gy-40 justify-content-center">
-						<div className="col-xl-3 col-md-6">
+					<div className="row gy-30 justify-content-center">
+						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
@@ -29,16 +29,16 @@ export default function Section6() {
 										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
 										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
 										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-										<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
+										
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Kaizar T Shakir</Link></h4>
-									<span className="box-text">Hon. Chairman</span>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Kaizar T Shakir</Link></h4>
+									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Chairman</span>
 								</div>
 							</div>
 						</div>
-						<div className="col-xl-3 col-md-6">
+						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
@@ -49,16 +49,15 @@ export default function Section6() {
 										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
 										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
 										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-										<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Gaurav Oberoi</Link></h4>
-									<span className="box-text">Hon. Vice Chairman</span>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Gaurav Oberoi</Link></h4>
+									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Vice Chairman</span>
 								</div>
 							</div>
 						</div>
-						<div className="col-xl-3 col-md-6">
+						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
@@ -69,16 +68,15 @@ export default function Section6() {
 										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
 										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
 										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-										<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Suresh K P</Link></h4>
-									<span className="box-text">Hon. Secretary</span>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Suresh K P</Link></h4>
+									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Secretary</span>
 								</div>
 							</div>
 						</div>
-						<div className="col-xl-3 col-md-6">
+						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
@@ -89,16 +87,16 @@ export default function Section6() {
 										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
 										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
 										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-										<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
+										
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Sunnith Arora</Link></h4>
-									<span className="box-text">Hon. Jt Secretary</span>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Sunnith Arora</Link></h4>
+									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Jt Secretary</span>
 								</div>
 							</div>
 						</div>
-						<div className="col-xl-3 col-md-6">
+						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
@@ -109,12 +107,12 @@ export default function Section6() {
 										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
 										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
 										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-										<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
+									
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Krishen Suryakanth</Link></h4>
-									<span className="box-text">Hon. Treasurer</span>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Krishen Suryakanth</Link></h4>
+									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Treasurer</span>
 								</div>
 							</div>
 						</div>
