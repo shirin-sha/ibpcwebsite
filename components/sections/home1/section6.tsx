@@ -21,15 +21,6 @@ export default function Section6() {
 									<Link href="/team-details" className="thumb">
 										<img src="/assets/img/team/team-1-1.jpg" alt="img" />
 									</Link>
-									<div className="team-social">
-										<button className="icon-btn"><i className="fas fa-share-alt" /></button>
-										<div className="social-wrap">
-											<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-											<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
-											<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-											<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										</div>
-									</div>
 								</div>
 								<div className="team-card-details">
 									<h4 className="box-title"><Link href="/team-details">Dr. Adarsh Swaika</Link></h4>
@@ -47,15 +38,6 @@ export default function Section6() {
 									<Link href="/team-details" className="thumb">
 										<img src="/assets/img/team/team-1-2.jpg" alt="img" />
 									</Link>
-									<div className="team-social">
-										<button className="icon-btn"><i className="fas fa-share-alt" /></button>
-										<div className="social-wrap">
-											<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-											<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
-											<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-											<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										</div>
-									</div>
 								</div>
 								<div className="team-card-details">
 									<h4 className="box-title"><Link href="/team-details">Meshal Al-Shamali</Link></h4>
@@ -73,15 +55,6 @@ export default function Section6() {
 									<Link href="/team-details" className="thumb">
 										<img src="/assets/img/team/team-1-3.jpg" alt="img" />
 									</Link>
-									<div className="team-social">
-										<button className="icon-btn"><i className="fas fa-share-alt" /></button>
-										<div className="social-wrap">
-											<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-											<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
-											<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-											<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										</div>
-									</div>
 								</div>
 								<div className="team-card-details">
 									<h4 className="box-title"><Link href="/team-details">Kaizar T Shakir</Link></h4>
