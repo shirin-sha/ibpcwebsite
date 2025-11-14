@@ -35,12 +35,47 @@ export default function Contact() {
 					==============================*/}
 					<section className="contact-page-area overflow-hidden pt-120">
 						<div className="container">
-							<div className="contact-wrap2 pt-120 pb-120 smoke5-bg text-center">
-								<div className="row justify-content-end">
-									<div className="col-xl-12">
-										<div className="contact-form-wrap2">
+							<div className="contact-wrap2 pt-120 pb-120 smoke5-bg">
+								<div className="row gy-5 align-items-center">
+									<div className="col-xl-5">
+										<div className="section__title mb-30">
+											<span className="sub-title">Get in touch</span>
+											<h2 className="title">Contact us</h2>
+											<p className="mt-3">We are here to answer any question you may have.</p>
+										</div>
+										<div className="contact-info-list">
+											<div className="contact-info-card d-flex align-items-start mb-25">
+												<div className="contact-info-icon">
+													<i className="fas fa-id-card" />
+												</div>
+												<div className="contact-info-content">
+													<p className="fw-semibold mb-1 text-uppercase" style={{ letterSpacing: '0.08em', color: 'var(--tg-theme-primary)' }}>Membership</p>
+													<h4 className="mb-2">Would you like to join our growing team?</h4>
+													<ul className="list-unstyled mb-0">
+														<li><i className="fas fa-envelope me-2" />info@ibpckuwait.org</li>
+														<li><i className="fas fa-phone me-2" />+965 5007 8512</li>
+													</ul>
+												</div>
+											</div>
+											<div className="contact-info-card d-flex align-items-start">
+												<div className="contact-info-icon">
+													<i className="fas fa-comments" />
+												</div>
+												<div className="contact-info-content">
+													<p className="fw-semibold mb-1 text-uppercase" style={{ letterSpacing: '0.08em', color: 'var(--tg-theme-primary)' }}>Feedbacks</p>
+													<h4 className="mb-2">Have a question in mind? Send a message.</h4>
+													<ul className="list-unstyled mb-0">
+														<li><i className="fas fa-envelope me-2" />admin@ibpckuwait.org</li>
+														<li><i className="fas fa-phone me-2" />+965 5007 8512</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div className="col-xl-7">
+										<div className="contact-form-wrap2 text-center">
 											<div className="section__title mb-30">
-												<span className="sub-title">Get In Touch</span>
+												<span className="sub-title">Send a message</span>
 												<h2 className="title">Needs Help? Let’s Get in Touch</h2>
 											</div>
 											<form action="mail.php" method="POST" className="contact__form ajax-contact">

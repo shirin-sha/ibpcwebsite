@@ -7,7 +7,7 @@ const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
 	slidesPerView: 1,
 	spaceBetween: 30,
-	autoplay: {
+	autoplay: {	
 		delay: 2500,
 		disableOnInteraction: false,
 	},
@@ -33,18 +33,18 @@ export default function Section1() {
 										<div className="col-lg-6">
 											<div className="hero-style1">
 												<div className="sub-title" data-ani="slideinup" data-ani-delay="0.1s">
-													<span>Welcome!</span> Where opportunities meets growth.</div>
+													Where opportunities meets growth.</div>
 												<h1 className="hero-title">
 													<div className="title1" data-ani="slideinup" data-ani-delay="0.2s">Empowering India-Kuwait Business Connections</div>
 													{/* <div className="title2" data-ani="slideinup" data-ani-delay="0.3s"> </div> */}
 													{/* <div className="title3" data-ani="slideinup" data-ani-delay="0.4s">Connections</div> */}
 												</h1>
 												<div className="tg-button-wrap" data-ani="slideinup" data-ani-delay="0.5s">
-													<Link href="/contact" className="btn btn-three">
-														<span className="btn-text" data-text="Join IBPC" />
+													<Link href="/events" className="btn btn-three">
+														<span className="btn-text" data-text="General Events" />
 													</Link>
-													<Link href="/service" className="btn btn-four">
-														<span className="btn-text" data-text="Explore Initiatives" />
+													<Link href="/about" className="btn btn-four">
+														<span className="btn-text" data-text="Lern More" />
 													</Link>
 												</div>
 											</div>
@@ -60,7 +60,7 @@ export default function Section1() {
 										<div className="col-lg-6">
 											<div className="hero-style1">
 												<div className="sub-title" data-ani="slideinup" data-ani-delay="0.1s">
-													<span>Welcome!</span> Creating a thriving platform for mutual success.</div>
+												Creating a thriving platform for mutual success.</div>
 												<h1 className="hero-title">
 													<div className="title1" data-ani="slideinup" data-ani-delay="0.2s">Building Bridges</div>
 													<div className="title2" data-ani="slideinup" data-ani-delay="0.3s">Between Nations</div>
@@ -87,7 +87,7 @@ export default function Section1() {
 										<div className="col-lg-6">
 											<div className="hero-style1">
 												<div className="sub-title" data-ani="slideinup" data-ani-delay="0.1s">
-													<span>Welcome!</span> Uniting business leaders across India and Kuwait.</div>
+													Uniting business leaders across India and Kuwait.</div>
 												<h1 className="hero-title">
 													<div className="title1" data-ani="slideinup" data-ani-delay="0.2s">Connect.</div>
 													<div className="title2" data-ani="slideinup" data-ani-delay="0.3s">Collaborate.</div>

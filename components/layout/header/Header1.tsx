@@ -46,7 +46,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 												</div>
 												<div className="info-card_content">
 													<p className="info-card_text">Phone Number</p>
-													<Link href="/tel:+12013802737" className="info-card_link">(+202) 2156-2145</Link>
+													<Link href="/tel:+965 5007 8512" className="info-card_link">+965 5007 8512</Link>
 												</div>
 											</div>
 											<div className="info-card">
@@ -55,7 +55,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 												</div>
 												<div className="info-card_content">
 													<p className="info-card_text">Email Us Here</p>
-													<Link href="/mailto:info@valom.com" className="info-card_link">info@valom.com</Link>
+													<Link href="/mailto:info@ibpckuwait.org" className="info-card_link">info@ibpckuwait.org</Link>
 												</div>
 											</div>
 											<div className="info-card">
@@ -81,7 +81,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 								<div className="tgmenu__wrap">
 									<nav className="tgmenu__nav">
 										<div className="logo d-lg-none d-block">
-											<Link href="/"><img src="/assets/img/logo/logo.svg" alt="Logo" /></Link>
+											<Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" style={{  height: '60px' }} /></Link>
 										</div>
 										<div className="tgmenu__navbar-wrap tgmenu__main-menu d-none d-lg-flex">
 											<ul className="navigation">
@@ -129,7 +129,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 					<nav className="tgmobile__menu-box">
 						<div className="close-btn"><i className="fas fa-times" /></div>
 						<div className="nav-logo">
-							<Link href="/"><img src="/assets/img/logo/logo.svg" alt="Logo" /></Link>
+							<Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
 						</div>
 						<div className="tgmobile__menu-outer">
 							{/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
