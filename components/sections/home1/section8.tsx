@@ -9,6 +9,7 @@ const swiperOptions = {
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
+						pauseOnMouseEnter: true,
         },
         loop: true,
 
@@ -60,45 +61,41 @@ export default function Section8() {
 	const projects = [
 		{
 			category: "IT Solution",
-			title: "Business Growth Strategy",
+			title: "Indian Business & Professional Council Elected New Managing Committee",
 			image: "/assets/img/project/project1-1.jpg"
 		},
 		{
 			category: "Business Solution",
-			title: "Business Growth Development",
+			title: "IBPC celebrates its 14th Anniversary",
 			image: "/assets/img/project/project1-2.jpg"
 		},
 		{
 			category: "Financial Solution",
-			title: "Financial Resilience Planning",
+			title: "Seminar by Sunderam Fund on Investments in India",
 			image: "/assets/img/project/project1-3.jpg"
 		},
 		{
 			category: "Business Growth",
-			title: "Strategic Roadmap Development",
+			title: "Indian business delegates in Kuwait to explore business opportunities",
 			image: "/assets/img/project/project1-4.jpg"
 		},
 		// Repeated projects for slider continuity
-		{
-			category: "IT Solution",
-			title: "Business Growth Strategy",
-			image: "/assets/img/project/project1-1.jpg"
-		},
-		{
-			category: "Business Solution",
-			title: "Business Growth Development",
-			image: "/assets/img/project/project1-2.jpg"
-		},
-		{
-			category: "Financial Solution",
-			title: "Financial Resilience Planning",
-			image: "/assets/img/project/project1-3.jpg"
-		},
-		{
-			category: "Business Growth",
-			title: "Strategic Roadmap Development",
-			image: "/assets/img/project/project1-4.jpg"
-		}
+		// {
+		// 	category: "IT Solution",
+		// 	title: "Business Growth Strategy",
+		// 	image: "/assets/img/project/project1-1.jpg"
+		// },
+		// {
+		// 	category: "Business Solution",
+		// 	title: "Business Growth Development",
+		// 	image: "/assets/img/project/project1-2.jpg"
+		// },
+		// {
+		// 	category: "Financial Solution",
+		// 	title: "Financial Resilience Planning",
+		// 	image: "/assets/img/project/project1-3.jpg"
+		// },
+	
 	]
 
 	return (
@@ -114,11 +111,11 @@ export default function Section8() {
 						</div>
 						<div className="col-auto">
 							<div className="tg-button-wrap mb-50">
-								<button data-slider-prev="#projectSlider1" className="slider-arrow default btn btn-five">
+								<button className="slider-arrow default btn btn-five h1p" aria-label="Previous slide">
 									<i className="fas fa-arrow-left" />
 									<div className="btn-text" data-text="PREV" />
 								</button>
-								<button data-slider-next="#projectSlider1" className="slider-arrow default btn btn-five">
+								<button className="slider-arrow default btn btn-five h1n" aria-label="Next slide">
 									<span className="btn-text" data-text="NEXT" />
 									<i className="fas fa-arrow-right" />
 								</button>
@@ -133,7 +130,7 @@ export default function Section8() {
 							id="projectSlider1"
 							data-swiper-options='{
                 "loop": true,
-                "autoplay": { "delay": 1000 },
+                "autoplay": { "delay": 4500, "pauseOnMouseEnter": true },
                 "breakpoints": {
                   "0": { "spaceBetween": 30, "slidesPerView": 1 },
                   "375": { "spaceBetween": 30, "slidesPerView": 1 },
@@ -152,9 +149,9 @@ export default function Section8() {
 												<img src={project.image} alt="img" />
 											</div>
 											<div className="project-card-details">
-												<span className="project-subtitle">{project.category}</span>
+											
 												<h4 className="project-title">
-													<Link href="/project-details">{project.title}</Link>
+													<Link href="/blog-details">{project.title}</Link>
 												</h4>
 											</div>
 										</div>

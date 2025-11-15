@@ -119,15 +119,7 @@ export default function Footer1() {
 												<Link href="tel:+96599586968">+965 9958 6968</Link>
 											</div>
 										</div>
-										<div className="footer__info-item">
-											<div className="footer__info-icon">
-												<i className="fas fa-globe" />
-											</div>
-											<div className="footer__info-content">
-												<h4 className="title">Website</h4>
-												<Link href="https://www.ibpckuwait.org" target="_blank">www.ibpckuwait.org</Link>
-											</div>
-										</div>
+									
 									</div>
 								</div>
 								<div className="col-xl-auto col-md-6">
