@@ -76,8 +76,8 @@ export default function Section10() {
 						<div className="swiper-wrapper">
 							{clients.map((client, index) => (
 								<SwiperSlide key={index}>
-									<Link 
-										href="#" 
+									<div 
+									
 										className="client-card"
 										style={{
 											width: '280px',
@@ -94,7 +94,7 @@ export default function Section10() {
 												objectFit: 'contain'
 											}}
 										/>
-									</Link>
+									</div>
 								</SwiperSlide>
 							))}
 						</div>
