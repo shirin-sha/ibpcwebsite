@@ -106,15 +106,7 @@ export default function BlogDetails() {
 								</div>
 								<div className="col-lg-4">
 									<aside className="blog-sidebar">
-										<div className="blog-widget">
-											<h4 className="widget-title">Search Here</h4>
-											<div className="sidebar-search-form">
-												<form action="#">
-													<input type="text" placeholder="Enter Keyword" />
-													<button type="submit"><i className="fas fa-search" /></button>
-												</form>
-											</div>
-										</div>
+									
 										<div className="blog-widget">
 											<h4 className="widget-title">Categories</h4>
 											<div className="sidebar-cat-list">
@@ -132,29 +124,29 @@ export default function BlogDetails() {
 											<div className="rc-post-wrap">
 												<div className="rc-post-item">
 													<div className="thumb">
-														<Link href="/blog-details"><img src="/assets/img/blog/rc_post01.jpg" alt="img" /></Link>
+														<Link href="/blog-details"><img src="/assets/img/blog/1-1.jpg" alt="N.R. Narayana Murthy speaks on entrepreneurship at IBPC Kuwait" /></Link>
 													</div>
 													<div className="content">
-														<span className="date"><i className="far fa-clock" />15 Jan, 2025</span>
-														<h4 className="title"><Link href="/blog-details">Financial Health Every Business...</Link></h4>
+														<span className="date"><i className="far fa-clock" />15 Jan, 2024</span>
+														<h4 className="title"><Link href="/blog-details">N.R. Narayana Murthy speaks on entrepreneurship at IBPC Kuwait</Link></h4>
 													</div>
 												</div>
 												<div className="rc-post-item">
 													<div className="thumb">
-														<Link href="/blog-details"><img src="/assets/img/blog/rc_post02.jpg" alt="img" /></Link>
+														<Link href="/blog-details"><img src="/assets/img/blog/1-2.jpg" alt="Melodies of the Sarod Concert" /></Link>
 													</div>
 													<div className="content">
-														<span className="date"><i className="far fa-clock" />20 Jan, 2025</span>
-														<h4 className="title"><Link href="/blog-details">Improvement is Essential for Business</Link></h4>
+														<span className="date"><i className="far fa-clock" />20 Feb, 2024</span>
+														<h4 className="title"><Link href="/blog-details">Melodies of the Sarod Concert</Link></h4>
 													</div>
 												</div>
 												<div className="rc-post-item">
 													<div className="thumb">
-														<Link href="/blog-details"><img src="/assets/img/blog/rc_post03.jpg" alt="img" /></Link>
+														<Link href="/blog-details"><img src="/assets/img/blog/1-3.jpg" alt="IBPC Meritorious Students Award 2018" /></Link>
 													</div>
 													<div className="content">
-														<span className="date"><i className="far fa-clock" />25 Jan, 2025</span>
-														<h4 className="title"><Link href="/blog-details">Strategic Partnerships for Growth</Link></h4>
+														<span className="date"><i className="far fa-clock" />05 Jun, 2024</span>
+														<h4 className="title"><Link href="/blog-details">IBPC Meritorious Students Award 2018</Link></h4>
 													</div>
 												</div>
 											</div>

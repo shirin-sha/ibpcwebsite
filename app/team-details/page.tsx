@@ -63,51 +63,34 @@ inspire emerging entrepreneurs in the Indian business fraternity in Kuwait. His
 dedication to innovation and sustainable growth has not only advanced his
 company but also reinforced the role of Indian enterprises in Kuwait’s economic
 landscape.</p>
-											<ul className="team-info-wrap">
-												<li>
-													<div className="team-info-card">
-														<div className="team-info-icon">
-														<i className="fas fa-phone-alt" />
-														</div>
-														<div className="team-info-details">
-															<p>Mobile
-															</p>
-															<h4>+965 9961 2676</h4>
-														</div>
-													</div>
+											<ul className="team-info-wrap" style={{ listStyle: 'none',  }}>
+												<li style={{ marginBottom: '20px', }}>
+													<p style={{ margin: 0, fontSize: '14px', color: '#666', marginBottom: '5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+														<i className="fas fa-phone-alt" style={{ color: 'var(--tg-theme-primary)', fontSize: '16px' }} />
+														Mobile
+													</p>
+													<h4 style={{ margin: 0, fontSize: '18px', fontWeight: '600', color: '#000',  }}><a href="tel:+96599612676">+965 9961 2676</a></h4>
 												</li>
-												<li>
-													<div className="team-info-card">
-														<div className="team-info-icon">
-														<i className="fas fa-phone-alt" />
-														</div>
-														<div className="team-info-details">
-															<p>Telephone</p>
-															<h4>+965 2483 3059 / +965 2481 5628 </h4>
-														</div>
-													</div>
+												<li style={{ marginBottom: '20px' }}>
+													<p style={{ margin: 0, fontSize: '14px', color: '#666', marginBottom: '5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+														<i className="fas fa-phone" style={{ color: 'var(--tg-theme-primary)', fontSize: '16px' }} />
+														Telephone
+													</p>
+													<h4 style={{ margin: 0, fontSize: '18px', fontWeight: '600', color: '#000',  }}><a href="tel:+96524833059">+965 2483 3059</a> <br/> <a href="tel:+96524815628">+965 2481 5628</a></h4>
 												</li>
-												<li>
-													<div className="team-info-card">
-														<div className="team-info-icon">
-														<i className="fas fa-envelope" />
-														</div>
-														<div className="team-info-details">
-															<p>Email 1</p>
-															<h4>skumar@samara-group.com</h4>
-														</div>
-													</div>
+												<li style={{ marginBottom: '20px',  }}>
+													<p style={{ margin: 0,  fontSize: '14px', color: '#666', marginBottom: '5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+														<i className="fas fa-envelope" style={{ color: 'var(--tg-theme-primary)', fontSize: '16px' }} />
+														Email 1
+													</p>
+													<h4 style={{ margin: 0, fontSize: '18px', fontWeight: '600', color: '#000', wordBreak: 'break-all', }}><a href="mailto:skumar@samara-group.com">skumar@samara-group.com</a></h4>
 												</li>
-												<li>
-													<div className="team-info-card">
-														<div className="team-info-icon">
-														<i className="fas fa-envelope" />
-														</div>
-														<div className="team-info-details">
-															<p>Email 2</p>
-															<h4> samara@samara kwt.com</h4>
-														</div>
-													</div>
+												<li style={{ marginBottom: '20px' }}>
+													<p style={{ margin: 0, fontSize: '14px', color: '#666', marginBottom: '5px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+														<i className="fas fa-envelope-open" style={{ color: 'var(--tg-theme-primary)', fontSize: '16px' }} />
+														Email 2
+													</p>
+													<h4 style={{ margin: 0, fontSize: '18px', fontWeight: '600', color: '#000', wordBreak: 'break-all',}}><a href="mailto:samara@samara-kwt.com">samara@samara-kwt.com</a></h4>
 												</li>
 											</ul>
 										</div>
