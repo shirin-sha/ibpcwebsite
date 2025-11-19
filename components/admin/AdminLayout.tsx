@@ -6,7 +6,7 @@ import LogoutButton from "./LogoutButton"
 
 type AdminLayoutProps = {
 	children: React.ReactNode
-	active?: "news" | "news-list" | "events" | "events-list" | "hero-sliders" | "hero-sliders-list" | "gallery"
+	active?: "news" | "news-list" | "events" | "events-list" | "hero-sliders" | "hero-sliders-list" | "gallery" | "contact"
 }
 
 export default function AdminLayout({ children, active = "news" }: AdminLayoutProps) {
@@ -14,9 +14,10 @@ export default function AdminLayout({ children, active = "news" }: AdminLayoutPr
 
 	// Determine active link based on pathname
 	const getActiveLink = () => {
-		if (pathname?.includes('/hero-sliders')) return 'hero-sliders-list'
-		if (pathname?.includes('/news')) return 'news-list'
-		if (pathname?.includes('/events')) return 'events-list'
+		if (pathname?.includes("/hero-sliders")) return "hero-sliders-list"
+		if (pathname?.includes("/news")) return "news-list"
+		if (pathname?.includes("/events")) return "events-list"
+		if (pathname?.includes("/admin/contact")) return "contact"
 		return active
 	}
 
@@ -25,7 +26,8 @@ export default function AdminLayout({ children, active = "news" }: AdminLayoutPr
 	const navLinks = [
 		{ href: "/admin/hero-sliders/list", label: "Hero Sliders", key: "hero-sliders-list" },
 		{ href: "/admin/news/list", label: "News", key: "news-list" },
-		{ href: "/admin/events/list", label: "Events", key: "events-list" }
+		{ href: "/admin/events/list", label: "Events", key: "events-list" },
+		{ href: "/admin/contact", label: "Contact Enquiries", key: "contact" }
 	]
 	return (
 		<div style={{ minHeight: "100vh", backgroundColor: "#f5f6fa" }}>

@@ -1,7 +1,26 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
-export default function Contact() {
+
+type ContactPageProps = {
+	searchParams?: {
+		status?: string
+		error?: string
+	}
+}
+
+export default function Contact({ searchParams }: ContactPageProps) {
+	const status = searchParams?.status
+	const error = searchParams?.error
+	const alert =
+		status === "success"
+			? { type: "success", message: "Thank you! Your message has been sent to the IBPC admin team." }
+			: error === "missing_fields"
+				? { type: "error", message: "Please fill in your name, email, and message before submitting." }
+				: error === "failed"
+					? { type: "error", message: "Something went wrong while sending your message. Please try again." }
+					: null
+
 	return (
 		<>
 			<Layout headerStyle={1} footerStyle={1}>
@@ -43,7 +62,22 @@ export default function Contact() {
 												<span className="sub-title">Reach Out Anytime</span>
 												<h2 className="title">Need help? Let’s connect</h2>
 											</div>
-											<form action="mail.php" method="POST" className="contact__form ajax-contact">
+											{alert && (
+												<div
+													style={{
+														marginBottom: "20px",
+														padding: "14px 18px",
+														borderRadius: "12px",
+														fontWeight: 600,
+														color: alert.type === "success" ? "#0f5132" : "#b42318",
+														background: alert.type === "success" ? "rgba(209,231,221,0.9)" : "rgba(248,215,218,0.85)",
+														border: `1px solid ${alert.type === "success" ? "rgba(25,135,84,0.4)" : "rgba(220,53,69,0.4)"}`
+													}}
+												>
+													{alert.message}
+												</div>
+											)}
+											<form action="/api/contact" method="POST" className="contact__form ajax-contact">
 												<div className="row gy-4">
 													<div className="col-lg-6">
 														<div className="form-group">
@@ -55,13 +89,18 @@ export default function Contact() {
 															<input type="text" className="form-control style-white" name="email" id="email" placeholder="Email Address" />
 														</div>
 													</div>
-													<div className="col-12">
+													<div className="col-lg-6">
+														<div className="form-group">
+															<input type="text" className="form-control style-white" name="mobile" id="mobile" placeholder="Mobile Number" />
+														</div>
+													</div>
+													<div className="col-6">
 														<div className="form-group">
 															<select name="subject" id="subject" className="form-select style-white">
 																<option selected hidden>Select Service</option>
-																<option value="Business">Business</option>
-																<option value="Managment">Managment</option>
-																<option value="Analysis">Analysis</option>
+																<option value="general-inquiries">General Inquiries</option>
+																<option value="new-membership">New Membership</option>
+																<option value="community-partnerships">Community &amp; Partnerships</option>
 															</select>
 															<label className="form-icon-right2">
 																<svg width={16} height={8} viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
