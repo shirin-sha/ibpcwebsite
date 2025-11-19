@@ -137,7 +137,7 @@ export default async function EventDetails({ searchParams }: EventDetailsProps) 
 													<img src={event.imageUrl} alt={event.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
 												) : (
 													<div style={{ padding: "60px 30px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
-														<span style={{ display: "block", fontSize: "20px" }}>IBPC EVENT</span>
+														<span style={{ display: "block", fontSize: "20px" }}>{formatRange(event.startDate, event.endDate) || "To be announced"}</span>
 														<small style={{ display: "block", marginTop: "12px", fontSize: "14px" }}>{event.location || "Event"}</small>
 													</div>
 												)}
@@ -214,7 +214,7 @@ export default async function EventDetails({ searchParams }: EventDetailsProps) 
 																		</Link>
 																	) : (
 																		<Link href={`/event-details?id=${eventItem.id}`} style={{ padding: "12px", textAlign: "center", color: "#9ca3af", fontSize: "12px", fontWeight: 600 }}>
-																			IBPC
+																			{formatRange(eventItem.startDate, eventItem.endDate) || "To be announced"}
 																		</Link>
 																	)}
 																</div>
