@@ -1,7 +1,25 @@
 'use client'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+
+type EventItem = {
+	id: string
+	title: string
+	description: string
+	location: string
+	startDate: string
+	endDate: string
+}
+
+type DisplayEvent = {
+	id?: string
+	dateTime: string
+	location: string
+	title: string
+	link: string
+}
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -19,47 +37,86 @@ const swiperOptions = {
 	}
 }
 
+const formatDateRange = (startDate: string, endDate: string) => {
+	if (!startDate && !endDate) return ""
+	if (startDate === endDate || !endDate) return startDate
+	return `${startDate} - ${endDate}`
+}
 
 export default function Section12() {
-	// Define events data array
-	const events = [
+	const [events, setEvents] = useState<DisplayEvent[]>([])
+	const [loading, setLoading] = useState(true)
+
+	// Fallback events data
+	const fallbackEvents: DisplayEvent[] = [
 		{
 			dateTime: "21/08/2025 - 22/08/2025",
 			location: "HICC, Hyderabad, India",
 			title: "AgriBiz Connect 2025 – ASSOCHAM",
-			link: "/events/business-innovation-forum"
+			link: "/events"
 		},
 		{
 			dateTime: "28/08/2025 - 30/08/2025",
 			location: "Bharat Mandapam, New Delhi",
 			title: "11th India International MSME Expo & Summit – 2025",
-			link: "/events/cultural-exchange-networking"
+			link: "/events"
 		},
 		{
 			dateTime: "04/09/2025 - 06/09/2025",
 			location: "Bharat Mandapam, New Delhi",
 			title: "11th Edition iPHEX-2025: India's Mega Pharma Exhibition & B2B",
-			link: "/events/trade-opportunities-roundtable"
+			link: "/events"
 		},
 		{
 			dateTime: "11/09/2025",
 			location: "Bombay Exhibition Centre, Goregaon, Mumbai",
 			title: "15th AIGMF International Conference on 'AI and Digitalisation – the future for sustainable glassmaking",
-			link: "/events/investment-summit"
+			link: "/events"
 		},
 		{
 			dateTime: "11/09/2025",
 			location: "Bombay Exhibition Centre, Mumbai",
 			title: "15th AIGMF International Conference",
-			link: "/events/women-in-business-mixer"
+			link: "/events"
 		},
 		{
 			dateTime: "04/10/2026",
 			location: "Bengaluru, India",
 			title: "Tech Partnerships Showcase",
-			link: "/events/tech-partnerships-showcase"
+			link: "/events"
 		}
 	]
+
+	useEffect(() => {
+		let isMounted = true
+		async function fetchEvents() {
+			try {
+				const res = await fetch("/api/events?limit=6", { cache: "no-store" })
+				if (!res.ok) throw new Error("Failed to load")
+				const data = await res.json()
+				if (!isMounted) return
+				const mapped: DisplayEvent[] = data?.data?.map((item: EventItem) => ({
+					id: item.id,
+					dateTime: formatDateRange(item.startDate, item.endDate),
+					location: item.location || "To be announced",
+					title: item.title,
+					link: `/event-details?id=${item.id}`
+				}))
+				setEvents(mapped.length ? mapped : fallbackEvents)
+			} catch (error) {
+				console.error("Failed to fetch events", error)
+				if (isMounted) setEvents(fallbackEvents)
+			} finally {
+				if (isMounted) setLoading(false)
+			}
+		}
+		fetchEvents()
+		return () => {
+			isMounted = false
+		}
+	}, [])
+
+	const displayEvents = events.length > 0 ? events : fallbackEvents
 
 	return (
 		<>
@@ -92,14 +149,20 @@ export default function Section12() {
 							</div>
 						</div>
 						<div className="slider-area">
-							<Swiper {...swiperOptions}
-								className="tg-swiper__slider swiper-container testi-slider3 overflow-hidden"
-								id="testiSlider3"
-								data-swiper-options='{}'
-							>
-								<div className="swiper-wrapper">
-									{events.map((event, index) => (
-										<SwiperSlide key={index}>
+							{loading && (
+								<div style={{ textAlign: "center", padding: "40px", color: "#fff", fontSize: "14px" }}>
+									Loading events...
+								</div>
+							)}
+							{!loading && displayEvents.length > 0 && (
+								<Swiper {...swiperOptions}
+									className="tg-swiper__slider swiper-container testi-slider3 overflow-hidden"
+									id="testiSlider3"
+									data-swiper-options='{}'
+								>
+									<div className="swiper-wrapper">
+										{displayEvents.map((event, index) => (
+										<SwiperSlide key={event.id || `event-${index}`}>
 											<div
 												className="blog__post-item blog__post-item-four"
 												style={{
@@ -139,14 +202,14 @@ export default function Section12() {
 														WebkitBoxOrient: "vertical",
 														overflow: "hidden"
 													}}>
-														<Link href={event.link} className="event-title-link">
+														<Link href={event.id ? `/event-details?id=${event.id}` : event.link} className="event-title-link">
 															{event.title}
 														</Link>
 													</h3>
 												</div>
 												<div className="blog__post-bottom" style={{ marginTop: "auto" }}>
 													<Link
-														href={event.link}
+														href={event.id ? `/event-details?id=${event.id}` : event.link}
 														className="link-btn"
 														style={{
 															color: "var(--tg-theme-primary)",
@@ -162,9 +225,10 @@ export default function Section12() {
                                                 </div>
 											</div>
 										</SwiperSlide>
-									))}
-								</div>
-							</Swiper>
+										))}
+									</div>
+								</Swiper>
+							)}
 						</div>
 					</div>
 				</div>
