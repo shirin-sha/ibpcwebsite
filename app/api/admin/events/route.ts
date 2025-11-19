@@ -3,9 +3,9 @@ import { NextResponse } from "next/server"
 import { ObjectId } from "mongodb"
 import { getDb } from "@/lib/mongodb"
 
-const redirectWithStatus = (request: Request, params: Record<string, string>) => {
+const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/events") => {
 	const url = new URL(request.url)
-	url.pathname = "/admin/events"
+	url.pathname = pathname
 	url.search = new URLSearchParams(params).toString()
 	return NextResponse.redirect(url)
 }
