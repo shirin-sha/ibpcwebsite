@@ -71,6 +71,12 @@ export default async function Events({ searchParams }: EventsPageProps) {
 		return true
 	})
 
+	const sortedEvents = filteredEvents.sort((a, b) => {
+		const dateA = parseDate(a.startDate) || parseDate(a.endDate) || new Date(0)
+		const dateB = parseDate(b.startDate) || parseDate(b.endDate) || new Date(0)
+		return dateB.getTime() - dateA.getTime()
+	})
+
 	return (
 		<>
 			<Layout headerStyle={1} footerStyle={1}>
@@ -116,7 +122,7 @@ export default async function Events({ searchParams }: EventsPageProps) {
 							<div className="mb-40 text-center">
 								<EventsFilter currentFilter={filter} />
 							</div>
-							{filteredEvents.length === 0 ? (
+							{sortedEvents.length === 0 ? (
 								<div className="text-center" style={{ color: "#666" }}>
 									{filter === "upcoming" 
 										? "No upcoming events scheduled. Stay tuned for announcements."
@@ -127,7 +133,7 @@ export default async function Events({ searchParams }: EventsPageProps) {
 								</div>
 							) : (
 								<div className="row gy-40 justify-content-center">
-									{filteredEvents.map((event) => (
+									{sortedEvents.map((event) => (
 										<div className="col-lg-6" key={event.id}>
 											<Link href={`/event-details?id=${event.id}`} className="event-card-link" style={{ textDecoration: "none", display: "block" }}>
 												<div

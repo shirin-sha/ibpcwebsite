@@ -81,11 +81,22 @@ export default async function Blog2() {
 											<div className="col-xl-4 col-md-6" key={item.id || item.title}>
 													<Link href={`/blog-details?id=${item.id}`} style={{ textDecoration: "none" }}>
 													<div className="blog__post-item blog__post-item-two blog__post-item-three" style={{ height: "100%", display: "flex", flexDirection: "column" }}>
-														<div className="blog__post-thumb image-anim" style={{ backgroundColor: "#f8f9ff", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "220px" }}>
+														<div
+															className="blog__post-thumb image-anim"
+															style={{
+																backgroundColor: "#f8f9ff",
+																display: "flex",
+																alignItems: "center",
+																justifyContent: "center",
+																height: "240px",
+																overflow: "hidden",
+																borderRadius: "12px"
+															}}
+														>
 															{item.imageUrl ? (
 																<img src={item.imageUrl} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
 															) : (
-																<div style={{ padding: "40px 20px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
+																<div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", color: "#9ca3af", fontWeight: 600 }}>
 																	<span style={{ display: "block" }}>IBPC NEWS</span>
 																	<small style={{ display: "block", marginTop: "8px" }}>{item.categoryLabel}</small>
 																</div>

@@ -199,11 +199,31 @@ export default async function BlogDetails({ searchParams }: BlogDetailsProps) {
 											<h4 className="widget-title">Categories</h4>
 											<div className="sidebar-cat-list">
 												<ul className="list-wrap">
-													<li><Link href="#">Business Solution <span><i className="fas fa-arrow-right" /></span></Link></li>
-													<li><Link href="#">Strategy Growth <span><i className="fas fa-arrow-right" /></span></Link></li>
-													<li><Link href="#">Finance Solution <span><i className="fas fa-arrow-right" /></span></Link></li>
-													<li><Link href="#">Investment Policy <span><i className="fas fa-arrow-right" /></span></Link></li>
-													<li><Link href="#">Tax Managment <span><i className="fas fa-arrow-right" /></span></Link></li>
+													<li>
+														<Link href="/news-events?category=business-trade">
+															Business &amp; Trade <span><i className="fas fa-arrow-right" /></span>
+														</Link>
+													</li>
+													<li>
+														<Link href="/news-events?category=innovation-technology">
+															Innovation &amp; Technology <span><i className="fas fa-arrow-right" /></span>
+														</Link>
+													</li>
+													<li>
+														<Link href="/news-events?category=events-activities">
+															Events &amp; Activities <span><i className="fas fa-arrow-right" /></span>
+														</Link>
+													</li>
+													<li>
+														<Link href="/news-events?category=ibpc-community">
+															IBPC Community <span><i className="fas fa-arrow-right" /></span>
+														</Link>
+													</li>
+													<li>
+														<Link href="/news-events?category=partnerships-relations">
+															Partnerships &amp; Relations <span><i className="fas fa-arrow-right" /></span>
+														</Link>
+													</li>
 												</ul>
 											</div>
 										</div>
@@ -247,40 +267,6 @@ export default async function BlogDetails({ searchParams }: BlogDetailsProps) {
 											</div>
 										</div>
 									
-										<div className="blog-widget">
-											<h3 className="widget-title">Popular Tags</h3>
-											<div className="sidebar-tag-list">
-												<ul className="list-wrap">
-													<li>
-														<Link href="/blog">Services</Link>
-													</li>
-													<li>
-														<Link href="/blog">Business</Link>
-													</li>
-													<li>
-														<Link href="/blog">Consultancy</Link>
-													</li>
-													<li>
-														<Link href="/blog">Finance</Link>
-													</li>
-													<li>
-														<Link href="/blog">UI/UX Design</Link>
-													</li>
-													<li>
-														<Link href="/blog">Financial</Link>
-													</li>
-													<li>
-														<Link href="/blog">Speed</Link>
-													</li>
-													<li>
-														<Link href="/blog">Digital</Link>
-													</li>
-													<li>
-														<Link href="/blog">Market Analysis</Link>
-													</li>
-												</ul>
-											</div>
-										</div>
 										<div className="blog-widget sidebar-banner">
 											<h4 className="widget-title">Have Any Questions? Connect With Us Today!</h4>
 											<p className="banner-text">Our team is here to assist you with membership, events, or partnership inquiries.</p>

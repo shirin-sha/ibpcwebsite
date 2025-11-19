@@ -44,43 +44,43 @@ const formatDateRange = (startDate: string, endDate: string) => {
 }
 
 const FALLBACK_EVENTS: DisplayEvent[] = [
-	{
-		dateTime: "21/08/2025 - 22/08/2025",
-		location: "HICC, Hyderabad, India",
-		title: "AgriBiz Connect 2025 – ASSOCHAM",
-		link: "/events"
-	},
-	{
-		dateTime: "28/08/2025 - 30/08/2025",
-		location: "Bharat Mandapam, New Delhi",
-		title: "11th India International MSME Expo & Summit – 2025",
-		link: "/events"
-	},
-	{
-		dateTime: "04/09/2025 - 06/09/2025",
-		location: "Bharat Mandapam, New Delhi",
-		title: "11th Edition iPHEX-2025: India's Mega Pharma Exhibition & B2B",
-		link: "/events"
-	},
-	{
-		dateTime: "11/09/2025",
-		location: "Bombay Exhibition Centre, Goregaon, Mumbai",
-		title: "15th AIGMF International Conference on 'AI and Digitalisation – the future for sustainable glassmaking",
-		link: "/events"
-	},
-	{
-		dateTime: "11/09/2025",
-		location: "Bombay Exhibition Centre, Mumbai",
-		title: "15th AIGMF International Conference",
-		link: "/events"
-	},
-	{
-		dateTime: "04/10/2026",
-		location: "Bengaluru, India",
-		title: "Tech Partnerships Showcase",
-		link: "/events"
-	}
-]
+		{
+			dateTime: "21/08/2025 - 22/08/2025",
+			location: "HICC, Hyderabad, India",
+			title: "AgriBiz Connect 2025 – ASSOCHAM",
+			link: "/events"
+		},
+		{
+			dateTime: "28/08/2025 - 30/08/2025",
+			location: "Bharat Mandapam, New Delhi",
+			title: "11th India International MSME Expo & Summit – 2025",
+			link: "/events"
+		},
+		{
+			dateTime: "04/09/2025 - 06/09/2025",
+			location: "Bharat Mandapam, New Delhi",
+			title: "11th Edition iPHEX-2025: India's Mega Pharma Exhibition & B2B",
+			link: "/events"
+		},
+		{
+			dateTime: "11/09/2025",
+			location: "Bombay Exhibition Centre, Goregaon, Mumbai",
+			title: "15th AIGMF International Conference on 'AI and Digitalisation – the future for sustainable glassmaking",
+			link: "/events"
+		},
+		{
+			dateTime: "11/09/2025",
+			location: "Bombay Exhibition Centre, Mumbai",
+			title: "15th AIGMF International Conference",
+			link: "/events"
+		},
+		{
+			dateTime: "04/10/2026",
+			location: "Bengaluru, India",
+			title: "Tech Partnerships Showcase",
+			link: "/events"
+		}
+	]
 
 export default function Section12() {
 	const [events, setEvents] = useState<DisplayEvent[]>([])
@@ -147,7 +147,7 @@ export default function Section12() {
 								</div>
 							</div>
 						</div>
-						<div className="slider-area">
+						<div className="slider-area" style={{ padding: "0 24px" }}>
 							{loading && (
 								<div style={{ textAlign: "center", padding: "40px", color: "#fff", fontSize: "14px" }}>
 									Loading events...
