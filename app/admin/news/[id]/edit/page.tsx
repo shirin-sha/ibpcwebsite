@@ -50,7 +50,8 @@ export default async function EditNewsPage({ params }: EditPageProps) {
 				longDescription: doc.longDescription || "",
 				publishedDate: doc.publishedDate || "",
 				category: doc.category || "",
-				signatureEvent: Boolean(doc.signatureEvent)
+				signatureEvent: Boolean(doc.signatureEvent),
+				showOnHomepage: Boolean(doc.showOnHomepage)
 			}
 		}
 	} catch (error) {

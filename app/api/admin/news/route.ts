@@ -53,6 +53,7 @@ export async function POST(request: Request) {
 	const dateValue = formData.get("date")?.toString()
 	const category = formData.get("category")?.toString() || ""
 	const signatureEvent = formData.get("signatureEvent") === "on"
+	const showOnHomepage = formData.get("showOnHomepage") === "on"
 
 	if (!title) {
 		return redirectWithStatus(request, { error: "missing_title" })
@@ -80,7 +81,8 @@ export async function POST(request: Request) {
 		longDescription,
 		publishedDate,
 		category,
-		signatureEvent
+		signatureEvent,
+		showOnHomepage
 	}
 
 	if (featuredImage) {

@@ -8,6 +8,7 @@ export type NewsCard = {
 	categoryLabel: string
 	imageUrl: string | null
 	signatureEvent?: boolean
+	showOnHomepage?: boolean
 }
 
 type Section9Props = {
@@ -26,7 +27,14 @@ const parseDate = (date: string) => {
 }
 
 export default function Section9({ items = [] }: Section9Props) {
-	const news = items.filter((item) => !item.signatureEvent).slice(0, 3)
+	const news = items
+		.filter((item) => {
+			if (typeof item.showOnHomepage === "boolean") {
+				return item.showOnHomepage
+			}
+			return !item.signatureEvent
+		})
+		.slice(0, 3)
 
 	return (
 		<section className="blog-area-1 pt-120 pb-120">

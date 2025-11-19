@@ -46,7 +46,20 @@ export default async function AdminHeroSlidersListPage({ searchParams }: AdminHe
 	const { db } = await requireAdminSession()
 	const docs = (await db
 		.collection("heroSliders")
-		.find({})
+		.find(
+			{},
+			{
+				projection: {
+					eyebrow: 1,
+					mainTitle: 1,
+					button1Text: 1,
+					button1Link: 1,
+					button2Text: 1,
+					button2Link: 1,
+					createdAt: 1
+				}
+			}
+		)
 		.sort({ order: 1, createdAt: -1 })
 		.limit(50)
 		.toArray()) as HeroSliderDocument[]

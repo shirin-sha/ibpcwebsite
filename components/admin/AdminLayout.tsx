@@ -1,8 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { usePathname, useRouter } from "next/navigation"
-import { useState } from "react"
+import { usePathname } from "next/navigation"
 import LogoutButton from "./LogoutButton"
 
 type AdminLayoutProps = {
@@ -12,9 +11,6 @@ type AdminLayoutProps = {
 
 export default function AdminLayout({ children, active = "news" }: AdminLayoutProps) {
 	const pathname = usePathname()
-	const router = useRouter()
-	const [clickedLink, setClickedLink] = useState<string | null>(null)
-	const [isNavigating, setIsNavigating] = useState(false)
 
 	// Determine active link based on pathname
 	const getActiveLink = () => {
@@ -25,21 +21,6 @@ export default function AdminLayout({ children, active = "news" }: AdminLayoutPr
 	}
 
 	const currentActive = getActiveLink()
-
-	const handleLinkClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault()
-		setClickedLink(href)
-		setIsNavigating(true)
-		
-		// Navigate immediately
-		router.push(href)
-		
-		// Reset clicked state after navigation completes
-		setTimeout(() => {
-			setClickedLink(null)
-			setIsNavigating(false)
-		}, 300)
-	}
 
 	const navLinks = [
 		{ href: "/admin/hero-sliders/list", label: "Hero Sliders", key: "hero-sliders-list" },
@@ -122,53 +103,36 @@ export default function AdminLayout({ children, active = "news" }: AdminLayoutPr
 							<ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "4px" }}>
 								{navLinks.map((link) => {
 									const isActive = currentActive === link.key
-									const isClicked = clickedLink === link.href
-									const shouldHighlight = isActive || isClicked
 									
 									return (
 										<li key={link.key}>
 											<Link
 												href={link.href}
 												prefetch={true}
-												onClick={(e) => handleLinkClick(link.href, e)}
 												style={{
 													display: "block",
 													padding: "8px 10px",
 													borderRadius: "8px",
 													fontSize: "14px",
-													fontWeight: shouldHighlight ? 600 : 500,
-													color: shouldHighlight ? "var(--tg-theme-primary)" : "#4b5563",
-													backgroundColor: shouldHighlight ? "rgba(62, 128, 255, 0.12)" : "transparent",
+													fontWeight: isActive ? 600 : 500,
+													color: isActive ? "var(--tg-theme-primary)" : "#4b5563",
+													backgroundColor: isActive ? "rgba(62, 128, 255, 0.12)" : "transparent",
 													textDecoration: "none",
 													transition: "all 0.15s ease",
 													cursor: "pointer",
-													transform: isClicked ? "scale(0.98)" : "scale(1)",
 													position: "relative"
 												}}
 												onMouseEnter={(e) => {
-													if (!shouldHighlight) {
+													if (!isActive) {
 														e.currentTarget.style.backgroundColor = "rgba(62, 128, 255, 0.05)"
 													}
 												}}
 												onMouseLeave={(e) => {
-													if (!shouldHighlight) {
+													if (!isActive) {
 														e.currentTarget.style.backgroundColor = "transparent"
 													}
 												}}
 											>
-												{isClicked && (
-													<span
-														style={{
-															position: "absolute",
-															left: 0,
-															top: 0,
-															bottom: 0,
-															width: "3px",
-															backgroundColor: "var(--tg-theme-primary)",
-															borderRadius: "0 4px 4px 0"
-														}}
-													/>
-												)}
 												{link.label}
 											</Link>
 										</li>
@@ -177,29 +141,7 @@ export default function AdminLayout({ children, active = "news" }: AdminLayoutPr
 							</ul>
 						</aside>
 						<div style={{ flex: 1, minWidth: 0, position: "relative" }}>
-							{isNavigating && (
-								<div
-									style={{
-										position: "absolute",
-										top: 0,
-										left: 0,
-										right: 0,
-										height: "3px",
-										backgroundColor: "var(--tg-theme-primary)",
-										zIndex: 100,
-										animation: "slide-right 0.3s ease-out",
-										transformOrigin: "left"
-									}}
-								/>
-							)}
-							<div
-								style={{
-									opacity: isNavigating ? 0.6 : 1,
-									transition: "opacity 0.2s ease"
-								}}
-							>
-								{children}
-							</div>
+							<div>{children}</div>
 						</div>
 					</div>
 				</div>
@@ -208,14 +150,6 @@ export default function AdminLayout({ children, active = "news" }: AdminLayoutPr
 			<style
 				dangerouslySetInnerHTML={{
 					__html: `
-						@keyframes slide-right {
-							from {
-								transform: scaleX(0);
-							}
-							to {
-								transform: scaleX(1);
-							}
-						}
 						@media (max-width: 991px) {
 							.admin-shell {
 								flex-direction: column;

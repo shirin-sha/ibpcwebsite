@@ -39,6 +39,7 @@ export async function GET(request: Request) {
 		category: item.category ?? "",
 		categoryLabel: CATEGORY_LABELS[item.category as keyof typeof CATEGORY_LABELS] || item.category || "General",
 		signatureEvent: Boolean(item.signatureEvent),
+		showOnHomepage: Boolean(item.showOnHomepage),
 		imageUrl: item.featuredImage?.data ? `data:${item.featuredImage.contentType};base64,${item.featuredImage.data}` : null
 	}))
 

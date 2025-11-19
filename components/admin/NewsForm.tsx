@@ -16,6 +16,7 @@ type NewsFormProps = {
 		publishedDate?: string
 		category?: string
 		signatureEvent?: boolean
+		showOnHomepage?: boolean
 	}
 }
 
@@ -185,6 +186,24 @@ export default function NewsForm({ defaultDate, initialData }: NewsFormProps) {
 						/>
 						<label className="form-check-label" htmlFor="signature-event" style={{ fontSize: "14px", color: "#4b5563" }}>
 							Mark this as a Signature IBPC Event
+						</label>
+					</div>
+				</div>
+				<div className="col-12">
+					<label className="form-label" style={{ fontWeight: 600, marginBottom: "6px" }}>
+						Homepage Highlight
+					</label>
+					<div className="form-check" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+						<input
+							className="form-check-input"
+							type="checkbox"
+							id="homepage-highlight"
+							name="showOnHomepage"
+							style={{ width: "18px", height: "18px" }}
+							defaultChecked={initialData?.showOnHomepage}
+						/>
+						<label className="form-check-label" htmlFor="homepage-highlight" style={{ fontSize: "14px", color: "#4b5563" }}>
+							Mark this to show on Homepage News Lists
 						</label>
 					</div>
 				</div>

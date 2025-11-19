@@ -28,7 +28,7 @@ export default function AdminLogin({ searchParams }: AdminLoginProps) {
 										<i className="fas fa-user-shield" />
 									</div>
 									<h2 className="title mb-10" style={{ fontSize: "28px" }}>Welcome Back</h2>
-									<p style={{ color: "#666" }}>Sign in to continue to the IBPC admin dashboard.</p>
+									<p style={{ color: "#666" }}>IBPC Website Admin Dashboard</p>
 								</div>
 								{status && statusCopy && (
 									<div
@@ -55,7 +55,7 @@ export default function AdminLogin({ searchParams }: AdminLoginProps) {
 											name="email"
 											type="email"
 											className="form-control"
-											placeholder="name@ibpckuwait.org"
+											placeholder=""
 											style={{ height: "54px", borderRadius: "12px", borderColor: "#e5e7f0" }}
 											required
 											autoComplete="username"
