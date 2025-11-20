@@ -81,7 +81,7 @@ export default async function PhotoGallery() {
 														{item.imageCount} {item.imageCount === 1 ? 'photo' : 'photos'}
 													</p>
 													<Link href={`/photo-gallery/${item.id}`} className="link-btn gallery-btn" prefetch={false}>
-														View Album
+														Explore Photos
 														<i className="fas fa-angle-double-right" />
 													</Link>
 												</div>
