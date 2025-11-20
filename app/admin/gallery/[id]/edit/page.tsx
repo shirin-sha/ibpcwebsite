@@ -1,9 +1,9 @@
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
-import { getDb } from "@/lib/mongodb"
 import { ObjectId } from "mongodb"
+import { getDb } from "@/lib/mongodb"
 import AdminLayout from "@/components/admin/AdminLayout"
-import HeroSliderForm from "@/components/admin/HeroSliderForm"
+import GalleryForm from "@/components/admin/GalleryForm"
 
 async function requireAdminSession() {
 	const sessionToken = cookies().get("ibpc_admin_session")?.value
@@ -24,45 +24,50 @@ async function requireAdminSession() {
 	return { db }
 }
 
-type AdminHeroSliderEditPageProps = {
+type AdminGalleryEditPageProps = {
 	params: { id: string }
 }
 
-export default async function AdminHeroSliderEditPage({ params }: AdminHeroSliderEditPageProps) {
+export default async function AdminGalleryEditPage({ params }: AdminGalleryEditPageProps) {
 	const { db } = await requireAdminSession()
-	let sliderData: {
+	let galleryData: {
 		id?: string
-		eyebrow?: string
-		mainTitle?: string
-		button1Text?: string
-		button1Link?: string
-		button2Text?: string
-		button2Link?: string
+		title?: string
+		coverImage?: string | null
+		galleryImages?: Array<{ url: string; index: number }>
 	} | null = null
 
 	try {
-		const doc = await db.collection("heroSliders").findOne({ _id: new ObjectId(params.id) })
+		const doc = await db.collection("photoGallery").findOne({ _id: new ObjectId(params.id) })
 		if (doc) {
-			sliderData = {
+			const coverImageUrl = doc.coverImage?.data
+				? `data:${doc.coverImage.contentType || "image/jpeg"};base64,${doc.coverImage.data}`
+				: null
+
+			const galleryImagesData = Array.isArray(doc.galleryImages)
+				? doc.galleryImages.map((img: any, index: number) => ({
+						url: img.data ? `data:${img.contentType || "image/jpeg"};base64,${img.data}` : "",
+						index
+				  }))
+				: []
+
+			galleryData = {
 				id: doc._id?.toString?.(),
-				eyebrow: doc.eyebrow || "",
-				mainTitle: doc.mainTitle || "",
-				button1Text: doc.button1Text || "",
-				button1Link: doc.button1Link || "",
-				button2Text: doc.button2Text || "",
-				button2Link: doc.button2Link || ""
+				title: doc.title || "",
+				coverImage: coverImageUrl,
+				galleryImages: galleryImagesData
 			}
 		}
 	} catch (error) {
-		console.error("Failed to load hero slider", error)
+		console.error("Failed to load gallery item", error)
 	}
 
-	if (!sliderData) {
-		redirect("/admin/hero-sliders/list?error=not_found")
+	if (!galleryData) {
+		redirect("/admin/gallery/list?error=not_found")
 	}
 
 	return (
-		<AdminLayout active="hero-sliders">
+		<AdminLayout active="gallery">
 			<div
 				style={{
 					background: "#fff",
@@ -75,19 +80,17 @@ export default async function AdminHeroSliderEditPage({ params }: AdminHeroSlide
 				<div className="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-30" style={{ gap: "10px" }}>
 					<div>
 						<h2 className="title mb-4" style={{ fontSize: "24px" }}>
-							Edit Hero Slider
+							Edit Album
 						</h2>
-						<a href="/admin/hero-sliders/list" style={{ fontSize: "13px", color: "var(--tg-theme-primary)" }}>
+						<a href="/admin/gallery/list" style={{ fontSize: "13px", color: "var(--tg-theme-primary)" }}>
 							&larr; Back to list
 						</a>
 					</div>
 				</div>
-				<HeroSliderForm initialData={sliderData} />
+				<GalleryForm initialData={galleryData} />
 			</div>
 		</AdminLayout>
 	)
 }
-
-
 
 

@@ -1,8 +1,8 @@
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
-import AdminLayout from "@/components/admin/AdminLayout"
-import EventsForm from "@/components/admin/EventsForm"
 import { getDb } from "@/lib/mongodb"
+import AdminLayout from "@/components/admin/AdminLayout"
+import VideoGalleryForm from "@/components/admin/VideoGalleryForm"
 
 async function requireAdminSession() {
 	const sessionToken = cookies().get("ibpc_admin_session")?.value
@@ -19,41 +19,33 @@ async function requireAdminSession() {
 	if (!session) {
 		redirect("/admin?error=unauthorized")
 	}
-
-	return session
 }
 
-type AdminEventsPageProps = {
+type AdminVideoGalleryPageProps = {
 	searchParams?: {
 		status?: string
 		error?: string
 	}
 }
 
-const toInputDate = (date: Date) => {
-	const yyyy = date.getFullYear()
-	const mm = String(date.getMonth() + 1).padStart(2, "0")
-	const dd = String(date.getDate()).padStart(2, "0")
-	return `${yyyy}-${mm}-${dd}`
-}
-
-export default async function AdminEventsPage({ searchParams }: AdminEventsPageProps) {
+export default async function AdminVideoGalleryPage({ searchParams }: AdminVideoGalleryPageProps) {
 	await requireAdminSession()
-
-	const today = new Date()
-	const defaultDate = toInputDate(today)
 
 	const statusMessage =
 		searchParams?.status === "success"
-			? { type: "success", text: "Event saved successfully." }
-			: searchParams?.error === "missing_title"
-				? { type: "error", text: "Please provide the event title." }
-				: searchParams?.error === "unauthorized"
-					? { type: "error", text: "Your session has expired. Please sign in again." }
-					: null
+			? { type: "success" as const, text: "Video saved successfully." }
+			: searchParams?.status === "updated"
+				? { type: "success" as const, text: "Video updated successfully." }
+				: searchParams?.error === "missing_title"
+					? { type: "error" as const, text: "Please provide a video title." }
+					: searchParams?.error === "missing_url"
+						? { type: "error" as const, text: "Please provide a YouTube video URL." }
+						: searchParams?.error === "unauthorized"
+							? { type: "error" as const, text: "Your session has expired. Please sign in again." }
+							: null
 
 	return (
-		<AdminLayout active="events">
+		<AdminLayout active="video-gallery">
 			<div
 				style={{
 					background: "#fff",
@@ -64,9 +56,9 @@ export default async function AdminEventsPage({ searchParams }: AdminEventsPageP
 				}}
 			>
 				<h2 className="title mb-3" style={{ fontSize: "24px" }}>
-					Add Upcoming Event
+					Add Video to Gallery
 				</h2>
-				<p style={{ color: "#666", fontSize: "14px" }}>Share details about upcoming IBPC events, meetings, and engagements.</p>
+				<p style={{ color: "#666", fontSize: "14px" }}>Add a new YouTube video to the video gallery.</p>
 				{statusMessage && (
 					<div
 						style={{
@@ -82,14 +74,9 @@ export default async function AdminEventsPage({ searchParams }: AdminEventsPageP
 						{statusMessage.text}
 					</div>
 				)}
-				<EventsForm defaultStartDate={defaultDate} />
+				<VideoGalleryForm />
 			</div>
 		</AdminLayout>
 	)
 }
-
-
-
-
-
 

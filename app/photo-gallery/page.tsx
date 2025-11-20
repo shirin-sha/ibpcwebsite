@@ -1,43 +1,40 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { getDb } from "@/lib/mongodb"
 
-const galleryItems = [
-	{
-		title: "IBPC Picnic 2022",
-		image: "/assets/img/project/project3-1.jpg"
-	},
-	{
-		title: "IBPC Picnic 2019",
-		image: "/assets/img/project/project3-2.jpg"
-	},
-	{
-		title: "Seminar by Sunderam Fund",
-		image: "/assets/img/project/project3-3.jpg"
-	},
-	{
-		title: "Shahid Parvez Concert",
-		image: "/assets/img/project/project3-4.jpg"
-	},
-	{
-		title: "Sarod Concert",
-		image: "/assets/img/project/project3-5.jpg"
-	},
-	{
-		title: "Meritorious Students Award",
-		image: "/assets/img/project/project3-6.jpg"
-	},
-	{
-		title: "IBPC Picnic 2018",
-		image: "/assets/img/project/project3-7.jpg"
-	},
-	{
-		title: "Explore Business Opportunities",
-		image: "/assets/img/project/project3-8.jpg"
-	}
-]
+export const revalidate = 0
 
-export default function PhotoGallery() {
+type GalleryItem = {
+	id: string
+	title: string
+	coverImageUrl: string | null
+	imageCount: number
+}
+
+const PLACEHOLDER_IMAGE = "/assets/img/project/project3-1.jpg"
+
+async function fetchGalleryItems(): Promise<GalleryItem[]> {
+	const db = await getDb()
+	const docs = await db
+		.collection("photoGallery")
+		.find({})
+		.sort({ createdAt: -1 })
+		.limit(100)
+		.toArray()
+
+	return docs.map((doc) => ({
+		id: doc._id?.toString?.() ?? "",
+		title: doc.title || "Untitled album",
+		coverImageUrl: doc.coverImage?.data
+			? `data:${doc.coverImage.contentType || "image/jpeg"};base64,${doc.coverImage.data}`
+			: PLACEHOLDER_IMAGE,
+		imageCount: Array.isArray(doc.galleryImages) ? doc.galleryImages.length : 0
+	}))
+}
+
+export default async function PhotoGallery() {
+	const galleryItems = await fetchGalleryItems()
 	return (
 		<>
 			<Layout headerStyle={1} footerStyle={1}>
@@ -68,22 +65,31 @@ export default function PhotoGallery() {
 
 					<section className="project-area-3 pt-120 pb-120 overflow-hidden">
 						<div className="container">
-							<div className="row gy-30">
-								{galleryItems.map((item, index) => (
-									<div className="col-lg-6" key={index}>
-										<div className="gallery-card">
-											<img src={item.image} alt={item.title} className="gallery-image" />
-											<div className="gallery-overlay">
-												<h4 className="gallery-title">{item.title}</h4>
-												<Link href="#" className="link-btn gallery-btn">
-													Explore Photos
-													<i className="fas fa-angle-double-right" />
-												</Link>
+							{galleryItems.length === 0 ? (
+								<div style={{ textAlign: "center", color: "#6b7280", fontSize: "18px" }}>
+									No albums available.
+								</div>
+							) : (
+								<div className="row gy-30">
+									{galleryItems.map((item) => (
+										<div className="col-lg-6" key={item.id}>
+											<div className="gallery-card">
+												<img src={item.coverImageUrl || PLACEHOLDER_IMAGE} alt={item.title} className="gallery-image" />
+												<div className="gallery-overlay">
+													<h4 className="gallery-title">{item.title}</h4>
+													<p style={{ marginBottom: "12px", fontSize: "14px", opacity: 0.9 }}>
+														{item.imageCount} {item.imageCount === 1 ? 'photo' : 'photos'}
+													</p>
+													<Link href={`/photo-gallery/${item.id}`} className="link-btn gallery-btn" prefetch={false}>
+														View Album
+														<i className="fas fa-angle-double-right" />
+													</Link>
+												</div>
 											</div>
 										</div>
-									</div>
-								))}
-							</div>
+									))}
+								</div>
+							)}
 						</div>
 					</section>
 				</>

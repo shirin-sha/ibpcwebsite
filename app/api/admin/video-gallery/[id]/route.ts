@@ -3,7 +3,7 @@ import { NextResponse } from "next/server"
 import { ObjectId } from "mongodb"
 import { getDb } from "@/lib/mongodb"
 
-const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/hero-sliders/list") => {
+const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/video-gallery/list") => {
 	const url = new URL(request.url)
 	url.pathname = pathname
 	url.search = new URLSearchParams(params).toString()
@@ -29,7 +29,7 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
 
 	try {
 		const objectId = new ObjectId(params.id)
-		const result = await db.collection("heroSliders").deleteOne({ _id: objectId })
+		const result = await db.collection("videoGallery").deleteOne({ _id: objectId })
 
 		if (result.deletedCount === 0) {
 			return redirectWithStatus(request, { error: "not_found" })
@@ -37,11 +37,8 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
 
 		return redirectWithStatus(request, { status: "deleted" })
 	} catch (error) {
-		console.error("Failed to delete hero slider", error)
+		console.error("Failed to delete video", error)
 		return redirectWithStatus(request, { error: "delete_failed" })
 	}
 }
-
-
-
 
