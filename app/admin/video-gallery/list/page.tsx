@@ -91,11 +91,7 @@ export default async function AdminVideoGalleryListPage({ searchParams }: AdminV
 			render: (item) => (
 				<div>
 					<strong>{item.title}</strong>
-					{item.description && (
-						<div style={{ fontSize: "12px", color: "#6b7280", marginTop: "4px" }}>
-							{item.description.length > 80 ? `${item.description.slice(0, 77)}...` : item.description}
-						</div>
-					)}
+					
 				</div>
 			)
 		},
