@@ -20,10 +20,21 @@ const parseDate = (date: string) => {
 	}
 }
 
-async function loadNews(): Promise<NewsListItem[]> {
+const CATEGORIES = [
+	{ value: "", label: "All Categories" },
+	{ value: "business-trade", label: "Business & Trade" },
+	{ value: "ibpc-community", label: "IBPC Community" },
+	{ value: "innovation-technology", label: "Innovation & Technology" },
+	{ value: "events-activities", label: "Events & Activities" }
+]
+
+async function loadNews(category?: string): Promise<NewsListItem[]> {
 	try {
 		const baseUrl = getBaseUrl()
-		const res = await fetch(`${baseUrl}/api/news?limit=12`, { cache: "no-store" })
+		const url = category 
+			? `${baseUrl}/api/news?limit=50&category=${category}`
+			: `${baseUrl}/api/news?limit=50`
+		const res = await fetch(url, { cache: "no-store" })
 		if (!res.ok) return []
 		const json = await res.json()
 		return json?.data ?? []
@@ -33,8 +44,16 @@ async function loadNews(): Promise<NewsListItem[]> {
 	}
 }
 
-export default async function Blog2() {
-	const newsItems = await loadNews()
+type PageProps = {
+	searchParams?: {
+		category?: string
+	}
+}
+
+export default async function Blog2({ searchParams }: PageProps) {
+	const selectedCategory = searchParams?.category || ""
+	const newsItems = await loadNews(selectedCategory)
+	const categoryLabel = CATEGORIES.find(c => c.value === selectedCategory)?.label || "All Categories"
 
 	return (
 		<>
@@ -65,13 +84,53 @@ export default async function Blog2() {
 					</section>
 					<section className="blog-area-1 pt-120 pb-120">
 						<div className="container">
-							<div className="section__title mb-50 text-center">
+							<div className="section__title mb-30 text-center">
 								<span className="sub-title text-anim">COMPLETE UPDATES ABOUT IBPC</span>
-								<h2 className="title text-anim2">Recent News & Updates</h2>
+								<h2 className="title text-anim2">
+									{selectedCategory ? categoryLabel : "Recent News & Updates"}
+								</h2>
+							</div>
+							
+							{/* Category Filter */}
+							<div className="mb-50" style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "10px" }}>
+								{CATEGORIES.map((cat) => (
+									<Link 
+										key={cat.value}
+										href={cat.value ? `/news-events?category=${cat.value}` : "/news-events"}
+										className={selectedCategory === cat.value ? "btn" : ""}
+										style={{
+											padding: "10px 20px",
+											borderRadius: "8px",
+											fontSize: "14px",
+											fontWeight: 500,
+											textDecoration: "none",
+											transition: "all 0.3s ease",
+											border: selectedCategory === cat.value ? "none" : "2px solid #e5e7eb",
+											background: selectedCategory === cat.value ? "var(--tg-theme-primary)" : "#fff",
+											color: selectedCategory === cat.value ? "#fff" : "#4b5563"
+										}}
+									>
+										{selectedCategory === cat.value ? (
+											<span className="btn-text" data-text={cat.label} />
+										) : (
+											cat.label
+										)}
+									</Link>
+								))}
 							</div>
 							{newsItems.length === 0 ? (
-								<div className="text-center" style={{ color: "#666" }}>
-									No news has been published yet. Please check back soon.
+								<div className="text-center" style={{ color: "#666", padding: "60px 20px" }}>
+									<i className="fas fa-newspaper" style={{ fontSize: "48px", marginBottom: "16px", opacity: 0.3 }} />
+									<p style={{ marginBottom: 0 }}>
+										{selectedCategory 
+											? `No news found in "${categoryLabel}" category.` 
+											: "No news has been published yet. Please check back soon."}
+									</p>
+									{selectedCategory && (
+										<Link href="/news-events" className="btn" style={{ marginTop: "20px" }}>
+											<span className="btn-text" data-text="View All News" />
+										</Link>
+									)}
 								</div>
 							) : (
 								<div className="row gy-40 justify-content-center">

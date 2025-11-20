@@ -20,12 +20,22 @@ export async function GET(request: Request) {
 	const url = new URL(request.url)
 	const limitParam = url.searchParams.get("limit")
 	const signatureOnly = url.searchParams.get("signature") === "true"
-	const limit = limitParam ? Math.min(Math.max(parseInt(limitParam, 10) || 0, 1), 50) : 50
+	const categoryParam = url.searchParams.get("category")
+	const limit = limitParam ? Math.min(Math.max(parseInt(limitParam, 10) || 0, 1), 100) : 50
+
+	// Build query filter
+	const query: Record<string, any> = {}
+	if (signatureOnly) {
+		query.signatureEvent = true
+	}
+	if (categoryParam) {
+		query.category = categoryParam
+	}
 
 	const db = await getDb()
 	const newsItems = await db
 		.collection("news")
-		.find(signatureOnly ? { signatureEvent: true } : {})
+		.find(query)
 		.sort({ createdAt: -1 })
 		.limit(limit)
 		.toArray()
