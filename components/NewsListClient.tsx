@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 
 type NewsListItem = {
 	id: string
@@ -38,16 +38,54 @@ type Props = {
 	newsItems: NewsListItem[]
 }
 
+const ITEMS_PER_PAGE = 6
+
 export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 	const [selectedCategory, setSelectedCategory] = useState("")
+	const [currentPage, setCurrentPage] = useState(1)
+
+	// Debug: Log total items received
+	useEffect(() => {
+		console.log(`[NewsListClient] Received ${allNewsItems.length} total news items`)
+	}, [allNewsItems.length])
 
 	// Client-side filtering - instant!
 	const newsItems = useMemo(() => {
 		if (!selectedCategory) return allNewsItems
-		return allNewsItems.filter(item => item.category === selectedCategory)
+		const filtered = allNewsItems.filter(item => item.category === selectedCategory)
+		console.log(`[NewsListClient] Filtered to ${filtered.length} items for category: ${selectedCategory}`)
+		return filtered
 	}, [allNewsItems, selectedCategory])
 
+	// Reset to page 1 when category changes
+	useEffect(() => {
+		setCurrentPage(1)
+	}, [selectedCategory])
+
+	// Pagination calculations
+	const totalPages = Math.ceil(newsItems.length / ITEMS_PER_PAGE)
+	const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+	const endIndex = startIndex + ITEMS_PER_PAGE
+	const paginatedItems = newsItems.slice(startIndex, endIndex)
+
 	const categoryLabel = CATEGORIES.find(c => c.value === selectedCategory)?.label || "All Categories"
+
+	// Pagination handlers
+	const goToPage = (page: number) => {
+		setCurrentPage(page)
+	}
+
+	const goToPrevious = () => {
+		if (currentPage > 1) {
+			setCurrentPage(currentPage - 1)
+		}
+	}
+
+	const goToNext = () => {
+		if (currentPage < totalPages) {
+			setCurrentPage(currentPage + 1)
+		}
+	}
 
 	return (
 		<section className="blog-area-1 pt-120 pb-120">
@@ -57,6 +95,7 @@ export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 					<h2 className="title text-anim2">
 						{selectedCategory ? categoryLabel : "Recent News & Updates"}
 					</h2>
+				
 				</div>
 				
 				{/* Category Filter - Client-side instant switching */}
@@ -106,8 +145,9 @@ export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 						)}
 					</div>
 				) : (
-					<div className="row gy-40 justify-content-center">
-						{newsItems.map((item) => {
+					<>
+						<div className="row gy-40 justify-content-center">
+							{paginatedItems.map((item) => {
 							const { day, month } = parseDate(item.publishedDate || "")
 							return (
 								<div className="col-xl-4 col-md-6" key={item.id || item.title}>
@@ -165,10 +205,111 @@ export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 								</div>
 							)
 						})}
-					</div>
+						</div>
+
+						{/* Pagination Controls */}
+						{totalPages > 1 && (
+							<div className="mt-60" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+								<button
+									onClick={goToPrevious}
+									disabled={currentPage === 1}
+									className="btn"
+									style={{
+										width: "40px",
+										height: "40px",
+										padding: "0",
+										borderRadius: "8px",
+										fontSize: "18px",
+										cursor: currentPage === 1 ? "not-allowed" : "pointer",
+										opacity: currentPage === 1 ? 0.5 : 1,
+										border: "none",
+										display: "flex",
+										alignItems: "center",
+										justifyContent: "center"
+									}}
+									aria-label="Previous page"
+								>
+									<i className="fas fa-chevron-left" />{'Prev'}
+								</button>
+
+								{/* Page Numbers */}
+								<div style={{ display: "flex", gap: "4px", alignItems: "center" }}>
+									{Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+										// Show first page, last page, current page, and pages around current
+										const showPage = 
+											page === 1 || 
+											page === totalPages || 
+											(page >= currentPage - 1 && page <= currentPage + 1)
+
+										if (!showPage) {
+											// Show ellipsis
+											if (page === currentPage - 2 || page === currentPage + 2) {
+												return (
+													<span key={page} style={{ padding: "0 4px", color: "#6b7280" }}>
+														...
+													</span>
+												)
+											}
+											return null
+										}
+
+										return (
+											<button
+												key={page}
+												onClick={() => goToPage(page)}
+												className={currentPage === page ? "btn" : ""}
+												style={{
+													minWidth: "40px",
+													height: "40px",
+													padding: "0 12px",
+													borderRadius: "8px",
+													fontSize: "14px",
+													fontWeight: currentPage === page ? 600 : 400,
+													cursor: "pointer",
+													transition: "all 0.3s ease",
+													border: currentPage === page ? "none" : "2px solid #e5e7eb",
+													background: currentPage === page ? "var(--tg-theme-primary)" : "#fff",
+													color: currentPage === page ? "#fff" : "#4b5563"
+												}}
+											>
+												{currentPage === page ? (
+													<span className="btn-text" data-text={String(page)} />
+												) : (
+													page
+												)}
+											</button>
+										)
+									})}
+								</div>
+
+								<button
+									onClick={goToNext}
+									disabled={currentPage === totalPages}
+									className="btn"
+									style={{
+										width: "40px",
+										height: "40px",
+										padding: "0",
+										borderRadius: "8px",
+										fontSize: "18px",
+										cursor: currentPage === totalPages ? "not-allowed" : "pointer",
+										opacity: currentPage === totalPages ? 0.5 : 1,
+										border: "none",
+										display: "flex",
+										alignItems: "center",
+										justifyContent: "center"
+									}}
+									aria-label="Next page"
+								>{'Next'}
+									<i className="fas fa-chevron-right" />
+								</button>
+							</div>
+						)}
+					</>
 				)}
 			</div>
 		</section>
 	)
 }
+
 

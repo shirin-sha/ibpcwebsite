@@ -150,28 +150,28 @@ export default function Section8() {
 			<div className="container-fluid p-0">
 				<div className="project-slider1 overflow-hidden">
 					<Swiper {...swiperOptions} className="tg-swiper__slider swiper-container" id="projectSlider1">
-						{items.map((project) => (
-							<SwiperSlide key={project.id}>
-								<div className="project-card image-anim">
-									<div className="project-thumb" style={{ backgroundColor: "#f2f4ff" }}>
-										{project.imageUrl ? (
-											<img src={project.imageUrl} alt={project.title} />
-										) : (
-											<div style={{ padding: "40px 20px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
-												IBPC SIGNATURE EVENT
-											</div>
-										)}
+							{items.map((project) => (
+								<SwiperSlide key={project.id}>
+									<div className="project-card image-anim">
+										<div className="project-thumb" style={{ backgroundColor: "#f2f4ff" }}>
+											{project.imageUrl ? (
+												<img src={project.imageUrl} alt={project.title} />
+											) : (
+												<div style={{ padding: "40px 20px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
+													IBPC SIGNATURE EVENT
+												</div>
+											)}
+										</div>
+										<div className="project-card-details">
+										
+											<h4 className="project-title" style={{ marginBottom: "8px" }}>
+												<Link href={`/blog-details?id=${project.id}`}>{project.title}</Link>
+											</h4>
+										
+										</div>
 									</div>
-									<div className="project-card-details">
-									
-										<h4 className="project-title" style={{ marginBottom: "8px" }}>
-											<Link href={`/blog-details?id=${project.id}`}>{project.title}</Link>
-										</h4>
-									
-									</div>
-								</div>
-							</SwiperSlide>
-						))}
+								</SwiperSlide>
+							))}
 					</Swiper>
 					{loading && (
 						<div style={{ textAlign: "center", marginTop: "20px", color: "#7c8498", fontSize: "14px" }}>

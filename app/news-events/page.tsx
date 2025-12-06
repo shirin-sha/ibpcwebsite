@@ -39,10 +39,11 @@ async function loadNews(): Promise<NewsListItem[]> {
 			.collection("news")
 			.find({})
 			.sort({ createdAt: -1 })
-			.limit(100)
-			.toArray()
+			.toArray() // Removed limit to get ALL news items
 
-		return newsItems.map((item) => ({
+		console.log(`[News-Events] Loaded ${newsItems.length} news items from database`)
+
+		const mapped = newsItems.map((item) => ({
 			id: item._id?.toString?.() ?? "",
 			title: item.title ?? "",
 			shortDescription: item.shortDescription ?? "",
@@ -53,6 +54,9 @@ async function loadNews(): Promise<NewsListItem[]> {
 			signatureEvent: Boolean(item.signatureEvent),
 			imageUrl: item.featuredImage?.data ? `data:${item.featuredImage.contentType};base64,${item.featuredImage.data}` : null
 		}))
+
+		console.log(`[News-Events] Mapped ${mapped.length} news items`)
+		return mapped
 	} catch (error) {
 		console.error("Failed to fetch news list", error)
 		return []

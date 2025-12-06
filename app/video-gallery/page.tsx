@@ -102,43 +102,43 @@ export default async function VideoGallery() {
 									<p style={{ marginBottom: 0 }}>No videos available yet.</p>
 								</div>
 							) : (
-								<div className="row gy-30 justify-content-center">
-									{videoItems.map((video, index) => (
+							<div className="row gy-30 justify-content-center">
+								{videoItems.map((video, index) => (
 										<div className="col-lg-6" key={video.id || index}>
-											<div className="video-card">
+										<div className="video-card">
 												{video.publishedDate && (
 													<div className="video-date">{video.publishedDate}</div>
 												)}
 												{video.embedUrl ? (
-													<div className="video-frame">
-														<iframe
+												<div className="video-frame">
+													<iframe
 															src={video.embedUrl}
-															title={video.title}
-															frameBorder="0"
-															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-															allowFullScreen
+														title={video.title}
+														frameBorder="0"
+														allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+														allowFullScreen
 															loading="lazy"
-														/>
-													</div>
-												) : (
-													<div className="video-frame placeholder">
+													/>
+												</div>
+											) : (
+												<div className="video-frame placeholder">
 														<span>Video preview unavailable</span>
-													</div>
-												)}
-												<h3 className="video-title">{video.title}</h3>
+												</div>
+											)}
+											<h3 className="video-title">{video.title}</h3>
 												{video.description && (
-													<p className="video-description">{video.description}</p>
+											<p className="video-description">{video.description}</p>
 												)}
 												{video.videoUrl && (
 													<Link href={video.videoUrl} className="video-btn" target="_blank" rel="noopener noreferrer">
-														Watch on YouTube
-														<i className="fas fa-angle-double-right" />
-													</Link>
+												Watch on YouTube
+												<i className="fas fa-angle-double-right" />
+											</Link>
 												)}
-											</div>
 										</div>
-									))}
-								</div>
+									</div>
+								))}
+							</div>
 							)}
 						</div>
 					</section>
