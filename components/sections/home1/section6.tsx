@@ -23,7 +23,7 @@ export default function Section6() {
 									</Link>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Dr. Adarsh Swaika</Link></h4>
+									<h4 className="box-title"><Link href="/team-details">Ms. Paramita Tripathi</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px', display: 'block', marginBottom: '10px' }}>INDIAN AMBASSADOR TO KUWAIT</span>
 									<p className="box-desc" style={{ fontStyle: 'italic', lineHeight: '1.7', color: '#666' }}>
 										<i className="fas fa-quote-left" style={{ fontSize: '14px', marginRight: '8px', opacity: '0.5' }}></i>

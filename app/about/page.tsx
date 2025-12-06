@@ -278,7 +278,7 @@ Counter Area
 								</div>
 							</div>
 
-							{/* Leader 2 - Dr. Adarsh Swaika */}
+							{/* Leader 2 - Ms. Paramita Tripathi */}
 							<div className="about-wrap2 mb-80">
 								<div className="row gx-60 gy-5 align-items-start">
 									<div className="col-xl-8 col-lg-8 order-lg-1 order-2">
@@ -304,7 +304,7 @@ Counter Area
 											<div className="about-single-image mb-20">
 												<img 
 													src="/assets/img/team/team-1-1.jpg" 
-													alt="Dr. Adarsh Swaika" 
+													alt="Ms. Paramita Tripathi" 
 													style={{
 														width: '100%',
 														height: 'auto',
@@ -313,7 +313,7 @@ Counter Area
 													}}
 												/>
 											</div>
-											<h4 className="box-title">Dr. Adarsh Swaika</h4>
+											<h4 className="box-title">Ms. Paramita Tripathi</h4>
 											<span className="box-text" style={{ color: 'var(--tg-theme-primary)', fontWeight: 'bold' }}>INDIAN AMBASSADOR TO KUWAIT</span>
 										</div>
 									</div>
