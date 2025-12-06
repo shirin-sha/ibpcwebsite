@@ -38,7 +38,7 @@ type Props = {
 	newsItems: NewsListItem[]
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = 9
 
 export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 	const [selectedCategory, setSelectedCategory] = useState("")
@@ -60,6 +60,7 @@ export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 	// Reset to page 1 when category changes
 	useEffect(() => {
 		setCurrentPage(1)
+		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}, [selectedCategory])
 
 	// Pagination calculations
@@ -73,17 +74,20 @@ export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 	// Pagination handlers
 	const goToPage = (page: number) => {
 		setCurrentPage(page)
+		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
 
 	const goToPrevious = () => {
 		if (currentPage > 1) {
 			setCurrentPage(currentPage - 1)
+			window.scrollTo({ top: 0, behavior: 'smooth' })
 		}
 	}
 
 	const goToNext = () => {
 		if (currentPage < totalPages) {
 			setCurrentPage(currentPage + 1)
+			window.scrollTo({ top: 0, behavior: 'smooth' })
 		}
 	}
 
