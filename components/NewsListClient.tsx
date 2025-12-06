@@ -229,7 +229,7 @@ export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 									}}
 									aria-label="Previous page"
 								>
-									<i className="fas fa-chevron-left" />{'Prev'}
+									<i className="fas fa-chevron-left" />
 								</button>
 
 								{/* Page Numbers */}
@@ -300,7 +300,7 @@ export default function NewsListClient({ newsItems: allNewsItems }: Props) {
 										justifyContent: "center"
 									}}
 									aria-label="Next page"
-								>{'Next'}
+								>
 									<i className="fas fa-chevron-right" />
 								</button>
 							</div>
