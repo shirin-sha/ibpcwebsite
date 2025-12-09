@@ -91,7 +91,7 @@ export default function Section6() {
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Sunnith Arora</Link></h4>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Sunit Arora</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Jt Secretary</span>
 								</div>
 							</div>
