@@ -12,22 +12,29 @@ export async function GET(request: Request) {
 	const events = await db
 		.collection("events")
 		.find({})
+		.project({ longDescription: 0, "featuredImage.data": 0 })
 		.sort({ createdAt: -1 })
 		.limit(limit)
 		.toArray()
 
-	const data = events.map((event) => ({
-		id: event._id?.toString?.() ?? "",
-		title: event.title || "",
-		description: event.description || "",
-		longDescription: event.longDescription || "",
-		location: event.location || "",
-		startDate: normalizeDisplayDate(event.startDate),
-		endDate: normalizeDisplayDate(event.endDate),
-		imageUrl: event.featuredImage?.data ? `data:${event.featuredImage.contentType};base64,${event.featuredImage.data}` : null
-	}))
+	const data = events.map((event) => {
+		const id = event._id?.toString?.() ?? ""
+		const hasImage = Boolean((event as { featuredImage?: unknown }).featuredImage)
+		return {
+			id,
+			title: event.title || "",
+			description: event.description || "",
+			longDescription: "",
+			location: event.location || "",
+			startDate: normalizeDisplayDate(event.startDate),
+			endDate: normalizeDisplayDate(event.endDate),
+			imageUrl: hasImage ? `/api/events/${id}/featured-image` : null
+		}
+	})
 
-	return NextResponse.json({ success: true, data })
+	const response = NextResponse.json({ success: true, data })
+	response.headers.set("Cache-Control", "private, no-store")
+	return response
 }
 
 

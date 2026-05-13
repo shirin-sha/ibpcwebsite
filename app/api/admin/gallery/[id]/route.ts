@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { ObjectId } from "mongodb"
 import { getDb } from "@/lib/mongodb"
+import { revalidatePhotoGalleryContent } from "@/lib/cms-revalidate"
 
 const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/gallery/list") => {
 	const url = new URL(request.url)
@@ -35,6 +36,7 @@ export async function DELETE(request: Request, { params }: { params: { id: strin
 			return redirectWithStatus(request, { error: "not_found" })
 		}
 
+		revalidatePhotoGalleryContent()
 		return redirectWithStatus(request, { status: "deleted" })
 	} catch (error) {
 		console.error("Failed to delete gallery item", error)

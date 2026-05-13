@@ -36,24 +36,31 @@ export async function GET(request: Request) {
 	const newsItems = await db
 		.collection("news")
 		.find(query)
+		.project({ longDescription: 0, "featuredImage.data": 0 })
 		.sort({ createdAt: -1 })
 		.limit(limit)
 		.toArray()
 
-	const data = newsItems.map((item) => ({
-		id: item._id?.toString?.() ?? "",
-		title: item.title ?? "",
-		shortDescription: item.shortDescription ?? "",
-		longDescription: item.longDescription ?? "",
-		publishedDate: item.publishedDate ?? (item.createdAt instanceof Date ? toDdMmYy(item.createdAt) : ""),
-		category: item.category ?? "",
-		categoryLabel: CATEGORY_LABELS[item.category as keyof typeof CATEGORY_LABELS] || item.category || "General",
-		signatureEvent: Boolean(item.signatureEvent),
-		showOnHomepage: Boolean(item.showOnHomepage),
-		imageUrl: item.featuredImage?.data ? `data:${item.featuredImage.contentType};base64,${item.featuredImage.data}` : null
-	}))
+	const data = newsItems.map((item) => {
+		const id = item._id?.toString?.() ?? ""
+		const hasImage = Boolean((item as { featuredImage?: unknown }).featuredImage)
+		return {
+			id,
+			title: item.title ?? "",
+			shortDescription: item.shortDescription ?? "",
+			longDescription: "",
+			publishedDate: item.publishedDate ?? (item.createdAt instanceof Date ? toDdMmYy(item.createdAt) : ""),
+			category: item.category ?? "",
+			categoryLabel: CATEGORY_LABELS[item.category as keyof typeof CATEGORY_LABELS] || item.category || "General",
+			signatureEvent: Boolean(item.signatureEvent),
+			showOnHomepage: Boolean(item.showOnHomepage),
+			imageUrl: hasImage ? `/api/news/${id}/featured-image` : null
+		}
+	})
 
-	return NextResponse.json({ success: true, data })
+	const response = NextResponse.json({ success: true, data })
+	response.headers.set("Cache-Control", "private, no-store")
+	return response
 }
 
 

@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { CMS_EVENTS_TAG } from "@/lib/cms-revalidate"
 import { getBaseUrl } from "@/lib/getBaseUrl"
 import EventsFilter from "@/components/events/EventsFilter"
 
@@ -44,7 +45,7 @@ const isEventUpcoming = (event: EventItem): boolean => {
 
 async function fetchEvents(): Promise<EventItem[]> {
 	try {
-		const res = await fetch(`${getBaseUrl()}/api/events`, { cache: "no-store" })
+		const res = await fetch(`${getBaseUrl()}/api/events`, { next: { tags: [CMS_EVENTS_TAG] } })
 		if (!res.ok) return []
 		const json = await res.json()
 		return json?.data ?? []

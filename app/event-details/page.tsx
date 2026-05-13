@@ -1,6 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { CMS_EVENTS_TAG } from "@/lib/cms-revalidate"
 import { getBaseUrl } from "@/lib/getBaseUrl"
 import { redirect } from "next/navigation"
 import ShareButtons from "@/components/shared/ShareButtons"
@@ -30,7 +31,7 @@ const parseDate = (date: string) => {
 async function loadEvent(id: string): Promise<EventItem | null> {
 	try {
 		const baseUrl = getBaseUrl()
-		const res = await fetch(`${baseUrl}/api/events/${id}`, { cache: "no-store" })
+		const res = await fetch(`${baseUrl}/api/events/${id}`, { next: { tags: [CMS_EVENTS_TAG] } })
 		if (!res.ok) return null
 		const json = await res.json()
 		return json?.data ?? null
@@ -43,7 +44,7 @@ async function loadEvent(id: string): Promise<EventItem | null> {
 async function loadRecentEvents(excludeId: string, limit: number = 3): Promise<EventItem[]> {
 	try {
 		const baseUrl = getBaseUrl()
-		const res = await fetch(`${baseUrl}/api/events?limit=${limit + 5}`, { cache: "no-store" })
+		const res = await fetch(`${baseUrl}/api/events?limit=${limit + 5}`, { next: { tags: [CMS_EVENTS_TAG] } })
 		if (!res.ok) return []
 		const json = await res.json()
 		const allEvents = json?.data ?? []

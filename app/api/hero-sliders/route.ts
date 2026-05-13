@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server"
 import { getDb } from "@/lib/mongodb"
 
-// Cache for 5 minutes, revalidate on demand
-export const revalidate = 300
-
 export async function GET() {
 	try {
 		const db = await getDb()
@@ -28,10 +25,7 @@ export async function GET() {
 		}))
 
 		const response = NextResponse.json({ success: true, data })
-		
-		// Add caching headers
-		response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=600')
-		
+		response.headers.set("Cache-Control", "private, no-store")
 		return response
 	} catch (error) {
 		console.error("Failed to fetch hero sliders", error)

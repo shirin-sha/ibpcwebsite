@@ -10,8 +10,8 @@ const uri = process.env.MONGODB_URI
 const dbName = process.env.MONGODB_DB
 
 async function main() {
-	const email = process.argv[2]
-	const password = process.argv[3]
+	const email = process.argv[2] || process.env.ADMIN_SEED_EMAIL
+	const password = process.argv[3] || process.env.ADMIN_SEED_PASSWORD
 
 	if (!uri || !dbName) {
 		console.error("Please set MONGODB_URI and MONGODB_DB in .env.local before running the seed script.")
@@ -20,6 +20,7 @@ async function main() {
 
 	if (!email || !password) {
 		console.error("Usage: npm run seed:admin <email> <password>")
+		console.error("   or set ADMIN_SEED_EMAIL and ADMIN_SEED_PASSWORD in .env.local (no CLI args).")
 		process.exit(1)
 	}
 

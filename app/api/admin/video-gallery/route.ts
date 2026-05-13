@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { ObjectId } from "mongodb"
 import { getDb } from "@/lib/mongodb"
+import { revalidateVideoGalleryContent } from "@/lib/cms-revalidate"
 
 const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/video-gallery/list") => {
 	const url = new URL(request.url)
@@ -67,6 +68,7 @@ export async function POST(request: Request) {
 			console.error("Failed to update video", error)
 			return redirectWithStatus(request, { error: "update_failed" })
 		}
+		revalidateVideoGalleryContent()
 		return redirectWithStatus(request, { status: "updated" })
 	}
 
@@ -76,6 +78,7 @@ export async function POST(request: Request) {
 		createdBy: session.email || "admin"
 	})
 
+	revalidateVideoGalleryContent()
 	return redirectWithStatus(request, { status: "success" })
 }
 

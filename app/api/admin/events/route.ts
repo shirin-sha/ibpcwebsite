@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { ObjectId } from "mongodb"
 import { getDb } from "@/lib/mongodb"
+import { revalidateEventsContent } from "@/lib/cms-revalidate"
 
 const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/events") => {
 	const url = new URL(request.url)
@@ -103,6 +104,7 @@ export async function POST(request: Request) {
 			console.error("Failed to update event", error)
 			return redirectWithStatus(request, { error: "update_failed" }, "/admin/events/list")
 		}
+		revalidateEventsContent()
 		return redirectWithStatus(request, { status: "updated" }, "/admin/events/list")
 	}
 
@@ -113,6 +115,7 @@ export async function POST(request: Request) {
 		createdBy: session.email || "admin"
 	})
 
+	revalidateEventsContent()
 	return redirectWithStatus(request, { status: "success" })
 }
 

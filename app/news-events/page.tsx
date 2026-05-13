@@ -1,70 +1,29 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
-import { getDb } from "@/lib/mongodb"
 import NewsListClient from "@/components/NewsListClient"
+import { loadNewsEventsPage, NEWS_EVENTS_ITEMS_PER_PAGE } from "@/lib/news-events-list"
 
-type NewsListItem = {
-	id: string
-	title: string
-	shortDescription: string
-	longDescription: string
-	publishedDate: string
-	category: string
-	categoryLabel: string
-	signatureEvent: boolean
-	imageUrl: string | null
+type PageProps = {
+	searchParams: Record<string, string | string[] | undefined>
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-	"business-trade": "Business & Trade",
-	"innovation-technology": "Innovation & Technology",
-	"events-activities": "Events & Activities",
-	"ibpc-community": "IBPC Community"
-}
-
-const toDdMmYy = (date: Date) => {
-	const dd = String(date.getDate()).padStart(2, "0")
-	const mm = String(date.getMonth() + 1).padStart(2, "0")
-	const yy = String(date.getFullYear()).slice(-2)
-	return `${dd}/${mm}/${yy}`
-}
-
-// Static generation with ISR revalidation every 60 seconds
-export const revalidate = 60
-
-async function loadNews(): Promise<NewsListItem[]> {
-	try {
-		const db = await getDb()
-		const newsItems = await db
-			.collection("news")
-			.find({})
-			.sort({ createdAt: -1 })
-			.toArray() // Removed limit to get ALL news items
-
-		console.log(`[News-Events] Loaded ${newsItems.length} news items from database`)
-
-		const mapped = newsItems.map((item) => ({
-			id: item._id?.toString?.() ?? "",
-			title: item.title ?? "",
-			shortDescription: item.shortDescription ?? "",
-			longDescription: item.longDescription ?? "",
-			publishedDate: item.publishedDate ?? (item.createdAt instanceof Date ? toDdMmYy(item.createdAt) : ""),
-			category: item.category ?? "",
-			categoryLabel: CATEGORY_LABELS[item.category as keyof typeof CATEGORY_LABELS] || item.category || "General",
-			signatureEvent: Boolean(item.signatureEvent),
-			imageUrl: item.featuredImage?.data ? `data:${item.featuredImage.contentType};base64,${item.featuredImage.data}` : null
-		}))
-
-		console.log(`[News-Events] Mapped ${mapped.length} news items`)
-		return mapped
-	} catch (error) {
-		console.error("Failed to fetch news list", error)
-		return []
+function firstParam(value: string | string[] | undefined): string {
+	if (Array.isArray(value)) {
+		return typeof value[0] === "string" ? value[0] : ""
 	}
+	return typeof value === "string" ? value : ""
 }
 
-export default async function Blog2() {
-	const allNewsItems = await loadNews()
+export default async function Blog2({ searchParams }: PageProps) {
+	const rawPage = parseInt(firstParam(searchParams.page), 10)
+	const page = Number.isFinite(rawPage) && rawPage >= 1 ? rawPage : 1
+	const category = firstParam(searchParams.category).trim().slice(0, 120)
+
+	const { items, totalCount, page: resolvedPage } = await loadNewsEventsPage({
+		page,
+		category,
+		itemsPerPage: NEWS_EVENTS_ITEMS_PER_PAGE
+	})
 
 	return (
 		<>
@@ -93,7 +52,13 @@ export default async function Blog2() {
 							</div>
 						</div>
 					</section>
-					<NewsListClient newsItems={allNewsItems} />
+					<NewsListClient
+						newsItems={items}
+						totalCount={totalCount}
+						currentPage={resolvedPage}
+						currentCategory={category}
+						itemsPerPage={NEWS_EVENTS_ITEMS_PER_PAGE}
+					/>
 				</main>
 			</Layout>
 		</>

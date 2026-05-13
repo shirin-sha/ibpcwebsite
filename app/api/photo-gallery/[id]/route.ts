@@ -38,10 +38,13 @@ export async function GET(
 			})
 		}
 		
-		return NextResponse.json({
-			title: doc.title || "Untitled Album",
-			images
-		})
+		return NextResponse.json(
+			{
+				title: doc.title || "Untitled Album",
+				images
+			},
+			{ headers: { "Cache-Control": "private, no-store" } }
+		)
 	} catch (error) {
 		console.error("Failed to fetch album", error)
 		return NextResponse.json({ error: "Failed to fetch album" }, { status: 500 })

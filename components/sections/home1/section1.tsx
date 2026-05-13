@@ -47,7 +47,7 @@ export default function Section1() {
 				timeoutId = setTimeout(() => controller.abort(), 5000) // 5 second timeout
 				
 				const res = await fetch("/api/hero-sliders", { 
-					cache: "force-cache", // Use cache for faster loads
+					cache: "no-store",
 					signal: controller.signal
 				})
 				

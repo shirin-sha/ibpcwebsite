@@ -31,7 +31,7 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 	useEffect(() => {
 		async function fetchAlbum() {
 			try {
-				const response = await fetch(`/api/photo-gallery/${params.id}`)
+				const response = await fetch(`/api/photo-gallery/${params.id}`, { cache: "no-store" })
 				if (!response.ok) throw new Error('Failed to fetch album')
 				
 				const data = await response.json()

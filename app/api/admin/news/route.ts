@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { getDb } from "@/lib/mongodb"
 import { ObjectId } from "mongodb"
+import { revalidateNewsContent } from "@/lib/cms-revalidate"
 
 const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/news") => {
 	const url = new URL(request.url)
@@ -98,6 +99,7 @@ export async function POST(request: Request) {
 			console.error("Failed to update news", error)
 			return redirectWithStatus(request, { error: "update_failed" }, "/admin/news/list")
 		}
+		revalidateNewsContent()
 		return redirectWithStatus(request, { status: "updated" }, "/admin/news/list")
 	}
 
@@ -108,6 +110,7 @@ export async function POST(request: Request) {
 		createdBy: "admin"
 	})
 
+	revalidateNewsContent()
 	return redirectWithStatus(request, { status: "success" })
 }
 

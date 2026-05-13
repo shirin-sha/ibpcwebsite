@@ -1,40 +1,11 @@
-
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
-import { getDb } from "@/lib/mongodb"
+import { loadPhotoGalleryIndex, PLACEHOLDER_IMAGE } from "@/lib/photo-gallery-index"
 
-export const revalidate = 0
-
-type GalleryItem = {
-	id: string
-	title: string
-	coverImageUrl: string | null
-	imageCount: number
-}
-
-const PLACEHOLDER_IMAGE = "/assets/img/project/project3-1.jpg"
-
-async function fetchGalleryItems(): Promise<GalleryItem[]> {
-	const db = await getDb()
-	const docs = await db
-		.collection("photoGallery")
-		.find({})
-		.sort({ createdAt: -1 })
-		.limit(100)
-		.toArray()
-
-	return docs.map((doc) => ({
-		id: doc._id?.toString?.() ?? "",
-		title: doc.title || "Untitled album",
-		coverImageUrl: doc.coverImage?.data
-			? `data:${doc.coverImage.contentType || "image/jpeg"};base64,${doc.coverImage.data}`
-			: PLACEHOLDER_IMAGE,
-		imageCount: Array.isArray(doc.galleryImages) ? doc.galleryImages.length : 0
-	}))
-}
+export const dynamic = "force-dynamic"
 
 export default async function PhotoGallery() {
-	const galleryItems = await fetchGalleryItems()
+	const galleryItems = await loadPhotoGalleryIndex()
 	return (
 		<>
 			<Layout headerStyle={1} footerStyle={1}>

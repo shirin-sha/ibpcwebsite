@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { ObjectId } from "mongodb"
 import { getDb } from "@/lib/mongodb"
+import { revalidateHeroContent } from "@/lib/cms-revalidate"
 
 const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/hero-sliders/list") => {
 	const url = new URL(request.url)
@@ -76,6 +77,7 @@ export async function POST(request: Request) {
 			console.error("Failed to update hero slider", error)
 			return redirectWithStatus(request, { error: "update_failed" }, "/admin/hero-sliders/list")
 		}
+		revalidateHeroContent()
 		return redirectWithStatus(request, { status: "updated" }, "/admin/hero-sliders/list")
 	}
 
@@ -87,6 +89,7 @@ export async function POST(request: Request) {
 		order: 0
 	})
 
+	revalidateHeroContent()
 	return redirectWithStatus(request, { status: "success" }, "/admin/hero-sliders/list")
 }
 

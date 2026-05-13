@@ -11,12 +11,13 @@ import Section8 from "@/components/sections/home1/section8"
 import Section9, { type NewsCard } from "@/components/sections/home1/section9"
 import Section2 from "@/components/sections/home1/section2"
 import Section10 from "@/components/sections/home1/section10"
+import { CMS_NEWS_TAG } from "@/lib/cms-revalidate"
 import { getBaseUrl } from "@/lib/getBaseUrl"
 
 async function getLatestNews(): Promise<NewsCard[]> {
 	try {
 		const baseUrl = getBaseUrl()
-		const res = await fetch(`${baseUrl}/api/news?limit=3`, { cache: "no-store" })
+		const res = await fetch(`${baseUrl}/api/news?limit=12`, { next: { tags: [CMS_NEWS_TAG] } })
 		if (!res.ok) return []
 		const json = await res.json()
 		return json?.data ?? []

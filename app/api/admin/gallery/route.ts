@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { ObjectId } from "mongodb"
 import { getDb } from "@/lib/mongodb"
+import { revalidatePhotoGalleryContent } from "@/lib/cms-revalidate"
 
 const redirectWithStatus = (request: Request, params: Record<string, string>, pathname = "/admin/gallery/list") => {
 	const url = new URL(request.url)
@@ -112,6 +113,7 @@ export async function POST(request: Request) {
 			console.error("Failed to update gallery item", error)
 			return redirectWithStatus(request, { error: "update_failed" })
 		}
+		revalidatePhotoGalleryContent()
 		return redirectWithStatus(request, { status: "updated" })
 	}
 
@@ -123,6 +125,7 @@ export async function POST(request: Request) {
 		createdBy: session.email || "admin"
 	})
 
+	revalidatePhotoGalleryContent()
 	return redirectWithStatus(request, { status: "success" })
 }
 

@@ -47,30 +47,24 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 	const [isMobileMenu, setMobileMenu] = useState<boolean>(false)
 	const handleMobileMenu = (): void => setMobileMenu(!isMobileMenu)
 
+	// Run once: re-running WOW/AOS on scroll changes was heavy and unnecessary.
 	useEffect(() => {
-		const WOW: any = require('wowjs');
-		(window as any).wow = new WOW.WOW({
-			live: false
-		});
-
-		// Initialize WOW.js
-		(window as any).wow.init()
-
+		const WOW: any = require("wowjs")
+		;(window as any).wow = new WOW.WOW({ live: false })
+		;(window as any).wow.init()
 		AOS.init()
+	}, [])
 
+	useEffect(() => {
 		const handleScroll = (): void => {
-			const scrollCheck: boolean = window.scrollY > 100
-			if (scrollCheck !== scroll) {
-				setScroll(scrollCheck)
-			}
+			setScroll((prev) => {
+				const scrollCheck = window.scrollY > 100
+				return scrollCheck !== prev ? scrollCheck : prev
+			})
 		}
-
 		document.addEventListener("scroll", handleScroll)
-
-		return () => {
-			document.removeEventListener("scroll", handleScroll)
-		}
-	}, [scroll])
+		return () => document.removeEventListener("scroll", handleScroll)
+	}, [])
 	dataBg()
 	AnimatedText()
 	useMobileMenu()

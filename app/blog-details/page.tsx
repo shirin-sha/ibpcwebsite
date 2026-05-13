@@ -1,6 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import { CMS_NEWS_TAG } from "@/lib/cms-revalidate"
 import { getBaseUrl } from "@/lib/getBaseUrl"
 import { redirect } from "next/navigation"
 import ShareButtons from "@/components/shared/ShareButtons"
@@ -31,7 +32,7 @@ const parseDate = (date: string) => {
 async function loadNewsItem(id: string): Promise<NewsItem | null> {
 	try {
 		const baseUrl = getBaseUrl()
-		const res = await fetch(`${baseUrl}/api/news/${id}`, { cache: "no-store" })
+		const res = await fetch(`${baseUrl}/api/news/${id}`, { next: { tags: [CMS_NEWS_TAG] } })
 		if (!res.ok) return null
 		const json = await res.json()
 		return json?.data ?? null
@@ -44,7 +45,7 @@ async function loadNewsItem(id: string): Promise<NewsItem | null> {
 async function loadRecentNews(excludeId: string, limit: number = 3): Promise<NewsItem[]> {
 	try {
 		const baseUrl = getBaseUrl()
-		const res = await fetch(`${baseUrl}/api/news?limit=${limit + 5}`, { cache: "no-store" })
+		const res = await fetch(`${baseUrl}/api/news?limit=${limit + 5}`, { next: { tags: [CMS_NEWS_TAG] } })
 		if (!res.ok) return []
 		const json = await res.json()
 		const allNews = json?.data ?? []

@@ -21,14 +21,20 @@ export async function GET(request: Request, { params }: { params: { id: string }
 	try {
 		const db = await getDb()
 		const objectId = new ObjectId(params.id)
-		const item = await db.collection("news").findOne({ _id: objectId })
+		const item = await db.collection("news").findOne(
+			{ _id: objectId },
+			{ projection: { "featuredImage.data": 0 } }
+		)
 
 		if (!item) {
 			return NextResponse.json({ success: false, error: "News item not found" }, { status: 404 })
 		}
 
+		const id = item._id?.toString?.() ?? ""
+		const hasImage = Boolean((item as { featuredImage?: unknown }).featuredImage)
+
 		const data = {
-			id: item._id?.toString?.() ?? "",
+			id,
 			title: item.title ?? "",
 			shortDescription: item.shortDescription ?? "",
 			longDescription: item.longDescription ?? "",
@@ -36,10 +42,12 @@ export async function GET(request: Request, { params }: { params: { id: string }
 			category: item.category ?? "",
 			categoryLabel: CATEGORY_LABELS[item.category as keyof typeof CATEGORY_LABELS] || item.category || "General",
 			signatureEvent: Boolean(item.signatureEvent),
-			imageUrl: item.featuredImage?.data ? `data:${item.featuredImage.contentType};base64,${item.featuredImage.data}` : null
+			imageUrl: hasImage ? `/api/news/${id}/featured-image` : null
 		}
 
-		return NextResponse.json({ success: true, data })
+		const response = NextResponse.json({ success: true, data })
+		response.headers.set("Cache-Control", "private, no-store")
+		return response
 	} catch (error) {
 		console.error("Failed to fetch news item", error)
 		return NextResponse.json({ success: false, error: "Invalid news ID" }, { status: 400 })

@@ -29,10 +29,12 @@ const parseDate = (date: string) => {
 export default function Section9({ items = [] }: Section9Props) {
 	const news = items
 		.filter((item) => {
+			// Signature items have their own home block (Section8); never duplicate here
+			if (item.signatureEvent) return false
 			if (typeof item.showOnHomepage === "boolean") {
 				return item.showOnHomepage
 			}
-			return !item.signatureEvent
+			return true
 		})
 		.slice(0, 3)
 
