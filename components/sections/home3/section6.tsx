@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section6() {
@@ -6,7 +7,7 @@ export default function Section6() {
 
 			<section className="team-area-3 pt-120 pb-120 overflow-hidden gray-bg position-relative">
 				<div className="team-bg-shape3-1 d-xl-block d-none">
-					<img src="/assets/img/bg/team-bg-shape3-1.png" alt="img" />
+					<LazyImg src="/assets/img/bg/team-bg-shape3-1.png" alt="img" />
 				</div>
 				<div className="container">
 					<div className="row justify-content-center">
@@ -22,13 +23,13 @@ export default function Section6() {
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-3-1.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-3-1.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
-										<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
 										
 									</div>
 								</div>
@@ -42,13 +43,13 @@ export default function Section6() {
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-3-2.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-3-2.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
-										<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
 									</div>
 								</div>
 								<div className="team-card-details">
@@ -61,13 +62,13 @@ export default function Section6() {
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-3-3.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-3-3.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
-										<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
 									</div>
 								</div>
 								<div className="team-card-details">
@@ -80,13 +81,13 @@ export default function Section6() {
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-3-5.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-3-5.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
-										<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
 										
 									</div>
 								</div>
@@ -100,13 +101,13 @@ export default function Section6() {
 							<div className="team-card style3">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-3-4.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-3-4.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
-										<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-										<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-										<Link target="_blank" href="/https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-										<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+										<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
 									
 									</div>
 								</div>

@@ -75,9 +75,9 @@ export default function Footer2() {
 									<div className="col-auto">
 										<div className="social-links">
 											<ul className="list-wrap">
-												<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-square" />Facebook</Link></li>
-												<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter" />Twitter</Link></li>
-												<li><Link href="/https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin" />Linkedin</Link></li>
+												<li><Link href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-square" />Facebook</Link></li>
+												<li><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter" />Twitter</Link></li>
+												<li><Link href="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin" />Linkedin</Link></li>
 											</ul>
 										</div>
 									</div>

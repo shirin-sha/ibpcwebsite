@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section4() {
@@ -36,7 +37,7 @@ export default function Section4() {
 									<p className="box-text">IBPC builds collaborative platforms that strengthen economic and trade relations through bilateral meetings, strategic alliances, and policy-focused initiatives.</p>
 								</div>
 								<div className="box-img image-anim">
-									<img src="/assets/img/service/service-img-1-1.jpg" alt="img" />
+									<LazyImg src="/assets/img/service/service-img-1-1.jpg" alt="img" />
 								</div>
 							</div>
 						</div>
@@ -58,7 +59,7 @@ export default function Section4() {
 									<p className="box-text">We host exclusive business gatherings that connect leaders, entrepreneurs, and professionals, promoting exchange of ideas and creating lasting business relationships.</p>
 								</div>
 								<div className="box-img image-anim">
-									<img src="/assets/img/service/service-img-1-2.jpg" alt="img" />
+									<LazyImg src="/assets/img/service/service-img-1-2.jpg" alt="img" />
 								</div>
 							</div>
 						</div>
@@ -84,7 +85,7 @@ export default function Section4() {
 									<p className="box-text">IBPC supports knowledge transfer and technological collaboration, helping members explore new industries and drive innovation-led growth.</p>
 								</div>
 								<div className="box-img image-anim">
-									<img src="/assets/img/service/service-img-1-3.jpg" alt="img" />
+									<LazyImg src="/assets/img/service/service-img-1-3.jpg" alt="img" />
 								</div>
 							</div>
 						</div>

@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section1() {
@@ -22,10 +23,10 @@ export default function Section1() {
 						<div className="col-lg-6">
 							<div className="hero-thumb3">
 								<div className="img1">
-									<img src="/assets/img/hero/hero-3-1.png" alt="img" />
+									<LazyImg eager src="/assets/img/hero/hero-3-1.png" alt="img" />
 								</div>
 								<div className="img2">
-									<img src="/assets/img/hero/hero-3-2.png" alt="img" />
+									<LazyImg eager src="/assets/img/hero/hero-3-2.png" alt="img" />
 								</div>
 							</div>
 						</div>

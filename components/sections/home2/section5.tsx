@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 export default function Section5() {
 	return (
@@ -19,13 +20,13 @@ export default function Section5() {
 					<div className="testimonial-wrap1">
 						<div className="testimonial-card-list">
 							<div className="testimonial-brand-thumb">
-								<img src="/assets/img/testimonial/brand1-1.png" alt="img" />
+								<LazyImg src="/assets/img/testimonial/brand1-1.png" alt="img" />
 							</div>
 							<div className="testimonial-card">
 								<p className="testimonial-card_text">“We partnered with Valom Agency to enhance our sustainability initiatives, and the results were outstanding. Their team provided actionable insights and practical solutions”</p>
 								<div className="testimonial-card_details">
 									<div className="testimonial-card_thumb">
-										<img src="/assets/img/testimonial/1-1.png" alt="img" />
+										<LazyImg src="/assets/img/testimonial/1-1.png" alt="img" />
 									</div>
 									<h4 className="testimonial-card_title">Markus Daniel</h4>
 									<span className="testimonial-card_desig">- General Manager at Shotlife.com</span>
@@ -41,13 +42,13 @@ export default function Section5() {
 						</div>
 						<div className="testimonial-card-list">
 							<div className="testimonial-brand-thumb">
-								<img src="/assets/img/testimonial/brand1-2.png" alt="img" />
+								<LazyImg src="/assets/img/testimonial/brand1-2.png" alt="img" />
 							</div>
 							<div className="testimonial-card">
 								<p className="testimonial-card_text">“We partnered with Valom Agency to enhance our sustainability initiatives, and the results were outstanding. Their team provided actionable insights and practical solutions”</p>
 								<div className="testimonial-card_details">
 									<div className="testimonial-card_thumb">
-										<img src="/assets/img/testimonial/1-2.png" alt="img" />
+										<LazyImg src="/assets/img/testimonial/1-2.png" alt="img" />
 									</div>
 									<h4 className="testimonial-card_title">Daniel Carter</h4>
 									<span className="testimonial-card_desig">- General Manager at Shotlife.com</span>
@@ -63,13 +64,13 @@ export default function Section5() {
 						</div>
 						<div className="testimonial-card-list">
 							<div className="testimonial-brand-thumb">
-								<img src="/assets/img/testimonial/brand1-3.png" alt="img" />
+								<LazyImg src="/assets/img/testimonial/brand1-3.png" alt="img" />
 							</div>
 							<div className="testimonial-card">
 								<p className="testimonial-card_text">“We partnered with Valom Agency to enhance our sustainability initiatives, and the results were outstanding. Their team provided actionable insights and practical solutions”</p>
 								<div className="testimonial-card_details">
 									<div className="testimonial-card_thumb">
-										<img src="/assets/img/testimonial/1-3.png" alt="img" />
+										<LazyImg src="/assets/img/testimonial/1-3.png" alt="img" />
 									</div>
 									<h4 className="testimonial-card_title">George Miller</h4>
 									<span className="testimonial-card_desig">- General Manager at Shotlife.com</span>

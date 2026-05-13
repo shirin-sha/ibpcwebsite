@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 export default function Section7() {
 	return (
@@ -10,7 +11,7 @@ export default function Section7() {
 							<div className="goal-thumb1-1 image-anim">
 								<div className="img-bg-shape" data-mask-src="/assets/img/others/goal-img-mask1-2.png" />
 								<div className="thumb" data-mask-src="/assets/img/others/goal-img-mask1-1.png">
-									<img src="/assets/img/others/goal1-1.png" alt="img" />
+									<LazyImg src="/assets/img/others/goal1-1.png" alt="img" />
 								</div>
 							</div>
 						</div>

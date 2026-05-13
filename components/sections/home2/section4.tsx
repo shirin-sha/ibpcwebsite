@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section4() {
@@ -20,7 +21,7 @@ export default function Section4() {
 								<li className="nav-item" role="presentation">
 									<button className="nav-link process-nav-card active" id="step1" data-bs-toggle="tab" data-bs-target="#step01" type="button" role="tab" aria-controls="step1" aria-selected="true">
 										<div className="box-icon">
-											<img src="/assets/img/icon/process-icon1-1.png" alt="img" />
+											<LazyImg src="/assets/img/icon/process-icon1-1.png" alt="img" />
 										</div>
 										<div className="box-content">
 											<h4 className="box-title">Task Assessment</h4>
@@ -31,7 +32,7 @@ export default function Section4() {
 								<li className="nav-item" role="presentation">
 									<button className="nav-link process-nav-card" id="step2" data-bs-toggle="tab" data-bs-target="#step02" type="button" role="tab" aria-controls="step2" aria-selected="false">
 										<div className="box-icon">
-											<img src="/assets/img/icon/process-icon1-1.png" alt="img" />
+											<LazyImg src="/assets/img/icon/process-icon1-1.png" alt="img" />
 										</div>
 										<div className="box-content">
 											<h4 className="box-title">Strategy Consulting</h4>
@@ -42,7 +43,7 @@ export default function Section4() {
 								<li className="nav-item" role="presentation">
 									<button className="nav-link process-nav-card" id="step3" data-bs-toggle="tab" data-bs-target="#step03" type="button" role="tab" aria-controls="step3" aria-selected="false">
 										<div className="box-icon">
-											<img src="/assets/img/icon/process-icon1-1.png" alt="img" />
+											<LazyImg src="/assets/img/icon/process-icon1-1.png" alt="img" />
 										</div>
 										<div className="box-content">
 											<h4 className="box-title">Implementation</h4>
@@ -55,7 +56,7 @@ export default function Section4() {
 								<div className="tab-pane fade show active" id="step01" role="tabpanel" aria-labelledby="step1">
 									<div className="process-card">
 										<div className="process-card-thumb image-anim">
-											<img src="/assets/img/others/business-process2-1.jpg" alt="img" />
+											<LazyImg src="/assets/img/others/business-process2-1.jpg" alt="img" />
 										</div>
 										<div className="process-card-content">
 											<h4 className="process-card-title">Task Assessment</h4>
@@ -77,7 +78,7 @@ export default function Section4() {
 								<div className="tab-pane fade" id="step02" role="tabpanel" aria-labelledby="step2">
 									<div className="process-card">
 										<div className="process-card-thumb image-anim">
-											<img src="/assets/img/others/business-process2-2.jpg" alt="img" />
+											<LazyImg src="/assets/img/others/business-process2-2.jpg" alt="img" />
 										</div>
 										<div className="process-card-content">
 											<h4 className="process-card-title">Strategy Consulting</h4>
@@ -99,7 +100,7 @@ export default function Section4() {
 								<div className="tab-pane fade" id="step03" role="tabpanel" aria-labelledby="step3">
 									<div className="process-card">
 										<div className="process-card-thumb image-anim">
-											<img src="/assets/img/others/business-process2-3.jpg" alt="img" />
+											<LazyImg src="/assets/img/others/business-process2-3.jpg" alt="img" />
 										</div>
 										<div className="process-card-content">
 											<h4 className="process-card-title">Implementation</h4>

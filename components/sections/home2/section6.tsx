@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section6() {
@@ -20,15 +21,15 @@ export default function Section6() {
 							<div className="team-card style2">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-2-1.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-2-1.jpg" alt="img" />
 									</Link>
 									<div className="team-social">
-										<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+										<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 										<div className="social-wrap">
-											<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-											<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
-											<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-											<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://youtube.com/" tabIndex={-1} aria-label="YouTube"><i className="fab fa-youtube" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
 										</div>
 									</div>
 								</div>
@@ -42,15 +43,15 @@ export default function Section6() {
 							<div className="team-card style2">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-2-2.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-2-2.jpg" alt="img" />
 									</Link>
 									<div className="team-social">
-										<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+										<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 										<div className="social-wrap">
-											<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-											<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
-											<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-											<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://youtube.com/" tabIndex={-1} aria-label="YouTube"><i className="fab fa-youtube" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
 										</div>
 									</div>
 								</div>
@@ -64,15 +65,15 @@ export default function Section6() {
 							<div className="team-card style2">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-2-3.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-2-3.jpg" alt="img" />
 									</Link>
 									<div className="team-social">
-										<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+										<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 										<div className="social-wrap">
-											<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-											<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
-											<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-											<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://youtube.com/" tabIndex={-1} aria-label="YouTube"><i className="fab fa-youtube" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
+											<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
 										</div>
 									</div>
 								</div>

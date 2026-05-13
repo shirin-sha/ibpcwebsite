@@ -1,6 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import CmsImage from "@/components/CmsImage"
 import { CMS_EVENTS_TAG } from "@/lib/cms-revalidate"
 import { getBaseUrl } from "@/lib/getBaseUrl"
 import { redirect } from "next/navigation"
@@ -133,9 +134,17 @@ export default async function EventDetails({ searchParams }: EventDetailsProps) 
 								<div className="col-lg-8">
 									<div className="blog__details-wrap">
 										<div className="blog__details-thumb">
-											<div className="thumb" style={{ backgroundColor: "#f8f9ff", minHeight: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+											<div className="thumb" style={{ backgroundColor: "#f8f9ff", minHeight: "400px", position: "relative", overflow: "hidden" }}>
 												{event.imageUrl ? (
-													<img src={event.imageUrl} alt={event.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+													<CmsImage
+														src={event.imageUrl}
+														alt={event.title}
+														fill
+														sizes="(max-width: 991px) 100vw, 66vw"
+														className="object-cover"
+														style={{ objectFit: "cover" }}
+														priority
+													/>
 												) : (
 													<div style={{ padding: "60px 30px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
 														<span style={{ display: "block", fontSize: "20px" }}>{formatRange(event.startDate, event.endDate) || "To be announced"}</span>
@@ -208,10 +217,17 @@ export default async function EventDetails({ searchParams }: EventDetailsProps) 
 														const formattedDate = formatDateForRecentPost(eventItem.startDate || "")
 														return (
 															<div className="rc-post-item" key={eventItem.id}>
-																<div className="thumb" style={{ backgroundColor: "#f8f9ff", minWidth: "80px", minHeight: "80px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: "8px" }}>
+																<div className="thumb" style={{ backgroundColor: "#f8f9ff", position: "relative", minWidth: "80px", minHeight: "80px", width: "80px", height: "80px", overflow: "hidden", borderRadius: "8px" }}>
 																	{eventItem.imageUrl ? (
-																		<Link href={`/event-details?id=${eventItem.id}`}>
-																			<img src={eventItem.imageUrl} alt={eventItem.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+																		<Link href={`/event-details?id=${eventItem.id}`} style={{ display: "block", width: "100%", height: "100%" }}>
+																			<CmsImage
+																				src={eventItem.imageUrl}
+																				alt={eventItem.title}
+																				fill
+																				sizes="80px"
+																				className="object-cover"
+																				style={{ objectFit: "cover" }}
+																			/>
 																		</Link>
 																	) : (
 																		<Link href={`/event-details?id=${eventItem.id}`} style={{ padding: "12px", textAlign: "center", color: "#9ca3af", fontSize: "12px", fontWeight: 600 }}>

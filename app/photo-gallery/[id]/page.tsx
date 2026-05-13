@@ -2,6 +2,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import CmsImage from "@/components/CmsImage"
 import { useEffect, useState, useRef, useCallback } from "react"
 
 export const dynamic = 'force-dynamic'
@@ -263,10 +264,13 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 												key={index}
 												onClick={() => openLightbox(index)}
 											>
-												<img 
-													src={image.url} 
+												<CmsImage
+													src={image.url}
 													alt={image.alt}
-													loading="lazy"
+													fill
+													sizes="(max-width: 400px) 50vw, min(280px, 33vw)"
+													className="object-cover"
+													style={{ objectFit: "cover" }}
 												/>
 												<div className="photo-overlay">
 													<span className="photo-number">{index + 1}</span>
@@ -309,24 +313,37 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 						{/* Lightbox Modal */}
 						{lightboxOpen && album && (
 							<div className="lightbox-overlay" onClick={closeLightbox}>
-								<button className="lightbox-close" onClick={closeLightbox}>
+								<button type="button" className="lightbox-close" onClick={closeLightbox} aria-label="Close image viewer">
 									<i className="fas fa-times" />
 								</button>
 								
-								<button className="lightbox-nav lightbox-prev" onClick={(e) => { e.stopPropagation(); goToPrev(); }}>
+								<button type="button" className="lightbox-nav lightbox-prev" onClick={(e) => { e.stopPropagation(); goToPrev(); }} aria-label="Previous image">
 									<i className="fas fa-chevron-left" />
 								</button>
 								
-								<button className="lightbox-nav lightbox-next" onClick={(e) => { e.stopPropagation(); goToNext(); }}>
+								<button type="button" className="lightbox-nav lightbox-next" onClick={(e) => { e.stopPropagation(); goToNext(); }} aria-label="Next image">
 									<i className="fas fa-chevron-right" />
 								</button>
 								
 								<div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
 									<div className="lightbox-main-image">
-										<img 
-											src={album.images[currentImageIndex]?.url} 
-											alt={album.images[currentImageIndex]?.alt}
-										/>
+										{album.images[currentImageIndex] && (
+											<CmsImage
+												src={album.images[currentImageIndex].url}
+												alt={album.images[currentImageIndex].alt}
+												width={1920}
+												height={1080}
+												sizes="100vw"
+												style={{
+													maxWidth: "100%",
+													maxHeight: "100%",
+													width: "auto",
+													height: "auto",
+													objectFit: "contain",
+												}}
+												priority
+											/>
+										)}
 									</div>
 									
 									<div className="lightbox-counter">
@@ -340,7 +357,14 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 												className={`lightbox-thumbnail ${index === currentImageIndex ? 'active' : ''}`}
 												onClick={() => goToImage(index)}
 											>
-												<img src={image.url} alt={`Thumbnail ${index + 1}`} />
+												<CmsImage
+													src={image.url}
+													alt={`Thumbnail ${index + 1}`}
+													fill
+													sizes="80px"
+													className="object-cover"
+													style={{ objectFit: "cover" }}
+												/>
 											</div>
 										))}
 									</div>
@@ -559,6 +583,7 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 								}
 								
 								.lightbox-thumbnail {
+									position: relative;
 									flex-shrink: 0;
 									width: 80px;
 									height: 80px;

@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react"
 import Link from "next/link"
+import CmsImage from "@/components/CmsImage"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 
@@ -153,9 +154,16 @@ export default function Section8() {
 							{items.map((project) => (
 								<SwiperSlide key={project.id}>
 									<div className="project-card image-anim">
-										<div className="project-thumb" style={{ backgroundColor: "#f2f4ff" }}>
+										<div className="project-thumb" style={{ backgroundColor: "#f2f4ff", position: "relative", minHeight: "500px" }}>
 											{project.imageUrl ? (
-												<img src={project.imageUrl} alt={project.title} />
+												<CmsImage
+													src={project.imageUrl}
+													alt={project.title}
+													fill
+													sizes="(max-width: 767px) 100vw, 33vw"
+													className="object-cover"
+													style={{ objectFit: "cover" }}
+												/>
 											) : (
 												<div style={{ padding: "40px 20px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
 													IBPC SIGNATURE EVENT

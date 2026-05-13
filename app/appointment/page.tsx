@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -35,7 +36,7 @@ export default function Appointment() {
 						<div className="container">
 							<div className="appointment-wrap2">
 								<div className="appointment-thumb2 d-lg-block d-none">
-									<img src="/assets/img/others/appointment2-1.png" alt="img" />
+									<LazyImg src="/assets/img/others/appointment2-1.png" alt="img" />
 								</div>
 								<div className="row justify-content-end">
 									<div className="col-lg-6">

@@ -15,7 +15,7 @@ export default function Footer1() {
 									</h3>
 								</div>
 								<div className="col-auto">
-									<Link href="/contact" className="btn btn-three">
+									<Link href="/contact" className="btn btn-three" aria-label="Share your feedback">
 										<span className="btn-text" data-text="Share Your Feedback" />
 									</Link>
 								</div>
@@ -33,11 +33,11 @@ export default function Footer1() {
 										</p>
 										<div className="social-links">
 											<ul className="list-wrap">
-												<li><Link href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
-												<li><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
-												<li><Link href="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in" /></Link></li>
-												<li><Link href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
-												<li><Link href="https://www.youtube.com/" target="_blank"><i className="fab fa-youtube" /></Link></li>
+												<li><Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f" /></Link></li>
+												<li><Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i className="fab fa-twitter" /></Link></li>
+												<li><Link href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link></li>
+												<li><Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram" /></Link></li>
+												<li><Link href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fab fa-youtube" /></Link></li>
 											</ul>
 										</div>
 									</div>

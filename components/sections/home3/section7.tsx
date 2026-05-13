@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import CounterUp from '@/components/elements/CounterUp'
 
 export default function Section7() {
@@ -11,16 +12,16 @@ export default function Section7() {
 							<div className="col-xl-6 text-xl-end">
 								<div className="feature-thumb2-1">
 									<div className="img1 image-anim">
-										<img src="/assets/img/others/feature2-1.jpg" alt="img" />
+										<LazyImg src="/assets/img/others/feature2-1.jpg" alt="img" />
 									</div>
 									<div className="img2 jump image-anim">
 										<div className="thumb">
-											<img src="/assets/img/others/feature2-2.jpg" alt="img" />
+											<LazyImg src="/assets/img/others/feature2-2.jpg" alt="img" />
 										</div>
 									</div>
 									<div className="feature-counter-wrap">
 										<div className="box-icon">
-											<img src="/assets/img/icon/feature-counter-icon2-1.svg" alt="img" />
+											<LazyImg src="/assets/img/icon/feature-counter-icon2-1.svg" alt="img" />
 										</div>
 										<h3 className="box-counter"><CounterUp>96</CounterUp>%</h3>
 										<p className="box-text">Successful Stories</p>
@@ -38,7 +39,7 @@ export default function Section7() {
 								<div className="about-grid-wrap style3">
 									<div className="about-grid-card style3">
 										<div className="box-icon">
-											<img src="/assets/img/icon/feature-icon2-1.svg" alt="img" />
+											<LazyImg src="/assets/img/icon/feature-icon2-1.svg" alt="img" />
 										</div>
 										<div className="card-details">
 											<h4 className="box-title">Global Business Service</h4>
@@ -47,7 +48,7 @@ export default function Section7() {
 									</div>
 									<div className="about-grid-card style3">
 										<div className="box-icon">
-											<img src="/assets/img/icon/feature-icon2-1.svg" alt="img" />
+											<LazyImg src="/assets/img/icon/feature-icon2-1.svg" alt="img" />
 										</div>
 										<div className="card-details">
 											<h4 className="box-title">Global Business Service</h4>

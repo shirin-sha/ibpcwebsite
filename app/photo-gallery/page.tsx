@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import CmsImage from "@/components/CmsImage"
 import { loadPhotoGalleryIndex, PLACEHOLDER_IMAGE } from "@/lib/photo-gallery-index"
 
 export const dynamic = "force-dynamic"
@@ -45,7 +46,15 @@ export default async function PhotoGallery() {
 									{galleryItems.map((item) => (
 										<div className="col-lg-6" key={item.id}>
 											<div className="gallery-card">
-												<img src={item.coverImageUrl || PLACEHOLDER_IMAGE} alt={item.title} className="gallery-image" />
+												<CmsImage
+													src={item.coverImageUrl || PLACEHOLDER_IMAGE}
+													alt={item.title}
+													width={1200}
+													height={675}
+													sizes="(max-width: 991px) 100vw, 50vw"
+													className="gallery-image"
+													style={{ width: "100%", height: "auto", display: "block" }}
+												/>
 												<div className="gallery-overlay">
 													<h4 className="gallery-title">{item.title}</h4>
 													<p style={{ marginBottom: "12px", fontSize: "14px", opacity: 0.9 }}>

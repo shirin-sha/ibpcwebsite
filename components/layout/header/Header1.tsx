@@ -20,9 +20,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 								<ul className="tg-header__top-right list-wrap">
 									<li className="tg-header__top-social">
 										<ul className="list-wrap">
-											<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f me-2" />Facebook</Link></li>
-											<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter me-2" />Twitter</Link></li>
-											<li><Link href="/https://www.fa-linkedin.com/" target="_blank"><i className="fab fa-linkedin-in me-2" />Linkedin</Link></li>
+											<li><Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f me-2" />Facebook</Link></li>
+											<li><Link href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter me-2" />Twitter</Link></li>
+											<li><Link href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in me-2" />Linkedin</Link></li>
 										</ul>
 									</li>
 								</ul>
@@ -107,12 +107,12 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 											</ul>
 										</div>
 										<div className="tgmenu__action d-none d-lg-block">
-											<a href="https://mms.ibpckuwait.org/login" className="btn btn-two menu-tigger" target='_blank'>
+											<a href="https://mms.ibpckuwait.org/login" className="btn btn-two menu-tigger" target="_blank" rel="noopener noreferrer" aria-label="Member login">
 												<span className="btn-text" data-text="Member Login" />
 											</a>
 										</div>
 										<div className="mobile-nav-toggler d-lg-none d-inline-flex">
-											<Link href="#" className="sidebar-btn">
+											<Link href="#" className="sidebar-btn" aria-label="Open navigation menu">
 												<span className="line" />
 												<span className="line" />
 												<span className="line" />
@@ -143,12 +143,12 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 							</div>
 							<div className="social-links">
 								<ul className="list-wrap">
-									<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
-									<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
-									<li><Link href="/https://www.whatsapp.com/" target="_blank"><i className="fab fa-whatsapp" /></Link>
+									<li><Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f" /></Link></li>
+									<li><Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i className="fab fa-twitter" /></Link></li>
+									<li><Link href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i className="fab fa-whatsapp" /></Link>
 									</li>
-									<li><Link href="/https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
-									<li><Link href="/https://www.youtube.com/" target="_blank"><i className="fab fa-youtube" /></Link>
+									<li><Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram" /></Link></li>
+									<li><Link href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i className="fab fa-youtube" /></Link>
 									</li>
 								</ul>
 							</div>
@@ -160,7 +160,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 				{/* offCanvas-menu */}
 				<div className="offCanvas__info">
 					<div className="offCanvas__close-icon menu-close">
-						<button><i className="fas fa-times" /></button>
+						<button type="button" aria-label="Close appointment panel"><i className="fas fa-times" /></button>
 					</div>
 					<div className="appointment-wrap2">
 						<div className="appointment-thumb2 d-lg-block d-none">
@@ -196,7 +196,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 											</div>
 											<div className="col-12">
 												<div className="form-group">
-													<select name="subject" id="subject" className="form-select style-border3">
+													<select name="subject" id="subject" className="form-select style-border3" aria-label="Select service">
 														<option >Select Service</option>
 														<option value="Business">Business</option>
 														<option value="Managment">Managment</option>
@@ -235,7 +235,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
 												</div>
 											</div>
 										</div>
-										<button type="submit" className="btn mt-30">
+										<button type="submit" className="btn mt-30" aria-label="Submit appointment message">
 											<span className="btn-text" data-text="Submit Message" />
 										</button>
 									</form>

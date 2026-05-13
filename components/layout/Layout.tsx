@@ -1,7 +1,5 @@
 
 'use client'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 import dynamic from 'next/dynamic'
 import type { FC } from 'react'
 
@@ -46,14 +44,6 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 	// Mobile Menu
 	const [isMobileMenu, setMobileMenu] = useState<boolean>(false)
 	const handleMobileMenu = (): void => setMobileMenu(!isMobileMenu)
-
-	// Run once: re-running WOW/AOS on scroll changes was heavy and unnecessary.
-	useEffect(() => {
-		const WOW: any = require("wowjs")
-		;(window as any).wow = new WOW.WOW({ live: false })
-		;(window as any).wow.init()
-		AOS.init()
-	}, [])
 
 	useEffect(() => {
 		const handleScroll = (): void => {

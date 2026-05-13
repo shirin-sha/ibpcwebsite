@@ -44,8 +44,7 @@
 /*  01. Theme Default CSS
 ==============================================*/
 
-@import url($font-url);
-
+// Google Fonts load in Next.js app/layout.tsx (link + display=swap); avoid render-blocking @import here.
 
 /*=============================
 	Typography css start

@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section6() {
@@ -19,7 +20,7 @@ export default function Section6() {
 							<div className="team-card">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-1-1.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-1-1.jpg" alt="img" />
 									</Link>
 								</div>
 								<div className="team-card-details">
@@ -36,7 +37,7 @@ export default function Section6() {
 							<div className="team-card">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-1-2.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-1-2.jpg" alt="img" />
 									</Link>
 								</div>
 								<div className="team-card-details">
@@ -53,7 +54,7 @@ export default function Section6() {
 							<div className="team-card">
 								<div className="box-img image-anim">
 									<Link href="/team-details" className="thumb">
-										<img src="/assets/img/team/team-1-3.jpg" alt="img" />
+										<LazyImg src="/assets/img/team/team-1-3.jpg" alt="img" />
 									</Link>
 								</div>
 								<div className="team-card-details">

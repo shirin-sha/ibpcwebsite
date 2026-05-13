@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import CounterUp from '@/components/elements/CounterUp'
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -56,12 +57,12 @@ export default function About() {
 										<div className="about-thumb2-1">
 											<div className="img1">
 												<div className="thumb image-anim">
-													<img src="/assets/img/others/about2-1.jpg" alt="img" />
+													<LazyImg src="/assets/img/others/about2-1.jpg" alt="img" />
 												</div>
 											</div>
 											<div className="img2">
 												<div className="thumb image-anim">
-													<img src="/assets/img/others/about2-2.jpg" alt="img" />
+													<LazyImg src="/assets/img/others/about2-2.jpg" alt="img" />
 												</div>
 											</div>
 											<div className="about-bg-shape2-1">
@@ -135,7 +136,7 @@ export default function About() {
 					{/*============================== Team Area ==============================*/}
 					<section className="team-area-1 pt-120 pb-120 gray-bg section-radius position-relative">
 						<div className="team-bg-shape3-1 d-xl-block d-none">
-							<img src="/assets/img/bg/team-bg-shape3-1.png" alt="img" />
+							<LazyImg src="/assets/img/bg/team-bg-shape3-1.png" alt="img" />
 						</div>
 						<div className="container">
 							<div className="row justify-content-center">
@@ -152,15 +153,15 @@ export default function About() {
 										<div className="team-card">
 											<div className="box-img image-anim">
 												<Link href="/team-details" className="thumb">
-													<img src={member.img} alt="img" />
+													<LazyImg src={member.img} alt="img" />
 												</Link>
 												<div className="team-social">
-													<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+													<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 													<div className="social-wrap">
-														<Link target="_blank" href="/https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-														<Link target="_blank" href="/https://youtube.com/" tabIndex={-1}><i className="fab fa-youtube" /></Link>
-														<Link target="_blank" href="/https://behance.com/" tabIndex={-1}><i className="fab fa-behance" /></Link>
-														<Link target="_blank" href="/https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
+														<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+														<Link target="_blank" rel="noopener noreferrer" href="https://youtube.com/" tabIndex={-1} aria-label="YouTube"><i className="fab fa-youtube" /></Link>
+														<Link target="_blank" rel="noopener noreferrer" href="https://behance.com/" tabIndex={-1} aria-label="Behance"><i className="fab fa-behance" /></Link>
+														<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
 													</div>
 												</div>
 											</div>
@@ -183,7 +184,7 @@ export default function About() {
 									<div className="goal-thumb1-1 image-anim">
 										<div className="img-bg-shape" data-mask-src="/assets/img/others/goal-img-mask1-2.png" />
 										<div className="thumb" data-mask-src="/assets/img/others/goal-img-mask1-1.png">
-											<img src="/assets/img/others/goal1-1.png" alt="img" />
+											<LazyImg src="/assets/img/others/goal1-1.png" alt="img" />
 										</div>
 									</div>
 								</div>

@@ -1,6 +1,7 @@
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
+import CmsImage from "@/components/CmsImage"
 import { CMS_NEWS_TAG } from "@/lib/cms-revalidate"
 import { getBaseUrl } from "@/lib/getBaseUrl"
 import { redirect } from "next/navigation"
@@ -129,9 +130,17 @@ export default async function BlogDetails({ searchParams }: BlogDetailsProps) {
 								<div className="col-lg-8">
 									<div className="blog__details-wrap">
 										<div className="blog__details-thumb">
-											<div className="thumb" style={{ backgroundColor: "#f8f9ff", minHeight: "400px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+											<div className="thumb" style={{ backgroundColor: "#f8f9ff", minHeight: "400px", position: "relative", overflow: "hidden" }}>
 												{newsItem.imageUrl ? (
-													<img src={newsItem.imageUrl} alt={newsItem.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+													<CmsImage
+														src={newsItem.imageUrl}
+														alt={newsItem.title}
+														fill
+														sizes="(max-width: 991px) 100vw, 66vw"
+														className="object-cover"
+														style={{ objectFit: "cover" }}
+														priority
+													/>
 												) : (
 													<div style={{ padding: "60px 30px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
 														<span style={{ display: "block", fontSize: "20px" }}>IBPC NEWS</span>
@@ -240,10 +249,17 @@ export default async function BlogDetails({ searchParams }: BlogDetailsProps) {
 														const formattedDate = formatDateForRecentPost(post.publishedDate || "")
 														return (
 															<div className="rc-post-item" key={post.id}>
-																<div className="thumb" style={{ backgroundColor: "#f8f9ff", minWidth: "80px", minHeight: "80px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: "8px" }}>
+																<div className="thumb" style={{ backgroundColor: "#f8f9ff", position: "relative", minWidth: "80px", minHeight: "80px", width: "80px", height: "80px", overflow: "hidden", borderRadius: "8px" }}>
 																	{post.imageUrl ? (
-																		<Link href={`/blog-details?id=${post.id}`}>
-																			<img src={post.imageUrl} alt={post.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+																		<Link href={`/blog-details?id=${post.id}`} style={{ display: "block", width: "100%", height: "100%" }}>
+																			<CmsImage
+																				src={post.imageUrl}
+																				alt={post.title}
+																				fill
+																				sizes="80px"
+																				className="object-cover"
+																				style={{ objectFit: "cover" }}
+																			/>
 																		</Link>
 																	) : (
 																		<Link href={`/blog-details?id=${post.id}`} style={{ padding: "12px", textAlign: "center", color: "#9ca3af", fontSize: "12px", fontWeight: 600 }}>

@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -41,7 +42,7 @@ export default function ServiceDetails() {
 									<div className="service__details-wrap">
 										<div className="service__details-thumb mb-45">
 											<div className="thumb">
-												<img src="/assets/img/service/service-details-1-1.jpg" alt="img" />
+												<LazyImg src="/assets/img/service/service-details-1-1.jpg" alt="img" />
 											</div>
 										</div>
 										<div className="service__details-content">

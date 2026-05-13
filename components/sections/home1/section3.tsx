@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import CounterUp from '@/components/elements/CounterUp'
 import Link from 'next/link'
 
@@ -13,7 +14,7 @@ export default function Section3() {
 								<div className="about-thumb1-1">
 									<div className="img1">
 										<div className="thumb image-anim">
-											<img src="/assets/img/others/about1-1.jpg" alt="img" />
+											<LazyImg src="/assets/img/others/about1-1.jpg" alt="img" />
 										</div>
 									</div>
 									<div className="about-experience-wrap movingX">

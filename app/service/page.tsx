@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import CounterUp from '@/components/elements/CounterUp'
 import Layout from "@/components/layout/Layout"
@@ -59,7 +60,7 @@ export default function Service() {
 											<p className="box-text">Global business landscape continues to evolve at an unprecedented pace, the role of the consultancy company...</p>
 										</div>
 										<div className="box-img image-anim">
-											<img src="/assets/img/service/service-img-1-1.jpg" alt="img" />
+											<LazyImg src="/assets/img/service/service-img-1-1.jpg" alt="img" />
 											<div className="tg-button-wrap">
 												<Link href="/service-details" className="btn btn-three">
 													<span className="btn-text" data-text="Read More Details" />
@@ -88,7 +89,7 @@ export default function Service() {
 											<p className="box-text">Global business landscape continues to evolve at an unprecedented pace, the role of the consultancy company...</p>
 										</div>
 										<div className="box-img image-anim">
-											<img src="/assets/img/service/service-img-1-2.jpg" alt="img" />
+											<LazyImg src="/assets/img/service/service-img-1-2.jpg" alt="img" />
 											<div className="tg-button-wrap">
 												<Link href="/service-details" className="btn btn-three">
 													<span className="btn-text" data-text="Read More Details" />
@@ -121,7 +122,7 @@ export default function Service() {
 											<p className="box-text">Global business landscape continues to evolve at an unprecedented pace, the role of the consultancy company...</p>
 										</div>
 										<div className="box-img image-anim">
-											<img src="/assets/img/service/service-img-1-3.jpg" alt="img" />
+											<LazyImg src="/assets/img/service/service-img-1-3.jpg" alt="img" />
 											<div className="tg-button-wrap">
 												<Link href="/service-details" className="btn btn-three">
 													<span className="btn-text" data-text="Read More Details" />
@@ -152,7 +153,7 @@ export default function Service() {
 											<p className="box-text">Global business landscape continues to evolve at an unprecedented pace, the role of the consultancy company...</p>
 										</div>
 										<div className="box-img image-anim">
-											<img src="/assets/img/service/service-img-1-1.jpg" alt="img" />
+											<LazyImg src="/assets/img/service/service-img-1-1.jpg" alt="img" />
 											<div className="tg-button-wrap">
 												<Link href="/service-details" className="btn btn-three">
 													<span className="btn-text" data-text="Read More Details" />
@@ -181,7 +182,7 @@ export default function Service() {
 											<p className="box-text">Global business landscape continues to evolve at an unprecedented pace, the role of the consultancy company...</p>
 										</div>
 										<div className="box-img image-anim">
-											<img src="/assets/img/service/service-img-1-2.jpg" alt="img" />
+											<LazyImg src="/assets/img/service/service-img-1-2.jpg" alt="img" />
 											<div className="tg-button-wrap">
 												<Link href="/service-details" className="btn btn-three">
 													<span className="btn-text" data-text="Read More Details" />
@@ -214,7 +215,7 @@ export default function Service() {
 											<p className="box-text">Global business landscape continues to evolve at an unprecedented pace, the role of the consultancy company...</p>
 										</div>
 										<div className="box-img image-anim">
-											<img src="/assets/img/service/service-img-1-3.jpg" alt="img" />
+											<LazyImg src="/assets/img/service/service-img-1-3.jpg" alt="img" />
 											<div className="tg-button-wrap">
 												<Link href="/service-details" className="btn btn-three">
 													<span className="btn-text" data-text="Read More Details" />
@@ -239,7 +240,7 @@ export default function Service() {
 										<div className="about-thumb1-1">
 											<div className="img1">
 												<div className="thumb image-anim">
-													<img src="/assets/img/others/about1-1.jpg" alt="img" />
+													<LazyImg src="/assets/img/others/about1-1.jpg" alt="img" />
 												</div>
 											</div>
 											<div className="about-experience-wrap movingX">

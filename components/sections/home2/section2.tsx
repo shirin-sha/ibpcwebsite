@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section2() {
@@ -12,12 +13,12 @@ export default function Section2() {
 								<div className="about-thumb2-1">
 									<div className="img1">
 										<div className="thumb image-anim">
-											<img src="/assets/img/others/about2-1.jpg" alt="img" />
+											<LazyImg src="/assets/img/others/about2-1.jpg" alt="img" />
 										</div>
 									</div>
 									<div className="img2">
 										<div className="thumb image-anim">
-											<img src="/assets/img/others/about2-2.jpg" alt="img" />
+											<LazyImg src="/assets/img/others/about2-2.jpg" alt="img" />
 										</div>
 									</div>
 									<div className="about-bg-shape2-1">

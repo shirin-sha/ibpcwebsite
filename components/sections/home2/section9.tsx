@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Link from 'next/link'
 
 export default function Section9() {
@@ -14,7 +15,7 @@ export default function Section9() {
 						<div className="col-lg-6">
 							<div className="blog__post-item blog__post-item-four">
 								<div className="blog__post-thumb image-anim">
-									<Link href="/blog-details"><img src="/assets/img/blog/2-1.jpg" alt="img" /></Link>
+									<Link href="/blog-details"><LazyImg src="/assets/img/blog/2-1.jpg" alt="img" /></Link>
 								</div>
 								<div className="blog__post-content">
 									<div className="blog__post-meta">
@@ -40,7 +41,7 @@ export default function Section9() {
 						<div className="col-lg-6">
 							<div className="blog__post-item blog__post-item-four">
 								<div className="blog__post-thumb image-anim">
-									<Link href="/blog-details"><img src="/assets/img/blog/2-2.jpg" alt="img" /></Link>
+									<Link href="/blog-details"><LazyImg src="/assets/img/blog/2-2.jpg" alt="img" /></Link>
 								</div>
 								<div className="blog__post-content">
 									<div className="blog__post-meta">

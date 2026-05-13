@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import CounterUp from '@/components/elements/CounterUp'
 
 export default function Section2() {
@@ -13,7 +14,7 @@ export default function Section2() {
 									<h3 className="counter-card_title"><CounterUp>20</CounterUp>K</h3>
 								</div>
 								<div className="box-thumb">
-									<img src="/assets/img/others/counter3-1.jpg" alt="img" />
+									<LazyImg src="/assets/img/others/counter3-1.jpg" alt="img" />
 									<p className="counter-card_text">Session Completed</p>
 								</div>
 							</div>
@@ -24,7 +25,7 @@ export default function Section2() {
 									<h3 className="counter-card_title"><CounterUp>35</CounterUp>+</h3>
 								</div>
 								<div className="box-thumb">
-									<img src="/assets/img/others/counter3-2.jpg" alt="img" />
+									<LazyImg src="/assets/img/others/counter3-2.jpg" alt="img" />
 									<p className="counter-card_text">COUNTRY OPERATION</p>
 								</div>
 							</div>
@@ -35,7 +36,7 @@ export default function Section2() {
 									<h3 className="counter-card_title"><CounterUp>20</CounterUp>K</h3>
 								</div>
 								<div className="box-thumb">
-									<img src="/assets/img/others/counter3-3.jpg" alt="img" />
+									<LazyImg src="/assets/img/others/counter3-3.jpg" alt="img" />
 									<p className="counter-card_text">EXPERT CONSULTANTS</p>
 								</div>
 							</div>
@@ -46,7 +47,7 @@ export default function Section2() {
 									<h3 className="counter-card_title"><CounterUp>100</CounterUp>%</h3>
 								</div>
 								<div className="box-thumb">
-									<img src="/assets/img/others/counter3-4.jpg" alt="img" />
+									<LazyImg src="/assets/img/others/counter3-4.jpg" alt="img" />
 									<p className="counter-card_text">COUNTRY OPERATION</p>
 								</div>
 							</div>

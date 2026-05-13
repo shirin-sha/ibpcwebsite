@@ -14,8 +14,10 @@ export default function BackToTop({ target }: any) {
 	}, [])
 
 	const handleClick = () => {
+		const el = document.querySelector(target)
+		if (!el) return
 		window.scrollTo({
-			top: document.querySelector(target).offsetTop,
+			top: (el as HTMLElement).offsetTop,
 			behavior: 'smooth'
 		})
 	}
@@ -23,7 +25,7 @@ export default function BackToTop({ target }: any) {
 	return (
 		<>
 			{hasScrolled && (
-				<button className="scroll__top scroll-to-target" onClick={handleClick} >
+				<button type="button" className="scroll__top scroll-to-target" onClick={handleClick} aria-label="Scroll to top">
 					<i className="fas fa-arrow-up" />
 				</button>
 			)}

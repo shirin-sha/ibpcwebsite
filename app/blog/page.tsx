@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -44,7 +45,7 @@ export default function Blog() {
 										<div className="col-12">
 											<div className="blog__post-item">
 												<div className="blog__post-thumb">
-													<Link href="/blog-details"><img src="/assets/img/blog/blog-s-1-1.jpg" alt="img" /></Link>
+													<Link href="/blog-details"><LazyImg src="/assets/img/blog/blog-s-1-1.jpg" alt="img" /></Link>
 													<div className="blog__post-date">15 <span>JAN</span></div>
 												</div>
 												<div className="blog__post-meta">
@@ -76,7 +77,7 @@ export default function Blog() {
 										<div className="col-12">
 											<div className="blog__post-item">
 												<div className="blog__post-thumb">
-													<Link href="/blog-details"><img src="/assets/img/blog/blog-s-1-2.jpg" alt="img" /></Link>
+													<Link href="/blog-details"><LazyImg src="/assets/img/blog/blog-s-1-2.jpg" alt="img" /></Link>
 													<div className="blog__post-date">20 <span>JAN</span></div>
 												</div>
 												<div className="blog__post-meta">
@@ -108,7 +109,7 @@ export default function Blog() {
 										<div className="col-12">
 											<div className="blog__post-item">
 												<div className="blog__post-thumb">
-													<Link href="/blog-details"><img src="/assets/img/blog/blog-s-1-3.jpg" alt="img" /></Link>
+													<Link href="/blog-details"><LazyImg src="/assets/img/blog/blog-s-1-3.jpg" alt="img" /></Link>
 													<div className="blog__post-date">14 <span>FEB</span></div>
 												</div>
 												<div className="blog__post-meta">
@@ -159,7 +160,7 @@ export default function Blog() {
 											<div className="sidebar-search-form">
 												<form action="#">
 													<input type="text" placeholder="Enter Keyword" />
-													<button type="submit"><i className="fas fa-search" /></button>
+													<button type="submit" aria-label="Search blog"><i className="fas fa-search" /></button>
 												</form>
 											</div>
 										</div>
@@ -180,7 +181,7 @@ export default function Blog() {
 											<div className="rc-post-wrap">
 												<div className="rc-post-item">
 													<div className="thumb">
-														<Link href="/blog-details"><img src="/assets/img/blog/rc_post01.jpg" alt="img" /></Link>
+														<Link href="/blog-details"><LazyImg src="/assets/img/blog/rc_post01.jpg" alt="img" /></Link>
 													</div>
 													<div className="content">
 														<span className="date"><i className="far fa-clock" />15 Jan, 2025</span>
@@ -189,7 +190,7 @@ export default function Blog() {
 												</div>
 												<div className="rc-post-item">
 													<div className="thumb">
-														<Link href="/blog-details"><img src="/assets/img/blog/rc_post02.jpg" alt="img" /></Link>
+														<Link href="/blog-details"><LazyImg src="/assets/img/blog/rc_post02.jpg" alt="img" /></Link>
 													</div>
 													<div className="content">
 														<span className="date"><i className="far fa-clock" />20 Jan, 2025</span>
@@ -198,7 +199,7 @@ export default function Blog() {
 												</div>
 												<div className="rc-post-item">
 													<div className="thumb">
-														<Link href="/blog-details"><img src="/assets/img/blog/rc_post03.jpg" alt="img" /></Link>
+														<Link href="/blog-details"><LazyImg src="/assets/img/blog/rc_post03.jpg" alt="img" /></Link>
 													</div>
 													<div className="content">
 														<span className="date"><i className="far fa-clock" />25 Jan, 2025</span>
@@ -213,49 +214,49 @@ export default function Blog() {
 												<ul className="list-wrap">
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post01.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post01.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post02.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post02.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post03.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post03.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post04.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post04.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post05.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post05.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post06.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post06.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post07.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post07.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>
 													<li>
 														<div className="insta-thumb">
-															<img src="/assets/img/blog/ins_post08.jpg" alt="Image" />
+															<LazyImg src="/assets/img/blog/ins_post08.jpg" alt="Image" />
 															<Link href="/instagram.com" className="icon-btn"><i className="fab fa-instagram" /></Link>
 														</div>
 													</li>

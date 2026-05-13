@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -42,7 +43,7 @@ export default function Error() {
 								<div className="col-12">
 									<div className="error-wrap text-center">
 										<div className="ertor-thumb mb-40">
-											<img src="/assets/img/others/error.svg" alt="img" />
+											<LazyImg src="/assets/img/others/error.svg" alt="img" />
 										</div>
 										<div className="section__title">
 											<h2 className="title">Oops! Nothing Was Found

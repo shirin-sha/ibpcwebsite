@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import type { NewsEventsListItem } from "@/lib/news-events-list"
+import CmsImage from "@/components/CmsImage"
 
 const parseDate = (date: string) => {
 	const [dd, mm, yy] = date.split("/")
@@ -117,16 +118,21 @@ export default function NewsListClient({
 													className="blog__post-thumb image-anim"
 													style={{
 														backgroundColor: "#f8f9ff",
-														display: "flex",
-														alignItems: "center",
-														justifyContent: "center",
+														position: "relative",
 														height: "240px",
 														overflow: "hidden",
 														borderRadius: "12px"
 													}}
 												>
 													{item.imageUrl ? (
-														<img src={item.imageUrl} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+														<CmsImage
+															src={item.imageUrl}
+															alt={item.title}
+															fill
+															sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
+															className="object-cover"
+															style={{ objectFit: "cover" }}
+														/>
 													) : (
 														<div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", color: "#9ca3af", fontWeight: 600 }}>
 															<span style={{ display: "block" }}>IBPC NEWS</span>

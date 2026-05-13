@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 
@@ -40,7 +41,7 @@ export default function TeamDetails() {
 									<div className="col-xl-6">
 										<div className="team__details-thumb">
 											<div className="thumb">
-												<img src="/assets/img/team/team-details-1-1.jpg" alt="img" />
+												<LazyImg src="/assets/img/team/team-details-1-1.jpg" alt="img" />
 											</div>
 										</div>
 									</div>

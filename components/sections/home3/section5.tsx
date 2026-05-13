@@ -1,4 +1,5 @@
-'use client'
+﻿'use client'
+import LazyImg from "@/components/LazyImg"
 import { useState } from 'react'
 import ModalVideo from 'react-modal-video'
 import "@/node_modules/react-modal-video/css/modal-video.css"
@@ -10,7 +11,7 @@ export default function Section5() {
 		<>
 
 			<section className="video-area-1 pt-120 pb-120 overflow-hidden position-relative">
-				<div className="video-bg-shape1 spin"><img src="/assets/img/bg/video-bg-shape1-1.png" alt="img" /></div>
+				<div className="video-bg-shape1 spin"><LazyImg src="/assets/img/bg/video-bg-shape1-1.png" alt="img" /></div>
 				<div className="container">
 					<div className="row justify-content-center">
 						<div className="col-lg-7">
@@ -27,7 +28,7 @@ export default function Section5() {
 						<div className="col-12">
 							<div className="video-wrap1">
 								<div className="video-thumb-box1">
-									<img src="/assets/img/others/video1-1.png" alt="img" />
+									<LazyImg src="/assets/img/others/video1-1.png" alt="img" />
 									<a onClick={() => setOpen(true)} className="video-link popup-video">Watch Our Video <span className="video-btn"><i className="far fa-play-circle" /></span>
 									</a>
 									<h4 className="video-text">Watch Video</h4>

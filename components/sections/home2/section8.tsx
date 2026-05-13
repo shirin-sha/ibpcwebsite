@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 export default function Section8() {
 	return (
@@ -9,7 +10,7 @@ export default function Section8() {
 					<div className="row gy-5 gx-80 justify-content-between align-items-center">
 						<div className="col-xl-6">
 							<div className="faq-thumb1-1">
-								<img src="/assets/img/others/faq1-1.jpg" alt="img" />
+								<LazyImg src="/assets/img/others/faq1-1.jpg" alt="img" />
 							</div>
 						</div>
 						<div className="col-xl-6">

@@ -18,11 +18,11 @@ export default function Footer4() {
 										</p>
 										<div className="social-links">
 											<ul className="list-wrap">
-												<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
-												<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
-												<li><Link href="/https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in" /></Link></li>
-												<li><Link href="/https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
-												<li><Link href="/https://www.skype.com/" target="_blank"><i className="fab fa-skype" /></Link></li>
+												<li><Link href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
+												<li><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
+												<li><Link href="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in" /></Link></li>
+												<li><Link href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
+												<li><Link href="https://www.skype.com/" target="_blank"><i className="fab fa-skype" /></Link></li>
 											</ul>
 										</div>
 									</div>

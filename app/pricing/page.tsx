@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -40,7 +41,7 @@ export default function Pricing() {
 								<div className="col-xl-4 col-md-6">
 									<div className="pricing-card">
 										<div className="pricing-card_thumb">
-											<img src="/assets/img/others/pricing-thumb1-1.png" alt="img" />
+											<LazyImg src="/assets/img/others/pricing-thumb1-1.png" alt="img" />
 											<h4 className="pricing-card_price"><span className="currency">$</span>2,500<span className="duration">/month</span>
 											</h4>
 										</div>
@@ -65,7 +66,7 @@ export default function Pricing() {
 									<div className="pricing-card active">
 										<div className="pricing-card_thumb">
 											<div className="pricing-card_tag">Standard</div>
-											<img src="/assets/img/others/pricing-thumb1-2.png" alt="img" />
+											<LazyImg src="/assets/img/others/pricing-thumb1-2.png" alt="img" />
 											<h4 className="pricing-card_price"><span className="currency">$</span>5,000<span className="duration">/month</span>
 											</h4>
 										</div>
@@ -89,7 +90,7 @@ export default function Pricing() {
 								<div className="col-xl-4 col-md-6">
 									<div className="pricing-card">
 										<div className="pricing-card_thumb">
-											<img src="/assets/img/others/pricing-thumb1-3.png" alt="img" />
+											<LazyImg src="/assets/img/others/pricing-thumb1-3.png" alt="img" />
 											<h4 className="pricing-card_price"><span className="currency">$</span>10,000<span className="duration">/month</span>
 											</h4>
 										</div>

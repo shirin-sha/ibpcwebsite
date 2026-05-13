@@ -17,10 +17,10 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu }: any)
 										<li className="tg-header__top-social">
 											<ul className="list-wrap">
 												<li>Follow Us On: </li>
-												<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
-												<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
-												<li><Link href="/https://www.fa-linkedin.com/" target="_blank"><i className="fab fa-linkedin-in" /></Link></li>
-												<li><Link href="/https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
+												<li><Link href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
+												<li><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
+												<li><Link href="https://www.linkedin.com/" target="_blank"><i className="fab fa-linkedin-in" /></Link></li>
+												<li><Link href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
 											</ul>
 										</li>
 									</ul>
@@ -160,11 +160,11 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu }: any)
 							</div>
 							<div className="social-links">
 								<ul className="list-wrap">
-									<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
-									<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
-									<li><Link href="/https://www.whatsapp.com/" target="_blank"><i className="fab fa-whatsapp" /></Link></li>
-									<li><Link href="/https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
-									<li><Link href="/https://www.youtube.com/" target="_blank"><i className="fab fa-youtube" /></Link></li>
+									<li><Link href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
+									<li><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
+									<li><Link href="https://www.whatsapp.com/" target="_blank"><i className="fab fa-whatsapp" /></Link></li>
+									<li><Link href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
+									<li><Link href="https://www.youtube.com/" target="_blank"><i className="fab fa-youtube" /></Link></li>
 								</ul>
 							</div>
 						</div>
@@ -175,7 +175,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu }: any)
 				{/* offCanvas-menu */}
 				<div className="offCanvas__info">
 					<div className="offCanvas__close-icon menu-close">
-						<button><i className="fas fa-times" /></button>
+						<button type="button" aria-label="Close appointment panel"><i className="fas fa-times" /></button>
 					</div>
 					<div className="appointment-wrap2">
 						<div className="appointment-thumb2 d-lg-block d-none">

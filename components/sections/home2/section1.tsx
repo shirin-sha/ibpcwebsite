@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 export default function Section1() {
 	return (
@@ -14,7 +15,7 @@ export default function Section1() {
 								<div className="sub-title text-white text-anim2">We work with your company to identify position requirements, implement recruitment programs, and initiate employee assessments that maximize recruitment efforts</div>
 								<div className="hero-form-wrap">
 									<div className="hero-thumb-wrap">
-										<img src="/assets/img/hero/hero-2-1.png" alt="img" />
+										<LazyImg eager src="/assets/img/hero/hero-2-1.png" alt="img" />
 									</div>
 									<form action="mail.php" method="POST" className="appointment__form ajax-contact">
 										<h4 className="box-title">Book Appointment Now</h4>
@@ -46,7 +47,7 @@ export default function Section1() {
 							<div className="col-lg-4">
 								<div className="hero-feature-grid">
 									<div className="box-icon">
-										<img src="/assets/img/icon/hero-feature-icon2-1.svg" alt="img" />
+										<LazyImg src="/assets/img/icon/hero-feature-icon2-1.svg" alt="img" />
 									</div>
 									<div className="box-details">
 										<h4 className="box-title">Data-Driven Strategies</h4>
@@ -57,7 +58,7 @@ export default function Section1() {
 							<div className="col-lg-4">
 								<div className="hero-feature-grid">
 									<div className="box-icon">
-										<img src="/assets/img/icon/hero-feature-icon2-2.svg" alt="img" />
+										<LazyImg src="/assets/img/icon/hero-feature-icon2-2.svg" alt="img" />
 									</div>
 									<div className="box-details">
 										<h4 className="box-title">Ethical Consulting:</h4>
@@ -68,7 +69,7 @@ export default function Section1() {
 							<div className="col-lg-4">
 								<div className="hero-feature-grid">
 									<div className="box-icon">
-										<img src="/assets/img/icon/hero-feature-icon2-3.svg" alt="img" />
+										<LazyImg src="/assets/img/icon/hero-feature-icon2-3.svg" alt="img" />
 									</div>
 									<div className="box-details">
 										<h4 className="box-title">End-to-End Solutions</h4>

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import CmsImage from "@/components/CmsImage"
 
 export type NewsCard = {
 	id: string
@@ -58,9 +59,16 @@ export default function Section9({ items = [] }: Section9Props) {
 								<div className="col-xl-4 col-md-6" key={item.id || item.title}>
 									<Link href={`/blog-details?id=${item.id}`} style={{ textDecoration: "none" }}>
 									<div className="blog__post-item blog__post-item-two blog__post-item-three" style={{ height: "100%", display: "flex", flexDirection: "column" }}>
-										<div className="blog__post-thumb image-anim" style={{ backgroundColor: "#f8f9ff", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "220px" }}>
+										<div className="blog__post-thumb image-anim" style={{ backgroundColor: "#f8f9ff", position: "relative", overflow: "hidden", height: "300px" }}>
 											{item.imageUrl ? (
-												<img src={item.imageUrl} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+												<CmsImage
+													src={item.imageUrl}
+													alt={item.title}
+													fill
+													sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
+													className="object-cover"
+													style={{ objectFit: "cover" }}
+												/>
 											) : (
 												<div style={{ padding: "40px 20px", textAlign: "center", color: "#9ca3af", fontWeight: 600 }}>
 													<span style={{ display: "block" }}>IBPC NEWS</span>

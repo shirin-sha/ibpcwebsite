@@ -1,4 +1,5 @@
-'use client'
+﻿'use client'
+import LazyImg from "@/components/LazyImg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Link from 'next/link'
@@ -85,7 +86,7 @@ export default function Section10() {
 											padding: '30px'
 										}}
 									>
-										<img 
+										<LazyImg 
 											src={client.logo} 
 											alt={'logo'}
 											style={{

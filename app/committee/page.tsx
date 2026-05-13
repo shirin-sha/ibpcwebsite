@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 
@@ -39,7 +40,7 @@ export default function Committee() {
 								<div className="row gx-60 gy-5 align-items-center">
 									<div className="col-xl-6">
 										<div className="about-single-image">
-											<img 
+											<LazyImg 
 												src="/assets/img/others/committee.png" 
 												alt="IBPC Committee" 
 												style={{
@@ -72,7 +73,7 @@ export default function Committee() {
 					{/* Committee Section */}
 					<section className="team-area-1 pt-120 pb-120 gray-bg section-radius position-relative">
 						<div className="team-bg-shape3-1 d-xl-block d-none">
-							<img src="/assets/img/bg/team-bg-shape3-1.png" alt="img" />
+							<LazyImg src="/assets/img/bg/team-bg-shape3-1.png" alt="img" />
 						</div>
 						<div className="container">
 							<div className="row justify-content-center">
@@ -89,13 +90,13 @@ export default function Committee() {
 									<div className="team-card style3">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/team-3-1.jpg" alt="img" />
+												<LazyImg src="/assets/img/team/team-3-1.jpg" alt="img" />
 											</Link>
 											<div className="social-wrap">
-												<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-												<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-												<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-												<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
 											</div>
 										</div>
 										<div className="team-card-details">
@@ -108,13 +109,13 @@ export default function Committee() {
 									<div className="team-card style3">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/team-3-2.jpg" alt="img" />
+												<LazyImg src="/assets/img/team/team-3-2.jpg" alt="img" />
 											</Link>
 											<div className="social-wrap">
-												<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-												<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-												<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-												<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
 											</div>
 										</div>
 										<div className="team-card-details">
@@ -127,13 +128,13 @@ export default function Committee() {
 									<div className="team-card style3">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/team-3-3.jpg" alt="img" />
+												<LazyImg src="/assets/img/team/team-3-3.jpg" alt="img" />
 											</Link>
 											<div className="social-wrap">
-												<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-												<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-												<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-												<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
 											</div>
 										</div>
 										<div className="team-card-details">
@@ -146,13 +147,13 @@ export default function Committee() {
 									<div className="team-card style3">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/team-3-5.jpg" alt="img" />
+												<LazyImg src="/assets/img/team/team-3-5.jpg" alt="img" />
 											</Link>
 											<div className="social-wrap">
-												<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-												<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-												<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-												<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
 											</div>
 										</div>
 										<div className="team-card-details">
@@ -165,13 +166,13 @@ export default function Committee() {
 									<div className="team-card style3">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/team-3-4.jpg" alt="img" />
+												<LazyImg src="/assets/img/team/team-3-4.jpg" alt="img" />
 											</Link>
 											<div className="social-wrap">
-												<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-												<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-												<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
-												<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
+												<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
 											</div>
 										</div>
 										<div className="team-card-details">
@@ -202,15 +203,15 @@ export default function Committee() {
 									<div className="team-card">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/teamsc1.png" alt="img" />
+												<LazyImg src="/assets/img/team/teamsc1.png" alt="img" />
 											</Link>
 											<div className="team-social">
-												<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
-													<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-													<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-													<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
-													<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
 												</div>
 											</div>
 										</div>
@@ -224,15 +225,15 @@ export default function Committee() {
 									<div className="team-card">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/teamsc2.png" alt="img" />
+												<LazyImg src="/assets/img/team/teamsc2.png" alt="img" />
 											</Link>
 											<div className="team-social">
-												<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
-													<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-													<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-													<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
-													<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
 												</div>
 											</div>
 										</div>
@@ -246,15 +247,15 @@ export default function Committee() {
 									<div className="team-card">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/teamsc3.png" alt="img" />
+												<LazyImg src="/assets/img/team/teamsc3.png" alt="img" />
 											</Link>
 											<div className="team-social">
-												<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
-													<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-													<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-													<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
-													<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
 												</div>
 											</div>
 										</div>
@@ -268,15 +269,15 @@ export default function Committee() {
 									<div className="team-card">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/teamsc4.png" alt="img" />
+												<LazyImg src="/assets/img/team/teamsc4.png" alt="img" />
 											</Link>
 											<div className="team-social">
-												<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
-													<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-													<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-													<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
-													<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
 												</div>
 											</div>
 										</div>
@@ -290,15 +291,15 @@ export default function Committee() {
 									<div className="team-card">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/teamsc5.png" alt="img" />
+												<LazyImg src="/assets/img/team/teamsc5.png" alt="img" />
 											</Link>
 											<div className="team-social">
-												<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
-													<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-													<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-													<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
-													<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
 												</div>
 											</div>
 										</div>
@@ -312,15 +313,15 @@ export default function Committee() {
 									<div className="team-card">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/teamsc6.png" alt="img" />
+												<LazyImg src="/assets/img/team/teamsc6.png" alt="img" />
 											</Link>
 											<div className="team-social">
-												<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
-													<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-													<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-													<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
-													<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
 												</div>
 											</div>
 										</div>
@@ -334,15 +335,15 @@ export default function Committee() {
 									<div className="team-card">
 										<div className="box-img image-anim">
 											<Link href="/team-details" className="thumb">
-												<img src="/assets/img/team/teamsc7.png" alt="img" />
+												<LazyImg src="/assets/img/team/teamsc7.png" alt="img" />
 											</Link>
 											<div className="team-social">
-												<button className="icon-btn"><i className="fas fa-share-alt" /></button>
+												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
-													<Link target="_blank" href="https://facebook.com/" tabIndex={-1}><i className="fab fa-facebook-f" /></Link>
-													<Link target="_blank" href="https://twitter.com/" tabIndex={-1}><i className="fab fa-twitter" /></Link>
-													<Link target="_blank" href="https://linkedin.com/" tabIndex={-1}><i className="fab fa-linkedin-in" /></Link>
-													<Link target="_blank" href="https://instagram.com/" tabIndex={-1}><i className="fab fa-instagram" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://linkedin.com/" tabIndex={-1} aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></Link>
+													<Link target="_blank" rel="noopener noreferrer" href="https://instagram.com/" tabIndex={-1} aria-label="Instagram"><i className="fab fa-instagram" /></Link>
 												</div>
 											</div>
 										</div>

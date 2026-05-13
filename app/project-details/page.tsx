@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
@@ -41,7 +42,7 @@ export default function ProjectDetails() {
 									<div className="project__details-wrap">
 										<div className="project__details-thumb">
 											<div className="thumb">
-												<img src="/assets/img/project/project-details-1-1.jpg" alt="img" />
+												<LazyImg src="/assets/img/project/project-details-1-1.jpg" alt="img" />
 											</div>
 										</div>
 										<div className="project__details-content">
@@ -58,14 +59,14 @@ export default function ProjectDetails() {
 												<div className="col-md-6">
 													<div className="project__details-thumb">
 														<div className="thumb">
-															<img src="/assets/img/project/project-details-1-2.jpg" alt="img" />
+															<LazyImg src="/assets/img/project/project-details-1-2.jpg" alt="img" />
 														</div>
 													</div>
 												</div>
 												<div className="col-md-6">
 													<div className="project__details-thumb">
 														<div className="thumb">
-															<img src="/assets/img/project/project-details-1-3.jpg" alt="img" />
+															<LazyImg src="/assets/img/project/project-details-1-3.jpg" alt="img" />
 														</div>
 													</div>
 												</div>

@@ -60,11 +60,11 @@ export default function Footer3() {
 										</p>
 										<div className="social-links style3">
 											<ul className="list-wrap">
-												<li><Link href="/https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
-												<li><Link href="/https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
-												<li><Link href="/https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
-												<li><Link href="/https://www.behance.com/" target="_blank"><i className="fab fa-behance" /></Link></li>
-												<li><Link href="/https://www.youtube.com/" target="_blank"><i className="fab fa-youtube" /></Link></li>
+												<li><Link href="https://www.facebook.com/" target="_blank"><i className="fab fa-facebook-f" /></Link></li>
+												<li><Link href="https://twitter.com" target="_blank"><i className="fab fa-twitter" /></Link></li>
+												<li><Link href="https://www.instagram.com/" target="_blank"><i className="fab fa-instagram" /></Link></li>
+												<li><Link href="https://www.behance.com/" target="_blank"><i className="fab fa-behance" /></Link></li>
+												<li><Link href="https://www.youtube.com/" target="_blank"><i className="fab fa-youtube" /></Link></li>
 											</ul>
 										</div>
 									</div>

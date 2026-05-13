@@ -1,3 +1,4 @@
+﻿import LazyImg from "@/components/LazyImg"
 
 import CounterUp from '@/components/elements/CounterUp'
 import Layout from "@/components/layout/Layout"
@@ -41,7 +42,7 @@ export default function About() {
 								<div className="row gx-60 gy-5 align-items-center">
 									<div className="col-xl-6">
 										<div className="about-single-image">
-											<img 
+											<LazyImg 
 												src="/assets/img/others/about2-1.jpg" 
 												alt="About IBPC" 
 												style={{
@@ -174,7 +175,7 @@ Counter Area
 								<div className="row gx-60 gy-5 align-items-center">
 									<div className="col-xl-6">
 										<div className="about-single-image">
-											<img 
+											<LazyImg 
 												src="/assets/img/others/mission.png" 
 												alt="IBPC Mission Vision Values" 
 												style={{
@@ -245,7 +246,7 @@ Counter Area
 									<div className="col-xl-4 col-lg-4">
 										<div className="text-center">
 											<div className="about-single-image mb-20">
-												<img 
+												<LazyImg 
 													src="/assets/img/team/team-1-3.jpg" 
 													alt="Kaizar T Shakir" 
 													style={{
@@ -302,7 +303,7 @@ Counter Area
 									<div className="col-xl-4 col-lg-4 order-lg-2 order-1">
 										<div className="text-center">
 											<div className="about-single-image mb-20">
-												<img 
+												<LazyImg 
 													src="/assets/img/team/team-1-1.jpg" 
 													alt="Ms. Paramita Tripathi" 
 													style={{
@@ -326,7 +327,7 @@ Counter Area
 									<div className="col-xl-4 col-lg-4">
 										<div className="text-center">
 											<div className="about-single-image mb-20">
-												<img 
+												<LazyImg 
 													src="/assets/img/team/team-1-2.jpg" 
 													alt="Meshal Mustafa J Alshemali" 
 													style={{
