@@ -9,7 +9,7 @@ export default async function VideoGallery() {
 
 	return (
 		<>
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<>
 					<section className="breadcrumb__area fix" data-background="assets/img/bg/breadcrumb-bg.png">
 						<div className="breadcrumb__bg-shape" />

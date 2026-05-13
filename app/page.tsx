@@ -39,7 +39,7 @@ export default async function Home() {
 
 	return (
 		<>
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<Section1 />
 				<Suspense fallback={<BelowFoldFallback />}>
 					<Section12 />

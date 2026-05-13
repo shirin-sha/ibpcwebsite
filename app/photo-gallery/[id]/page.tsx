@@ -146,7 +146,7 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 
 	if (loading) {
 		return (
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<section className="pt-120 pb-120">
 					<div className="container">
 						<div style={{ textAlign: "center", padding: "60px 20px" }}>
@@ -163,7 +163,7 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 
 	if (!album) {
 		return (
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<section className="pt-120 pb-120">
 					<div className="container">
 						<div style={{ textAlign: "center", padding: "60px 20px" }}>
@@ -180,7 +180,7 @@ export default function AlbumPage({ params }: AlbumPageProps) {
 	
 	return (
 		<>
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<>
 					<section className="breadcrumb__area fix" data-background="assets/img/bg/breadcrumb-bg.png">
 						<div className="breadcrumb__bg-shape" />

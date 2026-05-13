@@ -19,12 +19,12 @@ export default function Section6() {
 						<div className="col-lg-4 col-md-6">
 							<div className="team-card">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-1-1.jpg" alt="img" />
 									</Link>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Ms. Paramita Tripathi</Link></h4>
+									<h4 className="box-title"><Link href="/committee">Ms. Paramita Tripathi</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px', display: 'block', marginBottom: '10px' }}>INDIAN AMBASSADOR TO KUWAIT</span>
 									<p className="box-desc" style={{ fontStyle: 'italic', lineHeight: '1.7', color: '#666' }}>
 										<i className="fas fa-quote-left" style={{ fontSize: '14px', marginRight: '8px', opacity: '0.5' }}></i>
@@ -36,12 +36,12 @@ export default function Section6() {
 						<div className="col-lg-4 col-md-6">
 							<div className="team-card">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-1-2.jpg" alt="img" />
 									</Link>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Meshal Al-Shamali</Link></h4>
+									<h4 className="box-title"><Link href="/committee">Meshal Al-Shamali</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px', display: 'block', marginBottom: '10px' }}>KUWAIT'S AMBASSADOR TO INDIA</span>
 									<p className="box-desc" style={{ fontStyle: 'italic', lineHeight: '1.7', color: '#666' }}>
 										<i className="fas fa-quote-left" style={{ fontSize: '14px', marginRight: '8px', opacity: '0.5' }}></i>
@@ -53,12 +53,12 @@ export default function Section6() {
 						<div className="col-lg-4 col-md-6">
 							<div className="team-card">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-1-3.jpg" alt="img" />
 									</Link>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title"><Link href="/team-details">Kaizar T Shakir</Link></h4>
+									<h4 className="box-title"><Link href="/committee">Kaizar T Shakir</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px', display: 'block', marginBottom: '10px' }}>CHAIRMAN - IBPC</span>
 									<p className="box-desc" style={{ fontStyle: 'italic', lineHeight: '1.7', color: '#666' }}>
 										<i className="fas fa-quote-left" style={{ fontSize: '14px', marginRight: '8px', opacity: '0.5' }}></i>

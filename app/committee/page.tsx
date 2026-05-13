@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function Committee() {
 	return (
 		<>
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<>
 					{/* Breadcrumb Area */}
 					<section className="breadcrumb__area fix" data-background="assets/img/bg/breadcrumb-bg.png">
@@ -89,9 +89,9 @@ export default function Committee() {
 								<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 									<div className="team-card style3">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/team-3-1.jpg" alt="img" />
-											</Link>
+											</div>
 											<div className="social-wrap">
 												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
 												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
@@ -100,7 +100,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-											<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Kaizar T Shakir</Link></h4>
+											<h4 className="box-title" style={{ fontSize: '16px' }}>Kaizar T Shakir</h4>
 											<span className="box-text" style={{ fontSize: '13px' }}>Hon. Chairman</span>
 										</div>
 									</div>
@@ -108,9 +108,9 @@ export default function Committee() {
 								<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 									<div className="team-card style3">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/team-3-2.jpg" alt="img" />
-											</Link>
+											</div>
 											<div className="social-wrap">
 												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
 												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
@@ -119,7 +119,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-											<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Gaurav Oberoi</Link></h4>
+											<h4 className="box-title" style={{ fontSize: '16px' }}>Gaurav Oberoi</h4>
 											<span className="box-text" style={{ fontSize: '13px' }}>Hon. Vice Chairman</span>
 										</div>
 									</div>
@@ -127,9 +127,9 @@ export default function Committee() {
 								<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 									<div className="team-card style3">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/team-3-3.jpg" alt="img" />
-											</Link>
+											</div>
 											<div className="social-wrap">
 												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
 												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
@@ -138,7 +138,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-											<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Suresh K P</Link></h4>
+											<h4 className="box-title" style={{ fontSize: '16px' }}>Suresh K P</h4>
 											<span className="box-text" style={{ fontSize: '13px' }}>Hon. Secretary</span>
 										</div>
 									</div>
@@ -146,9 +146,9 @@ export default function Committee() {
 								<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 									<div className="team-card style3">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/team-3-5.jpg" alt="img" />
-											</Link>
+											</div>
 											<div className="social-wrap">
 												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
 												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
@@ -157,7 +157,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-											<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Sunit Arora</Link></h4>
+											<h4 className="box-title" style={{ fontSize: '16px' }}>Sunit Arora</h4>
 											<span className="box-text" style={{ fontSize: '13px' }}>Hon. Jt Secretary</span>
 										</div>
 									</div>
@@ -165,9 +165,9 @@ export default function Committee() {
 								<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 									<div className="team-card style3">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/team-3-4.jpg" alt="img" />
-											</Link>
+											</div>
 											<div className="social-wrap">
 												<Link target="_blank" rel="noopener noreferrer" href="https://facebook.com/" tabIndex={-1} aria-label="Facebook"><i className="fab fa-facebook-f" /></Link>
 												<Link target="_blank" rel="noopener noreferrer" href="https://twitter.com/" tabIndex={-1} aria-label="Twitter"><i className="fab fa-twitter" /></Link>
@@ -176,7 +176,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-											<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Krishen Suryakanth</Link></h4>
+											<h4 className="box-title" style={{ fontSize: '16px' }}>Krishen Suryakanth</h4>
 											<span className="box-text" style={{ fontSize: '13px' }}>Hon. Treasurer</span>
 										</div>
 									</div>
@@ -202,9 +202,9 @@ export default function Committee() {
 								<div className="col-lg-3 col-md-6">
 									<div className="team-card">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/teamsc1.png" alt="img" />
-											</Link>
+											</div>
 											<div className="team-social">
 												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
@@ -216,7 +216,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-										<h4 className="box-title"><Link href="/team-details">Tony Jashanma</Link></h4>
+										<h4 className="box-title">Tony Jashanma</h4>
 										<span className="box-text">Advisory Board Member</span>
 										</div>
 									</div>
@@ -224,9 +224,9 @@ export default function Committee() {
 								<div className="col-lg-3 col-md-6">
 									<div className="team-card">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/teamsc2.png" alt="img" />
-											</Link>
+											</div>
 											<div className="team-social">
 												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
@@ -238,7 +238,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-										<h4 className="box-title"><Link href="/team-details">S.K. Wadhawan</Link></h4>
+										<h4 className="box-title">S.K. Wadhawan</h4>
 										<span className="box-text">Advisory Board Member</span>
 										</div>
 									</div>
@@ -246,9 +246,9 @@ export default function Committee() {
 								<div className="col-lg-3 col-md-6">
 									<div className="team-card">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/teamsc3.png" alt="img" />
-											</Link>
+											</div>
 											<div className="team-social">
 												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
@@ -260,7 +260,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-										<h4 className="box-title"><Link href="/team-details">Kuldeep Singh</Link></h4>
+										<h4 className="box-title">Kuldeep Singh</h4>
 										<span className="box-text">Advisory Board Member</span>
 										</div>
 									</div>
@@ -268,9 +268,9 @@ export default function Committee() {
 								<div className="col-lg-3 col-md-6">
 									<div className="team-card">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/teamsc4.png" alt="img" />
-											</Link>
+											</div>
 											<div className="team-social">
 												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
@@ -282,7 +282,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-										<h4 className="box-title"><Link href="/team-details">Sam Alphonso</Link></h4>
+										<h4 className="box-title">Sam Alphonso</h4>
 										<span className="box-text">Advisory Board Member</span>
 										</div>
 									</div>
@@ -290,9 +290,9 @@ export default function Committee() {
 								<div className="col-lg-3 col-md-6">
 									<div className="team-card">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/teamsc5.png" alt="img" />
-											</Link>
+											</div>
 											<div className="team-social">
 												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
@@ -304,7 +304,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-										<h4 className="box-title"><Link href="/team-details">Shivy Bhasin</Link></h4>
+										<h4 className="box-title">Shivy Bhasin</h4>
 										<span className="box-text">Advisory Board Member</span>
 										</div>
 									</div>
@@ -312,9 +312,9 @@ export default function Committee() {
 								<div className="col-lg-3 col-md-6">
 									<div className="team-card">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/teamsc6.png" alt="img" />
-											</Link>
+											</div>
 											<div className="team-social">
 												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
@@ -326,7 +326,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-											<h4 className="box-title"><Link href="/team-details">Dhiraj Oberoi</Link></h4>
+											<h4 className="box-title">Dhiraj Oberoi</h4>
 											<span className="box-text">Advisory Board Member</span>
 										</div>
 									</div>
@@ -334,9 +334,9 @@ export default function Committee() {
                                 <div className="col-lg-3 col-md-6">
 									<div className="team-card">
 										<div className="box-img image-anim">
-											<Link href="/team-details" className="thumb">
+											<div className="thumb">
 												<LazyImg src="/assets/img/team/teamsc7.png" alt="img" />
-											</Link>
+											</div>
 											<div className="team-social">
 												<button type="button" className="icon-btn" aria-label="Show social profile links"><i className="fas fa-share-alt" /></button>
 												<div className="social-wrap">
@@ -348,7 +348,7 @@ export default function Committee() {
 											</div>
 										</div>
 										<div className="team-card-details">
-											<h4 className="box-title"><Link href="/team-details">Gurvinder Singh Lamba</Link></h4>
+											<h4 className="box-title">Gurvinder Singh Lamba</h4>
 											<span className="box-text">Advisory Board Member</span>
 										</div>
 									</div>

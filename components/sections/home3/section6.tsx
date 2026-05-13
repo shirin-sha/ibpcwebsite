@@ -22,7 +22,7 @@ export default function Section6() {
 						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-3-1.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
@@ -34,7 +34,7 @@ export default function Section6() {
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Kaizar T Shakir</Link></h4>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/committee">Kaizar T Shakir</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Chairman</span>
 								</div>
 							</div>
@@ -42,7 +42,7 @@ export default function Section6() {
 						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-3-2.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
@@ -53,7 +53,7 @@ export default function Section6() {
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Gaurav Oberoi</Link></h4>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/committee">Gaurav Oberoi</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Vice Chairman</span>
 								</div>
 							</div>
@@ -61,7 +61,7 @@ export default function Section6() {
 						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-3-3.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
@@ -72,7 +72,7 @@ export default function Section6() {
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Suresh K P</Link></h4>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/committee">Suresh K P</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Secretary</span>
 								</div>
 							</div>
@@ -80,7 +80,7 @@ export default function Section6() {
 						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-3-5.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
@@ -92,7 +92,7 @@ export default function Section6() {
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Sunit Arora</Link></h4>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/committee">Sunit Arora</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Jt Secretary</span>
 								</div>
 							</div>
@@ -100,7 +100,7 @@ export default function Section6() {
 						<div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
 							<div className="team-card style3">
 								<div className="box-img image-anim">
-									<Link href="/team-details" className="thumb">
+									<Link href="/committee" className="thumb">
 										<LazyImg src="/assets/img/team/team-3-4.jpg" alt="img" />
 									</Link>
 									<div className="social-wrap">
@@ -112,7 +112,7 @@ export default function Section6() {
 									</div>
 								</div>
 								<div className="team-card-details">
-									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/team-details">Krishen Suryakanth</Link></h4>
+									<h4 className="box-title" style={{ fontSize: '16px' }}><Link href="/committee">Krishen Suryakanth</Link></h4>
 									<span className="box-text" style={{ fontSize: '13px' }}>Hon. Treasurer</span>
 								</div>
 							</div>

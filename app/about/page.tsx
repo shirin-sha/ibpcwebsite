@@ -8,7 +8,7 @@ export default function About() {
 	return (
 		<>
 
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<>
 
 					<section className="breadcrumb__area fix" data-background="assets/img/bg/breadcrumb-bg.png">

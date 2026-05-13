@@ -63,23 +63,15 @@ export default function Footer1() {
 												</Link>
 											</li>
 											<li>
-												<Link href="/ibpc-events">
+												<Link href="/news-events">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
-													IBPC Events
+													News & Events
 												</Link>
 											</li>
 											<li>
-												<Link href="/blog">
-													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
-													</svg>
-													News & Updates
-												</Link>
-											</li>
-											<li>
-												<Link href="/partners">
+												<Link href="/about">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
@@ -127,7 +119,7 @@ export default function Footer1() {
 										<h4 className="footer__widget-title">Membership Information</h4>
 										<ul className="list-wrap">
 											<li>
-												<Link href="/member-login">
+												<Link href="https://mms.ibpckuwait.org/login" target="_blank" rel="noopener noreferrer">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
@@ -135,7 +127,7 @@ export default function Footer1() {
 												</Link>
 											</li>
 											<li>
-												<Link href="/membership-directory">
+												<Link href="https://mms.ibpckuwait.org" target="_blank" rel="noopener noreferrer">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
@@ -143,7 +135,7 @@ export default function Footer1() {
 												</Link>
 											</li>
 											<li>
-												<Link href="/new-membership">
+												<Link href="https://mms.ibpckuwait.org/register" target="_blank" rel="noopener noreferrer">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>
@@ -159,7 +151,7 @@ export default function Footer1() {
 												</Link>
 											</li>
 											<li>
-												<Link href="/gallery">
+												<Link href="/photo-gallery">
 													<svg width={17} height={14} viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M9 1L15 7M15 7L9 13M15 7H0" stroke="currentColor" strokeWidth="1.5" />
 													</svg>

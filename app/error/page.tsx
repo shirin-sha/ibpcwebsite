@@ -7,7 +7,7 @@ export default function Error() {
 	return (
 		<>
 
-			<Layout headerStyle={1} footerStyle={1}>
+			<Layout>
 				<main>
 
 					<section className="breadcrumb__area fix" data-background="assets/img/bg/breadcrumb-bg.png">
